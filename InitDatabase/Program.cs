@@ -30,7 +30,9 @@ namespace InitDatabase {
 			public int trigia { get; set; }
 		}
 		static void Main(string[] args) {
-			Database.InitDatabase("thuvien.db", "lala");
+			string databasepath = Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location), @"..\..\..\Build");
+			databasepath = Path.Combine(databasepath, "thuvien.db");
+			Database.InitDatabase(databasepath, "lala");
 			Database.DropDatabase("lala");
 			var datadocgia = JsonConvert.DeserializeObject<List<docgia>>(File.ReadAllText("docgia.json"));
 			var datasach = JsonConvert.DeserializeObject<List<sach>>(File.ReadAllText("sach.json"));
@@ -104,8 +106,8 @@ namespace InitDatabase {
 				Sach temp = new Sach() {
 					MaSach = RandomIdGenerator.GetBase36(10),
 					TenSach = s.tensach,
-					TheLoai = new TheLoai() { TenTheLoai = s.theloai},
-					TacGia = new TacGia() { TenTacGia = s.tacgia},
+					TheLoai = new TheLoai() { TenTheLoai = s.theloai },
+					TacGia = new TacGia() { TenTacGia = s.tacgia },
 					NamXB = s.namxb,
 					NXB = s.nxb,
 					NgayNhap = s.ngaynhapsach,
