@@ -123,6 +123,8 @@ namespace InitDatabase {
 			foreach (var s in sach) {
 				Database.AddSach(s);
 			}
+
+			Console.WriteLine("Xong");
 		}
 	}
 }
