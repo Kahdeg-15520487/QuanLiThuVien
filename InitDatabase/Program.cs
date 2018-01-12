@@ -31,11 +31,14 @@ namespace InitDatabase {
 		}
 		static void Main(string[] args) {
 			string databasepath = Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location), @"..\..\..\Build");
+
 			databasepath = Path.Combine(databasepath, "thuvien.db");
+			Console.WriteLine(databasepath);
 			Database.InitDatabase(databasepath, "lala");
 			Database.DropDatabase("lala");
-			var datadocgia = JsonConvert.DeserializeObject<List<docgia>>(File.ReadAllText("docgia.json"));
-			var datasach = JsonConvert.DeserializeObject<List<sach>>(File.ReadAllText("sach.json"));
+			
+			var datadocgia = JsonConvert.DeserializeObject<List<docgia>>(Properties.Resources.docgia);
+			var datasach = JsonConvert.DeserializeObject<List<sach>>(Properties.Resources.sach);
 
 			//insert loại đọc giả
 			List<string> tenloaidocgia = new List<string>();
