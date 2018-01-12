@@ -3,9 +3,9 @@
 	/// quy định được lưu trong bảng QuyDinh
 	/// </summary>
 	public class QuyDinh {
-		public int MaQD { get; set; }
-		public string TenQD { get; set; }
-		public string GtQD { get; set; }
+		public string MaQuyDinh { get; set; }
+		public string TenQuiDinh { get; set; }
+		public string NoiDungQuiDinh { get; set; }
 		public string GhiChu { get; set; }
 	}
 }
