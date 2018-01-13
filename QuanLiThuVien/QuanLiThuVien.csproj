@@ -45,24 +45,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LapTheDocGia\LapPhieuThuTien.cs">
+    <Compile Include="XuliPhieuThuTien\LapPhieuThuTien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LapTheDocGia\LapPhieuThuTien.Designer.cs">
+    <Compile Include="XuliPhieuThuTien\LapPhieuThuTien.Designer.cs">
       <DependentUpon>LapPhieuThuTien.cs</DependentUpon>
     </Compile>
-    <Compile Include="LapTheDocGia\LapTheDocGia.cs">
+    <Compile Include="XuliTheDocGia\LapTheDocGia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LapTheDocGia\LapTheDocGia.Designer.cs">
+    <Compile Include="XuliTheDocGia\LapTheDocGia.Designer.cs">
       <DependentUpon>LapTheDocGia.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="LapTheDocGia\LapPhieuThuTien.resx">
+    <EmbeddedResource Include="XuliPhieuThuTien\LapPhieuThuTien.resx">
       <DependentUpon>LapPhieuThuTien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LapTheDocGia\LapTheDocGia.resx">
+    <EmbeddedResource Include="XuliTheDocGia\LapTheDocGia.resx">
       <DependentUpon>LapTheDocGia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
