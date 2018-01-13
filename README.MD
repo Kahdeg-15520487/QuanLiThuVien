@@ -28,4 +28,4 @@ sau đó chuột phải vào project QuanLiThuVien rồi chọn Set as StartUp P
 
 DataAccess.Database là lớp dùng để truy cập vào cơ sở dữ liệu.
 
-[chú thích các phương thức của lớp Database](Doc\DataAccess.md#database)
+[chú thích các phương thức của lớp Database](Doc/DataAccess.md#database)
