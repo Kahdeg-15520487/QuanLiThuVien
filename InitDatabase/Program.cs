@@ -125,6 +125,7 @@ namespace InitDatabase {
 			}
 
 			Console.WriteLine("Xong");
+			Console.ReadLine();
 		}
 	}
 }

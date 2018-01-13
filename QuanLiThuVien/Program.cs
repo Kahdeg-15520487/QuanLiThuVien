@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using DataAccess;
+
 namespace QuanLiThuVien {
 	static class Program {
 		/// <summary>
@@ -11,6 +13,8 @@ namespace QuanLiThuVien {
 		/// </summary>
 		[STAThread]
 		static void Main() {
+			Database.InitDatabase("thuvien.db", "secret");
+
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 			Application.Run(new LapTheDocGia());
