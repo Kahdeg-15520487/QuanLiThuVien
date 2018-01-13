@@ -45,8 +45,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LapTheDocGia\LapPhieuThuTien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LapTheDocGia\LapPhieuThuTien.Designer.cs">
+      <DependentUpon>LapPhieuThuTien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LapTheDocGia\LapTheDocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LapTheDocGia\LapTheDocGia.Designer.cs">
+      <DependentUpon>LapTheDocGia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="LapTheDocGia\LapPhieuThuTien.resx">
+      <DependentUpon>LapPhieuThuTien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LapTheDocGia\LapTheDocGia.resx">
+      <DependentUpon>LapTheDocGia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -68,6 +86,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{91d369e6-e7bd-4c27-b6e9-12234f901d63}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
