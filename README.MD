@@ -1,5 +1,7 @@
 # Quản lí thư viện
 
+## I. setup solution
+
 ### 1. lấy solution về
 đầu tiên là cài github nếu chưa có
 
@@ -19,3 +21,11 @@ xong rồi thì nhấn F5 để chạy.
 đợi tới khi nó kêu "xong" thì xong.
 
 sau đó chuột phải vào project QuanLiThuVien rồi chọn Set as StartUp Project
+
+## II. các thư viện
+
+### 1. DataAccess
+
+DataAccess.Database là lớp dùng để truy cập vào cơ sở dữ liệu.
+
+[chú thích các phương thức của lớp Database](Doc\DataAccess.md#database)
