@@ -10,7 +10,7 @@
 			{
 				int hash = 17;
 				hash = hash * 23 + TenTheLoai.GetHashCode();
-				hash = hash * 23 + GhiChu is null ? 0 : GhiChu.GetHashCode();
+				hash = hash * 23 + GhiChu == null ? 0 : GhiChu.GetHashCode();
 				return hash;
 			}
 		}
