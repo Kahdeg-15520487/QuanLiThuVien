@@ -62,6 +62,9 @@ namespace DataAccess {
 
 			mapper.Entity<BaocaoThongkeSachTraTre>()
 				  .Id(x => x.MaBaoCao);
+
+			mapper.Entity<BaocaoSachMuonTheoTheloai>()
+				  .Id(x => x.MaBaoCao);
 		}
 		#endregion
 
@@ -908,6 +911,87 @@ namespace DataAccess {
 			bool result;
 			using (var db = new LiteDatabase(DatabaseConnectionString)) {
 				result = db.GetCollection<BaocaoThongkeSachTraTre>("BaocaoThongkeSachTraTre").Delete(x => x.MaBaoCao == maBaoCao) > 0;
+			}
+			return result;
+		}
+		#endregion
+
+		#region BaocaoSachMuonTheoTheloai
+		/// <summary>
+		/// truy xuất báo cáo thống kê sách mượn theo thể loại từ database
+		/// </summary>
+		public static BaocaoSachMuonTheoTheloai GetBaocaoSachMuonTheoTheloai(string maBaoCao) {
+			BaocaoSachMuonTheoTheloai result;
+			using (var db = new LiteDatabase(DatabaseConnectionString)) {
+				result = db.GetCollection<BaocaoSachMuonTheoTheloai>("BaocaoSachMuonTheoTheloai")
+						   .FindOne(x => x.MaBaoCao == maBaoCao);
+			}
+			return result;
+		}
+
+		/// <summary>
+		/// truy xuất báo cáo thống kê sách mượn theo thể loại từ database
+		/// </summary>
+		public static BaocaoSachMuonTheoTheloai GetBaocaoSachMuonTheoTheloai(Expression<Func<BaocaoSachMuonTheoTheloai, bool>> dieukienloc) {
+			BaocaoSachMuonTheoTheloai result;
+			using (var db = new LiteDatabase(DatabaseConnectionString)) {
+				result = db.GetCollection<BaocaoSachMuonTheoTheloai>("BaocaoSachMuonTheoTheloai")
+						   .FindOne(dieukienloc);
+			}
+			return result;
+		}
+
+		/// <summary>
+		/// truy xuất báo cáo thống kê sách mượn theo thể loại từ database
+		/// </summary>
+		public static IEnumerable<BaocaoSachMuonTheoTheloai> GetBaocaoSachMuonTheoTheloais(Expression<Func<BaocaoSachMuonTheoTheloai, bool>> dieukienloc) {
+			IEnumerable<BaocaoSachMuonTheoTheloai> result;
+			using (var db = new LiteDatabase(DatabaseConnectionString)) {
+				result = db.GetCollection<BaocaoSachMuonTheoTheloai>("BaocaoSachMuonTheoTheloai")
+						   .Find(dieukienloc);
+			}
+			return result;
+		}
+
+		/// <summary>
+		/// truy xuất tất cả báo cáo thống kê sách mượn theo thể loại từ database
+		/// </summary>
+		public static IEnumerable<BaocaoSachMuonTheoTheloai> GetAllBaocaoSachMuonTheoTheloai() {
+			IEnumerable<BaocaoSachMuonTheoTheloai> result;
+			using (var db = new LiteDatabase(DatabaseConnectionString)) {
+				result = db.GetCollection<BaocaoSachMuonTheoTheloai>("BaocaoSachMuonTheoTheloai")
+						   .FindAll();
+			}
+			return result;
+		}
+
+		/// <summary>
+		/// cập nhật báo cáo thống kê sách mượn theo thể loại vào database
+		/// </summary>
+		public static bool SetBaocaoSachMuonTheoTheloai(BaocaoSachMuonTheoTheloai BaocaoSachMuonTheoTheloai) {
+			bool result;
+			using (var db = new LiteDatabase(DatabaseConnectionString)) {
+				result = db.GetCollection<BaocaoSachMuonTheoTheloai>("BaocaoSachMuonTheoTheloai").Update(BaocaoSachMuonTheoTheloai);
+			}
+			return result;
+		}
+
+		/// <summary>
+		/// thêm báo cáo thống kê sách mượn theo thể loại vào database
+		/// </summary>
+		public static void AddBaocaoSachMuonTheoTheloai(BaocaoSachMuonTheoTheloai BaocaoSachMuonTheoTheloai) {
+			using (var db = new LiteDatabase(DatabaseConnectionString)) {
+				db.GetCollection<BaocaoSachMuonTheoTheloai>("BaocaoSachMuonTheoTheloai").Insert(BaocaoSachMuonTheoTheloai);
+			}
+		}
+
+		/// <summary>
+		/// xóa báo cáo thống kê sách mượn theo thể loại khỏi database
+		/// </summary>
+		public static bool RemoveBaocaoSachMuonTheoTheloai(string maBaoCao) {
+			bool result;
+			using (var db = new LiteDatabase(DatabaseConnectionString)) {
+				result = db.GetCollection<BaocaoSachMuonTheoTheloai>("BaocaoSachMuonTheoTheloai").Delete(x => x.MaBaoCao == maBaoCao) > 0;
 			}
 			return result;
 		}

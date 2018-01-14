@@ -1,26 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using QuanLiThuVien.BaocaoSachMuonTheoTheloai;
 
-namespace QuanLiThuVien.BaocaoSachtratre {
-	public partial class QuanliBaocaoThongkeSachTratre : Form {
-		public QuanliBaocaoThongkeSachTratre() {
+namespace QuanLiThuVien {
+	public partial class QuanliBaocaoSachMuonTheoTheloai : Form {
+		public QuanliBaocaoSachMuonTheoTheloai() {
 			InitializeComponent();
 		}
 
-		private void QuanliBaocaoThongkeSachTratre_Load(object sender, EventArgs e) {
+		private void QuanliBaocaoSachMuonTheoTheloai_Load(object sender, EventArgs e) {
 			PopulateListView(GetAll());
 		}
 
 		private void button_lapbaocao_Click(object sender, EventArgs e) {
-			new LapBaoCaoSachTraTre().ShowDialog();
+			new LapBaocaoSachMuonTheoTheloai().ShowDialog();
 			PopulateListView(GetAll());
 		}
 
@@ -29,7 +24,7 @@ namespace QuanLiThuVien.BaocaoSachtratre {
 				return;
 			}
 			var sbc = listView_baocao.SelectedItems[0];
-			new XemBaoCaoSachTraTre(sbc.SubItems[1].Text).ShowDialog();
+			new XemBaocaoSachMuonTheoTheloai(sbc.SubItems[1].Text).ShowDialog();
 		}
 
 		private void button_timbaocao_Click(object sender, EventArgs e) {
@@ -49,23 +44,23 @@ namespace QuanLiThuVien.BaocaoSachtratre {
 
 		private List<ListViewItem> GetAll() {
 			var lvis = new List<ListViewItem>();
-			foreach (var bc in DataAccess.Database.GetAllBaocaoThongkeSachTraTre()) {
+			foreach (var bc in DataAccess.Database.GetAllBaocaoSachMuonTheoTheloai()) {
 				ListViewItem item = new ListViewItem(lvis.Count.ToString());
 				item.SubItems.Add(bc.MaBaoCao);
 				item.SubItems.Add(bc.NgayLapBaoCao.ToShortDateString());
-				item.SubItems.Add(bc.DanhsachSachTraTre.Count.ToString());
+				item.SubItems.Add(bc.DanhsachSachMuonTheoTheloai.Count.ToString());
 				lvis.Add(item);
 			}
 			return lvis;
 		}
 
-		private List<ListViewItem> GetQuerry(Expression<Func<DataAccess.DataObject.BaocaoThongkeSachTraTre, bool>> dieukienloc) {
+		private List<ListViewItem> GetQuerry(Expression<Func<DataAccess.DataObject.BaocaoSachMuonTheoTheloai, bool>> dieukienloc) {
 			var lvis = new List<ListViewItem>();
-			foreach (var bc in DataAccess.Database.GetBaocaoThongkeSachTraTres(dieukienloc)) {
+			foreach (var bc in DataAccess.Database.GetBaocaoSachMuonTheoTheloais(dieukienloc)) {
 				ListViewItem item = new ListViewItem(lvis.Count.ToString());
 				item.SubItems.Add(bc.MaBaoCao);
 				item.SubItems.Add(bc.NgayLapBaoCao.ToShortDateString());
-				item.SubItems.Add(bc.DanhsachSachTraTre.Count.ToString());
+				item.SubItems.Add(bc.DanhsachSachMuonTheoTheloai.Count.ToString());
 				lvis.Add(item);
 			}
 			return lvis;

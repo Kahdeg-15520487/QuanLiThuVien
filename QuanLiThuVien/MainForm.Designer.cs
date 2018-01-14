@@ -35,7 +35,7 @@
 			// 
 			this.button_docgia.Location = new System.Drawing.Point(12, 12);
 			this.button_docgia.Name = "button_docgia";
-			this.button_docgia.Size = new System.Drawing.Size(97, 41);
+			this.button_docgia.Size = new System.Drawing.Size(97, 51);
 			this.button_docgia.TabIndex = 0;
 			this.button_docgia.Text = "Thao tác thẻ đọc giả";
 			this.button_docgia.UseVisualStyleBackColor = true;
@@ -45,7 +45,7 @@
 			// 
 			this.button_sach.Location = new System.Drawing.Point(115, 12);
 			this.button_sach.Name = "button_sach";
-			this.button_sach.Size = new System.Drawing.Size(97, 41);
+			this.button_sach.Size = new System.Drawing.Size(97, 51);
 			this.button_sach.TabIndex = 1;
 			this.button_sach.Text = "Thao tác sách";
 			this.button_sach.UseVisualStyleBackColor = true;
@@ -53,19 +53,19 @@
 			// 
 			// button_baocao
 			// 
-			this.button_baocao.Location = new System.Drawing.Point(218, 12);
+			this.button_baocao.Location = new System.Drawing.Point(424, 12);
 			this.button_baocao.Name = "button_baocao";
-			this.button_baocao.Size = new System.Drawing.Size(97, 41);
+			this.button_baocao.Size = new System.Drawing.Size(97, 51);
 			this.button_baocao.TabIndex = 2;
-			this.button_baocao.Text = "Báo cáo thống kê";
+			this.button_baocao.Text = "Báo cáo thống kê sách trả trễ";
 			this.button_baocao.UseVisualStyleBackColor = true;
 			this.button_baocao.Click += new System.EventHandler(this.button_baocao_Click);
 			// 
 			// button_muonsach
 			// 
-			this.button_muonsach.Location = new System.Drawing.Point(321, 12);
+			this.button_muonsach.Location = new System.Drawing.Point(218, 12);
 			this.button_muonsach.Name = "button_muonsach";
-			this.button_muonsach.Size = new System.Drawing.Size(97, 41);
+			this.button_muonsach.Size = new System.Drawing.Size(97, 51);
 			this.button_muonsach.TabIndex = 3;
 			this.button_muonsach.Text = "Mượn sách";
 			this.button_muonsach.UseVisualStyleBackColor = true;
@@ -73,9 +73,9 @@
 			// 
 			// button_trasach
 			// 
-			this.button_trasach.Location = new System.Drawing.Point(424, 12);
+			this.button_trasach.Location = new System.Drawing.Point(321, 12);
 			this.button_trasach.Name = "button_trasach";
-			this.button_trasach.Size = new System.Drawing.Size(97, 41);
+			this.button_trasach.Size = new System.Drawing.Size(97, 51);
 			this.button_trasach.TabIndex = 4;
 			this.button_trasach.Text = "Trả sách";
 			this.button_trasach.UseVisualStyleBackColor = true;
@@ -85,10 +85,11 @@
 			// 
 			this.button6.Location = new System.Drawing.Point(527, 12);
 			this.button6.Name = "button6";
-			this.button6.Size = new System.Drawing.Size(97, 41);
+			this.button6.Size = new System.Drawing.Size(97, 51);
 			this.button6.TabIndex = 5;
-			this.button6.Text = "button6";
+			this.button6.Text = "Báo cáo thống kê thể loại theo lượt mượn";
 			this.button6.UseVisualStyleBackColor = true;
+			this.button6.Click += new System.EventHandler(this.button6_Click);
 			// 
 			// MainForm
 			// 

@@ -45,6 +45,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaocaoSachMuonTheoTheloai\LapBaocaoSachMuonTheoTheloai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaocaoSachMuonTheoTheloai\LapBaocaoSachMuonTheoTheloai.Designer.cs">
+      <DependentUpon>LapBaocaoSachMuonTheoTheloai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaocaoSachMuonTheoTheloai\QuanliBaocaoSachMuonTheoTheloai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaocaoSachMuonTheoTheloai\QuanliBaocaoSachMuonTheoTheloai.Designer.cs">
+      <DependentUpon>QuanliBaocaoSachMuonTheoTheloai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaocaoSachMuonTheoTheloai\XemBaocaoSachMuonTheoTheloai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaocaoSachMuonTheoTheloai\XemBaocaoSachMuonTheoTheloai.Designer.cs">
+      <DependentUpon>XemBaocaoSachMuonTheoTheloai.cs</DependentUpon>
+    </Compile>
     <Compile Include="BaocaoSachtratre\XemBaoCaoSachTraTre.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +114,15 @@
     <Compile Include="XuliTheDocGia\QuanLiDocGia.Designer.cs">
       <DependentUpon>QuanLiDocGia.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BaocaoSachMuonTheoTheloai\LapBaocaoSachMuonTheoTheloai.resx">
+      <DependentUpon>LapBaocaoSachMuonTheoTheloai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaocaoSachMuonTheoTheloai\QuanliBaocaoSachMuonTheoTheloai.resx">
+      <DependentUpon>QuanliBaocaoSachMuonTheoTheloai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaocaoSachMuonTheoTheloai\XemBaocaoSachMuonTheoTheloai.resx">
+      <DependentUpon>XemBaocaoSachMuonTheoTheloai.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaocaoSachtratre\XemBaoCaoSachTraTre.resx">
       <DependentUpon>XemBaoCaoSachTraTre.cs</DependentUpon>
     </EmbeddedResource>

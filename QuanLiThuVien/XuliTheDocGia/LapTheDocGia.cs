@@ -39,7 +39,7 @@ namespace QuanLiThuVien {
 
 				var isPrint = MessageBox.Show("Bạn có muốn in thẻ đọc giả không ?", "", MessageBoxButtons.YesNo);
 				if (isPrint == DialogResult.Yes) {
-					Printer.Print(docgia.ToString());
+					MessageBox.Show("saved to " + Printer.Print(docgia.ToString()));
 				}
 			}
 		}

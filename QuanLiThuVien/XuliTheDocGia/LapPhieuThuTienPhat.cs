@@ -37,7 +37,7 @@ namespace QuanLiThuVien.XuliTheDocGia {
 
 			var isprint = MessageBox.Show("Đã tạo phiếu thu tiền phạt" + Environment.NewLine + "Bạn có muốn in ra?", "", MessageBoxButtons.YesNo);
 			if (isprint == DialogResult.Yes) {
-				Printer.Print(phieuthutienphat.ToString());
+				MessageBox.Show("saved to " + Printer.Print(phieuthutienphat.ToString()));
 			}
 			Close();
 		}

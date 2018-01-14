@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Database.cs" />
+    <Compile Include="DataObject\BaocaoSachMuonTheoTheloai.cs" />
     <Compile Include="DataObject\BaocaoThongkeSachTraTre.cs" />
     <Compile Include="DataObject\PhieuThuTienPhat.cs" />
     <Compile Include="DataObject\PhieuTraSach.cs" />
