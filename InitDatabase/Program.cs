@@ -34,67 +34,91 @@ namespace InitDatabase {
 
 			databasepath = Path.Combine(databasepath, "thuvien.db");
 			Console.WriteLine(databasepath);
-			Database.InitDatabase(databasepath, "lala");
-			Database.DropDatabase("lala");
-			
+			Database.InitDatabase(databasepath, "secret");
+			Database.DropDatabase("secret");
+
 			var datadocgia = JsonConvert.DeserializeObject<List<docgia>>(Properties.Resources.docgia);
 			var datasach = JsonConvert.DeserializeObject<List<sach>>(Properties.Resources.sach);
 
 			//insert loại đọc giả
+			//insert đọc giả
 			List<string> tenloaidocgia = new List<string>();
-			foreach (var dg in datadocgia) {
-				if (!tenloaidocgia.Contains(dg.loaidocgia)) {
-					tenloaidocgia.Add(dg.loaidocgia);
+			List<DocGia> docgia = new List<DocGia>();
+			using (var progress = new ProgressBar()) {
+				var count = 0;
+				Console.Write("Parsing datadocgia");
+				foreach (var dg in datadocgia) {
+					if (!tenloaidocgia.Contains(dg.loaidocgia)) {
+						tenloaidocgia.Add(dg.loaidocgia);
+					}
+					DocGia temp = new DocGia() {
+						MaTheDG = RandomIdGenerator.GetBase36(10),
+						HoTen = dg.hoten,
+						NgaySinh = dg.ngaysinh,
+						DiaChi = dg.diachi,
+						Email = dg.email,
+						LoaiDG = new LoaiDocGia() { TenLoaiDocGia = dg.loaidocgia, GhiChu = string.Empty },
+						NgayLapThe = dg.ngaylapthe,
+						NgayHetHan = dg.ngayhethan,
+						TongNo = dg.tongno
+					};
+					docgia.Add(temp);
+					progress.Report((double)count++ / datadocgia.Count);
 				}
 			}
+			Console.WriteLine();
 			foreach (var tldg in tenloaidocgia) {
 				Database.AddLoaiDocGia(new LoaiDocGia() {
 					TenLoaiDocGia = tldg,
 					GhiChu = string.Empty
 				});
 			}
-
-			//insert đọc giả
-			List<DocGia> docgia = new List<DocGia>();
-			foreach (var dg in datadocgia) {
-				DocGia temp = new DocGia() {
-					MaTheDG = RandomIdGenerator.GetBase36(10),
-					HoTen = dg.hoten,
-					NgaySinh = dg.ngaysinh,
-					DiaChi = dg.diachi,
-					Email = dg.email,
-					LoaiDG = new LoaiDocGia() { TenLoaiDocGia = dg.loaidocgia, GhiChu = string.Empty },
-					NgayLapThe = dg.ngaylapthe,
-					NgayHetHan = dg.ngayhethan,
-					TongNo = dg.tongno
-				};
-				docgia.Add(temp);
-			}
-
-			foreach (var dg in docgia) {
-				Database.AddDocGia(dg);
-			}
-
-			//insert theloai
-			List<string> tentheloai = new List<string>();
-			foreach (var s in datasach) {
-				if (!tentheloai.Contains(s.theloai)) {
-					tentheloai.Add(s.theloai);
+			using (var progress = new ProgressBar()) {
+				var count = 0;
+				Console.Write("Inserting parsed docgia into database");
+				foreach (var dg in docgia) {
+					Database.AddDocGia(dg);
+					progress.Report((double)count++ / docgia.Count);
 				}
 			}
+			Console.WriteLine();
+			//insert theloai
+			//insert tacgia
+			//insert sách
+			List<string> tentheloai = new List<string>();
+			List<string> tentacgia = new List<string>();
+			List<Sach> sach = new List<Sach>();
+			using (var progress = new ProgressBar()) {
+				var count = 0;
+				Console.Write("Parsing datasach");
+				foreach (var s in datasach) {
+					if (!tentheloai.Contains(s.theloai)) {
+						tentheloai.Add(s.theloai);
+					}
+					if (!tentacgia.Contains(s.tacgia)) {
+						tentacgia.Add(s.tacgia);
+					}
+					Sach temp = new Sach() {
+						MaSach = RandomIdGenerator.GetBase36(10),
+						TenSach = s.tensach,
+						TheLoai = new TheLoai() { TenTheLoai = s.theloai },
+						TacGia = new TacGia() { TenTacGia = s.tacgia },
+						NamXB = s.namxb,
+						NXB = s.nxb,
+						NgayNhap = s.ngaynhapsach,
+						TriGia = s.trigia,
+						TinhTrang = string.Empty
+					};
+					sach.Add(temp);
+					progress.Report((double)count++ / datasach.Count);
+				}
+			}
+			Console.WriteLine();
 			foreach (var ttl in tentheloai) {
 				Database.AddTheLoai(new TheLoai() {
 					TenTheLoai = ttl,
 					GhiChu = string.Empty
 				});
-			}
-
-			//insert tacgia
-			List<string> tentacgia = new List<string>();
-			foreach (var s in datasach) {
-				if (!tentacgia.Contains(s.tacgia)) {
-					tentacgia.Add(s.tacgia);
-				}
 			}
 			foreach (var ttg in tentacgia) {
 				Database.AddTacGia(new TacGia() {
@@ -102,28 +126,15 @@ namespace InitDatabase {
 					GhiChu = string.Empty
 				});
 			}
-
-			//insert sách
-			List<Sach> sach = new List<Sach>();
-			foreach (var s in datasach) {
-				Sach temp = new Sach() {
-					MaSach = RandomIdGenerator.GetBase36(10),
-					TenSach = s.tensach,
-					TheLoai = new TheLoai() { TenTheLoai = s.theloai },
-					TacGia = new TacGia() { TenTacGia = s.tacgia },
-					NamXB = s.namxb,
-					NXB = s.nxb,
-					NgayNhap = s.ngaynhapsach,
-					TriGia = s.trigia,
-					TinhTrang = string.Empty
-				};
-				sach.Add(temp);
+			using (var progress = new ProgressBar()) {
+				var count = 0;
+				Console.Write("Inserting parsed sach into database");
+				foreach (var s in sach) {
+					Database.AddSach(s);
+					progress.Report((double)count++ / sach.Count);
+				}
 			}
-
-			foreach (var s in sach) {
-				Database.AddSach(s);
-			}
-
+			Console.WriteLine();
 			Console.WriteLine("Xong");
 			Console.ReadLine();
 		}

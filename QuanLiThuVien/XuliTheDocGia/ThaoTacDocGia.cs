@@ -90,5 +90,13 @@ namespace QuanLiThuVien.XuliTheDocGia {
 			}
 			return lvis;
 		}
+
+		private void listView_docgia_MouseClick(object sender, MouseEventArgs e) {
+			if (e.Button == MouseButtons.Right) {
+				if (listView_docgia.FocusedItem.Bounds.Contains(e.Location) == true) {
+					contextMenuStrip1.Show(Cursor.Position);
+				}
+			}
+		}
 	}
 }
