@@ -43,38 +43,38 @@ namespace InitDatabase {
 			var qdcount = 0;
 			Database.AddQuyDinh(new QuyDinh() {
 				MaQuyDinh = qdcount++.ToString(),
-				TenQuiDinh = "Tuoi>=18",
-				NoiDungQuiDinh = "tuoi >= 18"
+				TenQuiDinh = "TuoiToithieu",
+				NoiDungQuiDinh = "18"
 			});
 
 			Database.AddQuyDinh(new QuyDinh() {
 				MaQuyDinh = qdcount++.ToString(),
-				TenQuiDinh = "Tuoi<=55",
-				NoiDungQuiDinh = "tuoi <= 55"
+				TenQuiDinh = "TuoiToida",
+				NoiDungQuiDinh = "55"
 			});
 
 			Database.AddQuyDinh(new QuyDinh() {
 				MaQuyDinh = qdcount++.ToString(),
-				TenQuiDinh = "ThoihanThe = 6m",
-				NoiDungQuiDinh = "thoihanthe = 6m"
+				TenQuiDinh = "ThoihanThe",
+				NoiDungQuiDinh = "6"
 			});
 
 			Database.AddQuyDinh(new QuyDinh() {
 				MaQuyDinh = qdcount++.ToString(),
-				TenQuiDinh = "NamXuatban <= 8",
-				NoiDungQuiDinh = "namxb <= 8"
+				TenQuiDinh = "NamXuatban",
+				NoiDungQuiDinh = "8"
 			});
 
 			Database.AddQuyDinh(new QuyDinh() {
 				MaQuyDinh = qdcount++.ToString(),
-				TenQuiDinh = "SoluongSachDuocMuon <= 5",
-				NoiDungQuiDinh = "slsachmuon <= 5"
+				TenQuiDinh = "SoluongSachDuocMuon",
+				NoiDungQuiDinh = "5"
 			});
 
 			Database.AddQuyDinh(new QuyDinh() {
 				MaQuyDinh = qdcount++.ToString(),
-				TenQuiDinh = "SoNgaymuon <= 4",
-				NoiDungQuiDinh = "songaymuon <= 4"
+				TenQuiDinh = "SoNgaymuonToida",
+				NoiDungQuiDinh = "4"
 			});
 
 			var datadocgia = JsonConvert.DeserializeObject<List<docgia>>(Properties.Resources.docgia);
