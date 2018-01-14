@@ -339,6 +339,19 @@ namespace DataAccess {
 		}
 
 		/// <summary>
+		/// truy xuất tất cả thông tin đọc giả từ database
+		/// </summary>
+		public static IEnumerable<DocGia> GetAllDocGia() {
+			IEnumerable<DocGia> result;
+			using (var db = new LiteDatabase(DatabasePath)) {
+				result = db.GetCollection<DocGia>("DocGia")
+						   .Include(x => x.LoaiDG)
+						   .FindAll();
+			}
+			return result;
+		}
+
+		/// <summary>
 		/// cập nhật thông tin đọc giả vào database
 		/// </summary>
 		public static bool SetDocGia(DocGia docGia) {

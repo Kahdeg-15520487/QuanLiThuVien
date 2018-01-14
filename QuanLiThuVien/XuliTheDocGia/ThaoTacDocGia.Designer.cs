@@ -23,19 +23,17 @@
 		/// the contents of this method with the code editor.
 		/// </summary>
 		private void InitializeComponent() {
-			System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
-            "",
-            "1",
-            "2",
-            "3"}, -1);
 			this.button_lapthedocgia = new System.Windows.Forms.Button();
-			this.listView1 = new System.Windows.Forms.ListView();
-			this.button_capnhatdocgia = new System.Windows.Forms.Button();
-			this.button_xoadocgia = new System.Windows.Forms.Button();
-			this.button_timdocgia = new System.Windows.Forms.Button();
+			this.listView_docgia = new System.Windows.Forms.ListView();
 			this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.button_capnhatdocgia = new System.Windows.Forms.Button();
+			this.button_xoadocgia = new System.Windows.Forms.Button();
+			this.button_timdocgia = new System.Windows.Forms.Button();
+			this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.SuspendLayout();
 			// 
 			// button_lapthedocgia
@@ -48,19 +46,35 @@
 			this.button_lapthedocgia.UseVisualStyleBackColor = true;
 			this.button_lapthedocgia.Click += new System.EventHandler(this.button_lapthedocgia_Click);
 			// 
-			// listView1
+			// listView_docgia
 			// 
-			this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+			this.listView_docgia.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
-            this.columnHeader3});
-			this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem5});
-			this.listView1.Location = new System.Drawing.Point(12, 108);
-			this.listView1.Name = "listView1";
-			this.listView1.Size = new System.Drawing.Size(779, 186);
-			this.listView1.TabIndex = 6;
-			this.listView1.UseCompatibleStateImageBehavior = false;
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6});
+			this.listView_docgia.Location = new System.Drawing.Point(12, 108);
+			this.listView_docgia.Name = "listView_docgia";
+			this.listView_docgia.Size = new System.Drawing.Size(534, 186);
+			this.listView_docgia.TabIndex = 6;
+			this.listView_docgia.UseCompatibleStateImageBehavior = false;
+			this.listView_docgia.View = System.Windows.Forms.View.Details;
+			// 
+			// columnHeader1
+			// 
+			this.columnHeader1.Text = "STT";
+			// 
+			// columnHeader2
+			// 
+			this.columnHeader2.Text = "Mã đọc giả";
+			this.columnHeader2.Width = 87;
+			// 
+			// columnHeader3
+			// 
+			this.columnHeader3.Text = "Họ tên";
+			this.columnHeader3.Width = 116;
 			// 
 			// button_capnhatdocgia
 			// 
@@ -84,7 +98,7 @@
 			// 
 			// button_timdocgia
 			// 
-			this.button_timdocgia.Location = new System.Drawing.Point(519, 70);
+			this.button_timdocgia.Location = new System.Drawing.Point(316, 70);
 			this.button_timdocgia.Name = "button_timdocgia";
 			this.button_timdocgia.Size = new System.Drawing.Size(95, 32);
 			this.button_timdocgia.TabIndex = 9;
@@ -92,18 +106,35 @@
 			this.button_timdocgia.UseVisualStyleBackColor = true;
 			this.button_timdocgia.Click += new System.EventHandler(this.button_timdocgia_Click);
 			// 
+			// columnHeader4
+			// 
+			this.columnHeader4.Text = "Loại đọc giả";
+			this.columnHeader4.Width = 73;
+			// 
+			// columnHeader5
+			// 
+			this.columnHeader5.Text = "Ngày hết hạn thẻ";
+			this.columnHeader5.Width = 97;
+			// 
+			// columnHeader6
+			// 
+			this.columnHeader6.Text = "Tổng nợ";
+			this.columnHeader6.Width = 69;
+			// 
 			// ThaoTacDocGia
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(803, 306);
+			this.ClientSize = new System.Drawing.Size(558, 306);
 			this.Controls.Add(this.button_timdocgia);
 			this.Controls.Add(this.button_xoadocgia);
 			this.Controls.Add(this.button_capnhatdocgia);
-			this.Controls.Add(this.listView1);
+			this.Controls.Add(this.listView_docgia);
 			this.Controls.Add(this.button_lapthedocgia);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
 			this.Name = "ThaoTacDocGia";
 			this.Text = "ThaoTacDocGia";
+			this.Load += new System.EventHandler(this.ThaoTacDocGia_Load);
 			this.ResumeLayout(false);
 
 		}
@@ -111,12 +142,15 @@
 		#endregion
 
 		private System.Windows.Forms.Button button_lapthedocgia;
-		private System.Windows.Forms.ListView listView1;
+		private System.Windows.Forms.ListView listView_docgia;
 		private System.Windows.Forms.Button button_capnhatdocgia;
 		private System.Windows.Forms.Button button_xoadocgia;
 		private System.Windows.Forms.Button button_timdocgia;
 		private System.Windows.Forms.ColumnHeader columnHeader1;
 		private System.Windows.Forms.ColumnHeader columnHeader2;
 		private System.Windows.Forms.ColumnHeader columnHeader3;
+		private System.Windows.Forms.ColumnHeader columnHeader4;
+		private System.Windows.Forms.ColumnHeader columnHeader5;
+		private System.Windows.Forms.ColumnHeader columnHeader6;
 	}
 }

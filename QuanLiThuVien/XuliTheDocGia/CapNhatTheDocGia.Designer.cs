@@ -1,5 +1,5 @@
-﻿namespace QuanLiThuVien {
-	partial class LapTheDocGia {
+﻿namespace QuanLiThuVien.XuliTheDocGia {
+	partial class CapNhatTheDocGia {
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
@@ -69,7 +69,6 @@
 			this.radioButton_Y.TabStop = true;
 			this.radioButton_Y.Text = "Y";
 			this.radioButton_Y.UseVisualStyleBackColor = true;
-			this.radioButton_Y.CheckedChanged += new System.EventHandler(this.radioButton_Y_CheckedChanged);
 			// 
 			// radioButton_X
 			// 
@@ -82,7 +81,6 @@
 			this.radioButton_X.TabStop = true;
 			this.radioButton_X.Text = "X";
 			this.radioButton_X.UseVisualStyleBackColor = true;
-			this.radioButton_X.CheckedChanged += new System.EventHandler(this.radioButton_X_CheckedChanged);
 			// 
 			// textBox_HoTen
 			// 
@@ -141,9 +139,9 @@
 			this.label2.AutoSize = true;
 			this.label2.Location = new System.Drawing.Point(131, 9);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(82, 13);
+			this.label2.Size = new System.Drawing.Size(107, 13);
 			this.label2.TabIndex = 30;
-			this.label2.Text = "Lập thẻ đọc giả";
+			this.label2.Text = "Cập nhật thẻ đọc giả";
 			// 
 			// button_Huy
 			// 
@@ -161,7 +159,7 @@
 			this.button_LapThe.Name = "button_LapThe";
 			this.button_LapThe.Size = new System.Drawing.Size(75, 23);
 			this.button_LapThe.TabIndex = 28;
-			this.button_LapThe.Text = "Lập thẻ";
+			this.button_LapThe.Text = "Cập nhật thẻ";
 			this.button_LapThe.UseVisualStyleBackColor = true;
 			this.button_LapThe.Click += new System.EventHandler(this.button_LapThe_Click);
 			// 
@@ -175,11 +173,9 @@
 			// dateTimePicker_NgayLapThe
 			// 
 			this.dateTimePicker_NgayLapThe.Location = new System.Drawing.Point(90, 185);
-			this.dateTimePicker_NgayLapThe.MaxDate = new System.DateTime(2020, 7, 5, 0, 0, 0, 0);
 			this.dateTimePicker_NgayLapThe.Name = "dateTimePicker_NgayLapThe";
 			this.dateTimePicker_NgayLapThe.Size = new System.Drawing.Size(200, 20);
 			this.dateTimePicker_NgayLapThe.TabIndex = 26;
-			this.dateTimePicker_NgayLapThe.ValueChanged += new System.EventHandler(this.dateTimePicker_NgayLapThe_ValueChanged);
 			// 
 			// textBox_DiaChi
 			// 
@@ -211,15 +207,14 @@
 			this.textBox_TenLoaiDocGia.ReadOnly = true;
 			this.textBox_TenLoaiDocGia.Size = new System.Drawing.Size(84, 20);
 			this.textBox_TenLoaiDocGia.TabIndex = 32;
-			this.textBox_TenLoaiDocGia.Text = "X";
 			// 
 			// textBox_MaDocGia
 			// 
 			this.textBox_MaDocGia.Location = new System.Drawing.Point(84, 33);
 			this.textBox_MaDocGia.Name = "textBox_MaDocGia";
-			this.textBox_MaDocGia.ReadOnly = true;
 			this.textBox_MaDocGia.Size = new System.Drawing.Size(100, 20);
 			this.textBox_MaDocGia.TabIndex = 33;
+			this.textBox_MaDocGia.TextChanged += new System.EventHandler(this.textBox_MaDocGia_TextChanged);
 			// 
 			// label8
 			// 
@@ -247,7 +242,7 @@
 			this.dateTimePicker_NgayHetHan.Size = new System.Drawing.Size(200, 20);
 			this.dateTimePicker_NgayHetHan.TabIndex = 36;
 			// 
-			// LapTheDocGia
+			// CapNhatTheDocGia
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -272,9 +267,8 @@
 			this.Controls.Add(this.dateTimePicker_NgayLapThe);
 			this.Controls.Add(this.textBox_DiaChi);
 			this.Controls.Add(this.dateTimePicker_NgaySinh);
-			this.Name = "LapTheDocGia";
-			this.Text = "Lập thẻ đọc giả";
-			this.Load += new System.EventHandler(this.LapTheDocGia_Load);
+			this.Name = "CapNhatTheDocGia";
+			this.Text = "Cập nhật thẻ đọc giả";
 			this.groupBox_LoaiDocGia.ResumeLayout(false);
 			this.groupBox_LoaiDocGia.PerformLayout();
 			this.ResumeLayout(false);

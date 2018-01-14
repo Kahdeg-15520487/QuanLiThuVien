@@ -57,6 +57,12 @@
     <Compile Include="XuliPhieuThuTien\LapPhieuThuTien.Designer.cs">
       <DependentUpon>LapPhieuThuTien.cs</DependentUpon>
     </Compile>
+    <Compile Include="XuliTheDocGia\CapNhatTheDocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XuliTheDocGia\CapNhatTheDocGia.Designer.cs">
+      <DependentUpon>CapNhatTheDocGia.cs</DependentUpon>
+    </Compile>
     <Compile Include="XuliTheDocGia\LapTheDocGia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="XuliPhieuThuTien\LapPhieuThuTien.resx">
       <DependentUpon>LapPhieuThuTien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XuliTheDocGia\CapNhatTheDocGia.resx">
+      <DependentUpon>CapNhatTheDocGia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="XuliTheDocGia\LapTheDocGia.resx">
       <DependentUpon>LapTheDocGia.cs</DependentUpon>
