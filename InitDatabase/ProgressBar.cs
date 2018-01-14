@@ -34,7 +34,7 @@ namespace InitDatabase {
 			// Make sure value is in [0..1] range
 			value = Math.Max(0, Math.Min(1, value));
 			Interlocked.Exchange(ref currentProgress, value);
-			this.task = task is null ? string.Empty : task;
+			this.task = task == null ? string.Empty : task;
 		}
 
 		private void TimerHandler(object state) {
