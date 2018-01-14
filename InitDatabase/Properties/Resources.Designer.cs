@@ -63,7 +63,7 @@ namespace InitDatabase.Properties {
         /// <summary>
         ///   Looks up a localized string similar to [{&quot;hoten&quot;:&quot;Isaiah Grigoriscu&quot;,&quot;ngaysinh&quot;:&quot;1993-12-23&quot;,&quot;diachi&quot;:&quot;40 Rusk Crossing&quot;,&quot;email&quot;:&quot;igrigoriscu0@blogspot.com&quot;,&quot;loaidocgia&quot;:&quot;X&quot;,&quot;ngaylapthe&quot;:&quot;2016-03-03&quot;,&quot;ngayhethan&quot;:&quot;2016-09-03&quot;,&quot;tongno&quot;:69000},
         ///{&quot;hoten&quot;:&quot;Leonie Kleisle&quot;,&quot;ngaysinh&quot;:&quot;1993-05-02&quot;,&quot;diachi&quot;:&quot;73449 Monica Point&quot;,&quot;email&quot;:&quot;lkleisle1@who.int&quot;,&quot;loaidocgia&quot;:&quot;X&quot;,&quot;ngaylapthe&quot;:&quot;2017-01-11&quot;,&quot;ngayhethan&quot;:&quot;2017-07-11&quot;,&quot;tongno&quot;:71000},
-        ///{&quot;hoten&quot;:&quot;Shayne Fuster&quot;,&quot;ngaysinh&quot;:&quot;1982-05-23&quot;,&quot;diachi&quot;:&quot;503 Heath Pass&quot;,&quot;email&quot;:&quot;sfuster2@example.com&quot;,&quot;loaidoc [rest of string was truncated]&quot;;.
+        ///{&quot;hoten&quot;:&quot;Shayne Fuster&quot;,&quot;ngaysinh&quot;:&quot;1982-05-23&quot;,&quot;diachi&quot;:&quot;503 Heath Pass&quot;,&quot;email&quot;:&quot;sfuster2@example.com&quot;,&quot;loaid [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string docgia {
             get {
@@ -75,7 +75,7 @@ namespace InitDatabase.Properties {
         ///   Looks up a localized string similar to [{&quot;tensach&quot;:&quot;Phalaropus lobatus&quot;,&quot;theloai&quot;:&quot;A&quot;,&quot;tacgia&quot;:&quot;Patrice Labusch&quot;,&quot;namxb&quot;:2015,&quot;nxb&quot;:&quot;nhà xuất bản Reynolds Group&quot;,&quot;ngaynhapsach&quot;:&quot;2015-10-04&quot;,&quot;trigia&quot;:19000},
         ///{&quot;tensach&quot;:&quot;Geochelone elegans&quot;,&quot;theloai&quot;:&quot;A&quot;,&quot;tacgia&quot;:&quot;Corri Caen&quot;,&quot;namxb&quot;:2012,&quot;nxb&quot;:&quot;nhà xuất bản Hauck-Armstrong&quot;,&quot;ngaynhapsach&quot;:&quot;2015-11-20&quot;,&quot;trigia&quot;:47000},
         ///{&quot;tensach&quot;:&quot;Ramphastos tucanus&quot;,&quot;theloai&quot;:&quot;C&quot;,&quot;tacgia&quot;:&quot;Gratiana Ketcher&quot;,&quot;namxb&quot;:2015,&quot;nxb&quot;:&quot;nhà xuất bản Lemke Group&quot;,&quot;ngaynhapsach&quot;:&quot;2010-06-21&quot;,&quot;trigia&quot;:35000},
-        ///{&quot;tensach&quot;:&quot;Cerc [rest of string was truncated]&quot;;.
+        ///{&quot;tensach&quot;:&quot;C [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string sach {
             get {
