@@ -24,7 +24,6 @@ namespace QuanLiThuVien {
 
 		private void button_LapThe_Click(object sender, EventArgs e) {
 			if (CheckInfo()) {
-				MessageBox.Show("lapthe");
 				var docgia = new DataAccess.DataObject.DocGia() {
 					MaTheDG = textBox_MaDocGia.Text,
 					HoTen = textBox_HoTen.Text,

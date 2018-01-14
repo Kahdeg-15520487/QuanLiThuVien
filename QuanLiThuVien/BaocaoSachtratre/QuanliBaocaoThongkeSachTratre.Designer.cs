@@ -69,6 +69,7 @@
             this.columnHeader3,
             this.columnHeader4});
 			this.listView_baocao.FullRowSelect = true;
+			this.listView_baocao.HideSelection = false;
 			this.listView_baocao.Location = new System.Drawing.Point(16, 93);
 			this.listView_baocao.MultiSelect = false;
 			this.listView_baocao.Name = "listView_baocao";
@@ -130,6 +131,7 @@
 			this.Controls.Add(this.label1);
 			this.Name = "QuanliBaocaoThongkeSachTratre";
 			this.Text = "QuanliBaocaoThongkeSachTratre";
+			this.Load += new System.EventHandler(this.QuanliBaocaoThongkeSachTratre_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

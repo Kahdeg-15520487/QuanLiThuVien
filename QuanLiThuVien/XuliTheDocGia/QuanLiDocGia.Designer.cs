@@ -37,7 +37,9 @@
 			this.button_timdocgia = new System.Windows.Forms.Button();
 			this.textBox_MaDocGia = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
-			this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+			this.contextMenuStrip_listview = new System.Windows.Forms.ContextMenuStrip(this.components);
+			this.toolStripMenuItem_lapphieuthutienphat = new System.Windows.Forms.ToolStripMenuItem();
+			this.contextMenuStrip_listview.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// button_lapthedocgia
@@ -60,6 +62,7 @@
             this.columnHeader5,
             this.columnHeader6});
 			this.listView_docgia.FullRowSelect = true;
+			this.listView_docgia.HideSelection = false;
 			this.listView_docgia.Location = new System.Drawing.Point(12, 88);
 			this.listView_docgia.Name = "listView_docgia";
 			this.listView_docgia.Size = new System.Drawing.Size(534, 206);
@@ -143,12 +146,21 @@
 			this.label1.TabIndex = 11;
 			this.label1.Text = "Mã độc giả";
 			// 
-			// contextMenuStrip1
+			// contextMenuStrip_listview
 			// 
-			this.contextMenuStrip1.Name = "contextMenuStrip1";
-			this.contextMenuStrip1.Size = new System.Drawing.Size(153, 26);
+			this.contextMenuStrip_listview.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem_lapphieuthutienphat});
+			this.contextMenuStrip_listview.Name = "contextMenuStrip1";
+			this.contextMenuStrip_listview.Size = new System.Drawing.Size(198, 48);
 			// 
-			// ThaoTacDocGia
+			// toolStripMenuItem_lapphieuthutienphat
+			// 
+			this.toolStripMenuItem_lapphieuthutienphat.Name = "toolStripMenuItem_lapphieuthutienphat";
+			this.toolStripMenuItem_lapphieuthutienphat.Size = new System.Drawing.Size(197, 22);
+			this.toolStripMenuItem_lapphieuthutienphat.Text = "Lập phiếu thu tiền phạt";
+			this.toolStripMenuItem_lapphieuthutienphat.Click += new System.EventHandler(this.toolStripMenuItem_lapphieuthutienphat_Click);
+			// 
+			// QuanLiDocGia
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -161,9 +173,10 @@
 			this.Controls.Add(this.listView_docgia);
 			this.Controls.Add(this.button_lapthedocgia);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-			this.Name = "ThaoTacDocGia";
+			this.Name = "QuanLiDocGia";
 			this.Text = "ThaoTacDocGia";
 			this.Load += new System.EventHandler(this.ThaoTacDocGia_Load);
+			this.contextMenuStrip_listview.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -184,6 +197,7 @@
 		private System.Windows.Forms.ColumnHeader columnHeader6;
 		private System.Windows.Forms.TextBox textBox_MaDocGia;
 		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+		private System.Windows.Forms.ContextMenuStrip contextMenuStrip_listview;
+		private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_lapphieuthutienphat;
 	}
 }

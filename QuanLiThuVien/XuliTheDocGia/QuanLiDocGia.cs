@@ -19,7 +19,7 @@ namespace QuanLiThuVien.XuliTheDocGia {
 		private void button_capnhatdocgia_Click(object sender, EventArgs e) {
 			var slvis = listView_docgia.SelectedItems;
 			foreach (ListViewItem slvi in slvis) {
-				new CapNhatTheDocGia(slvi.SubItems[1].Text).Show();
+				new CapNhatTheDocGia(slvi.SubItems[1].Text).ShowDialog();
 			}
 			PopulateListView(GetAll());
 			//get selected item
@@ -94,8 +94,16 @@ namespace QuanLiThuVien.XuliTheDocGia {
 		private void listView_docgia_MouseClick(object sender, MouseEventArgs e) {
 			if (e.Button == MouseButtons.Right) {
 				if (listView_docgia.FocusedItem.Bounds.Contains(e.Location) == true) {
-					contextMenuStrip1.Show(Cursor.Position);
+					contextMenuStrip_listview.Show(Cursor.Position);
 				}
+			}
+		}
+
+		private void toolStripMenuItem_lapphieuthutienphat_Click(object sender, EventArgs e) {
+			var madocgia = listView_docgia.SelectedItems[0].SubItems[1].Text;
+			var result = new LapPhieuThuTienPhat(madocgia).ShowDialog();
+			if (result == DialogResult.Yes) {
+				PopulateListView(GetAll());
 			}
 		}
 	}

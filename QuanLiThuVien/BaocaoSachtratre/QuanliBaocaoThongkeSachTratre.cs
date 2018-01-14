@@ -15,6 +15,10 @@ namespace QuanLiThuVien.BaocaoSachtratre {
 			InitializeComponent();
 		}
 
+		private void QuanliBaocaoThongkeSachTratre_Load(object sender, EventArgs e) {
+			PopulateListView(GetAll());
+		}
+
 		private void button_lapbaocao_Click(object sender, EventArgs e) {
 			new LapBaoCaoSachTraTre().ShowDialog();
 			PopulateListView(GetAll());
@@ -22,7 +26,7 @@ namespace QuanLiThuVien.BaocaoSachtratre {
 
 		private void button_xembaocao_Click(object sender, EventArgs e) {
 			var sbc = listView_baocao.SelectedItems[0];
-			new XemBaoCaoSachTraTre(sbc.SubItems[1].Text);
+			new XemBaoCaoSachTraTre(sbc.SubItems[1].Text).ShowDialog();
 		}
 
 		private void button_timbaocao_Click(object sender, EventArgs e) {

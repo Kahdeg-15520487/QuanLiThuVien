@@ -60,7 +60,6 @@ namespace QuanLiThuVien.XuliTheDocGia {
 
 		private void button_CapNhatThe_Click(object sender, EventArgs e) {
 			if (CheckInfo()) {
-				MessageBox.Show("capnhatthe");
 				docgia.LoaiDG.TenLoaiDocGia = textBox_TenLoaiDocGia.Text;
 				docgia.HoTen = textBox_HoTen.Text;
 				docgia.NgaySinh = dateTimePicker_NgaySinh.Value;
