@@ -35,7 +35,47 @@ namespace InitDatabase {
 			databasepath = Path.Combine(databasepath, "thuvien.db");
 			Console.WriteLine(databasepath);
 			Database.InitDatabase(databasepath, "secret");
+
 			Database.DropDatabase("secret");
+
+			//insert quy định
+			var qdcount = 0;
+			Database.AddQuyDinh(new QuyDinh() {
+				MaQuyDinh = qdcount++.ToString(),
+				TenQuiDinh = "Tuoi>=18",
+				NoiDungQuiDinh = "tuoi >= 18"
+			});
+
+			Database.AddQuyDinh(new QuyDinh() {
+				MaQuyDinh = qdcount++.ToString(),
+				TenQuiDinh = "Tuoi<=55",
+				NoiDungQuiDinh = "tuoi <= 55"
+			});
+
+			Database.AddQuyDinh(new QuyDinh() {
+				MaQuyDinh = qdcount++.ToString(),
+				TenQuiDinh = "ThoihanThe = 6m",
+				NoiDungQuiDinh = "thoihanthe = 6m"
+			});
+
+			Database.AddQuyDinh(new QuyDinh() {
+				MaQuyDinh = qdcount++.ToString(),
+				TenQuiDinh = "NamXuatban <= 8",
+				NoiDungQuiDinh = "namxb <= 8"
+			});
+
+			Database.AddQuyDinh(new QuyDinh() {
+				MaQuyDinh = qdcount++.ToString(),
+				TenQuiDinh = "SoluongSachDuocMuon <= 5",
+				NoiDungQuiDinh = "slsachmuon <= 5"
+			});
+
+			Database.AddQuyDinh(new QuyDinh() {
+				MaQuyDinh = qdcount++.ToString(),
+				TenQuiDinh = "SoNgaymuon <= 4",
+				NoiDungQuiDinh = "songaymuon <= 4"
+			});
+
 
 			var datadocgia = JsonConvert.DeserializeObject<List<docgia>>(Properties.Resources.docgia);
 			var datasach = JsonConvert.DeserializeObject<List<sach>>(Properties.Resources.sach);
