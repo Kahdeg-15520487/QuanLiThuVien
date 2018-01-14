@@ -56,8 +56,10 @@ namespace QuanLiThuVien {
 			}
 
 			var tuoi = DateTime.Today.Year - dateTimePicker_NgaySinh.Value.Year;
-			int.TryParse(Database.GetQuyDinh("TuoiToithieu").NoiDungQuiDinh, out int tuoitoithieu);
-			int.TryParse(Database.GetQuyDinh("TuoiToida").NoiDungQuiDinh, out int tuoitoida);
+			int tuoitoithieu;
+			int.TryParse(Database.GetQuyDinh("TuoiToithieu").NoiDungQuiDinh, out tuoitoithieu);
+			int tuoitoida;
+			int.TryParse(Database.GetQuyDinh("TuoiToida").NoiDungQuiDinh, out tuoitoida);
 			if (tuoi < tuoitoithieu || tuoi > tuoitoida) {
 				MessageBox.Show(string.Format("Tuổi đọc giả phải từ {0} tới {1}",tuoitoithieu,tuoitoida));
 				goto f;
@@ -67,8 +69,8 @@ namespace QuanLiThuVien {
 				MessageBox.Show("Địa chỉ không thể để trống");
 				goto f;
 			}
-
-			if (!int.TryParse(textBox_TongNo.Text, out int tongno)) {
+			int tongno;
+			if (!int.TryParse(textBox_TongNo.Text, out tongno)) {
 				MessageBox.Show("Tổng nợ không hợp lệ");
 				goto f;
 			}

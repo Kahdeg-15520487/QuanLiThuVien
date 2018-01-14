@@ -93,8 +93,8 @@ namespace QuanLiThuVien.XuliTheDocGia {
 				MessageBox.Show("Địa chỉ không thể để trống");
 				goto f;
 			}
-
-			if (!int.TryParse(textBox_tongno.Text, out int tongno)) {
+			int tongno;
+			if (!int.TryParse(textBox_tongno.Text, out tongno)) {
 				MessageBox.Show("Tổng nợ không hợp lệ");
 				goto f;
 			}

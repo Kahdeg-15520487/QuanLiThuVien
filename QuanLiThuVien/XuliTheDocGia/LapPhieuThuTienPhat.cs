@@ -47,7 +47,8 @@ namespace QuanLiThuVien.XuliTheDocGia {
 		}
 
 		private void textBox_sotienthu_TextChanged(object sender, EventArgs e) {
-			if (int.TryParse(textBox_sotienthu.Text, out int sotienthu)) {
+			var sotienthu = 0;
+			if (int.TryParse(textBox_sotienthu.Text, out sotienthu)) {
 				if (sotienthu < 0) {
 					textBox_sotienthu.Undo();
 					return;

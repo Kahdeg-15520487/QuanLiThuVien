@@ -75,7 +75,8 @@ namespace QuanLiThuVien {
 
 		private void CheckTextboxNumeric(object sender, EventArgs e) {
 			var textbox = ((TextBox)sender);
-			if (!int.TryParse(textbox.Text, out int t)) {
+			int t = 0;
+			if (!int.TryParse(textbox.Text, out t)) {
 				textbox.Undo();
 			}
 		}
