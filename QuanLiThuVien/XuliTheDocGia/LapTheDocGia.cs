@@ -25,7 +25,7 @@ namespace QuanLiThuVien {
 		private void button_LapThe_Click(object sender, EventArgs e) {
 			if (CheckInfo()) {
 				MessageBox.Show("lapthe");
-				Database.AddDocGia(new DataAccess.DataObject.DocGia() {
+				var docgia = new DataAccess.DataObject.DocGia() {
 					MaTheDG = textBox_MaDocGia.Text,
 					HoTen = textBox_HoTen.Text,
 					LoaiDG = new DataAccess.DataObject.LoaiDocGia() { TenLoaiDocGia = textBox_TenLoaiDocGia.Text },
@@ -35,7 +35,13 @@ namespace QuanLiThuVien {
 					NgayLapThe = dateTimePicker_NgayLapThe.Value,
 					NgayHetHan = dateTimePicker_NgayHetHan.Value,
 					TongNo = int.Parse(textBox_TongNo.Text)
-				});
+				};
+				Database.AddDocGia(docgia);
+
+				var isPrint = MessageBox.Show("Bạn có muốn in thẻ đọc giả không ?", "", MessageBoxButtons.YesNo);
+				if (isPrint == DialogResult.Yes) {
+					Printer.Print(docgia.ToString());
+				}
 			}
 		}
 
