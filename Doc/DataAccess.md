@@ -16,6 +16,7 @@ public static class DataAccess.Database
 | `DocGia` | GetDocGia(`String` mathedocgia) | truy xuất thông tin đọc giả từ database | 
 | `DocGia` | GetDocGia(`Expression<Func<DocGia, Boolean>>` dieukienloc) | truy xuất thông tin đọc giả từ database | 
 | `IEnumerable<DocGia>` | GetDocGias(`Expression<Func<DocGia, Boolean>>` dieukienloc) | truy xuất thông tin đọc giả từ database | 
+| `IEnumerable<DocGia>` | GetAllDocGia() | truy xuất tất cả thông tin đọc giả từ database | 
 | `Boolean` | SetDocGia(`DocGia` docGia) | cập nhật thông tin đọc giả vào database | 
 | `Boolean` | RemoveDocGia(`String` mathedocgia) | xóa thông tin đọc giả khỏi database | 
 
@@ -33,6 +34,7 @@ public static class DataAccess.Database
 | `PhieuThuTien` | GetPhieuThuTien(`String` maPhieuThuTien) | truy xuất thông tin phiếu thu tiền từ database | 
 | `PhieuThuTien` | GetPhieuThuTien(`Expression<Func<PhieuThuTien, Boolean>>` dieukienloc) | truy xuất thông tin phiếu thu tiền từ database | 
 | `IEnumerable<PhieuThuTien>` | GetPhieuThuTiens(`Expression<Func<PhieuThuTien, Boolean>>` dieukienloc) | truy xuất thông tin phiếu thu tiền từ database | 
+| `IEnumerable<PhieuThuTien>` | GetAllPhieuThuTien() | truy xuất tất cả thông tin phiếu thu tiền từ database | 
 | `Boolean` | SetPhieuThuTien(`PhieuThuTien` PhieuThuTien) | cập nhật thông tin phiếu thu tiền vào database | 
 | `Boolean` | RemovePhieuThuTien(`String` maPhieuThuTien) | xóa thông tin phiếu thu tiền khỏi database | 
 
@@ -42,6 +44,7 @@ public static class DataAccess.Database
 | `PhieuTraSach` | GetPhieuTraSach(`String` maPhieuTraSach) | truy xuất thông tin phiếu trả sách từ database | 
 | `PhieuTraSach` | GetPhieuTraSach(`Expression<Func<PhieuTraSach, Boolean>>` dieukienloc) | truy xuất thông tin phiếu trả sách từ database | 
 | `IEnumerable<PhieuTraSach>` | GetPhieuTraSachs(`Expression<Func<PhieuTraSach, Boolean>>` dieukienloc) | truy xuất thông tin phiếu trả sách từ database | 
+| `IEnumerable<PhieuTraSach>` | GetAllPhieuTraSach() | truy xuất tất cả thông tin phiếu trả sách từ database | 
 | `Boolean` | SetPhieuTraSach(`PhieuTraSach` PhieuTraSach) | cập nhật thông tin phiếu trả sách vào database | 
 | `Boolean` | RemovePhieuTraSach(`String` maPhieuTraSach) | xóa thông tin phiếu trả sách khỏi database | 
 
@@ -59,6 +62,7 @@ public static class DataAccess.Database
 | `Sach` | GetSach(`String` maSach) | truy xuất thông tin sách từ database | 
 | `Sach` | GetSach(`Expression<Func<Sach, Boolean>>` dieukienloc) | truy xuất thông tin sách từ database | 
 | `IEnumerable<Sach>` | GetSachs(`Expression<Func<Sach, Boolean>>` dieukienloc) | truy xuất thông tin sách từ database | 
+| `IEnumerable<Sach>` | GetAllSach() | truy xuất tất cả thông tin sách từ database | 
 | `Boolean` | SetSach(`Sach` Sach) | cập nhật thông tin sách vào database | 
 | `Boolean` | RemoveSach(`String` matheSach) | xóa thông tin sách khỏi database | 
 
@@ -68,6 +72,7 @@ public static class DataAccess.Database
 | `SachTra` | GetSachTra(`String` maPhieuTraSach, `String` maSach) | truy xuất thông tin sách trả từ database | 
 | `SachTra` | GetSachTra(`Expression<Func<SachTra, Boolean>>` dieukienloc) | truy xuất thông tin sách trả từ database | 
 | `IEnumerable<SachTra>` | GetSachTras(`Expression<Func<SachTra, Boolean>>` dieukienloc) | truy xuất thông tin sách trả từ database | 
+| `IEnumerable<SachTra>` | GetAllSachTra() | truy xuất tất cả thông tin sách trả từ database | 
 | `Boolean` | SetSachTra(`SachTra` SachTra) | cập nhật thông tin sách trả vào database | 
 | `Boolean` | RemoveSachTra(`String` maPhieuTraSach, `String` maSach) | xóa thông tin sách trả khỏi database | 
 
@@ -93,5 +98,6 @@ public static class DataAccess.Database
 | `ThongTinMuonSach` | GetThongTinMuonSach(`String` maTheDocGia, `String` maSach) | truy xuất thông tin mượn sách từ database | 
 | `ThongTinMuonSach` | GetThongTinMuonSach(`Expression<Func<ThongTinMuonSach, Boolean>>` dieukienloc) | truy xuất thông tin mượn sách từ database | 
 | `IEnumerable<ThongTinMuonSach>` | GetThongTinMuonSachs(`Expression<Func<ThongTinMuonSach, Boolean>>` dieukienloc) | truy xuất thông tin mượn sách từ database | 
+| `IEnumerable<ThongTinMuonSach>` | GetAllThongTinMuonSach() | truy xuất tất cả thông tin mượn sách từ database | 
 | `Boolean` | SetThongTinMuonSach(`ThongTinMuonSach` ThongTinMuonSach) | cập nhật thông tin mượn sách vào database | 
 | `Boolean` | RemoveThongTinMuonSach(`String` maTheDocGia, `String` maSach) | xóa thông tin mượn sách khỏi database | 

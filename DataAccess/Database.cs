@@ -427,6 +427,20 @@ namespace DataAccess {
 		}
 
 		/// <summary>
+		/// truy xuất tất cả thông tin sách từ database
+		/// </summary>
+		public static IEnumerable<Sach> GetAllSach() {
+			IEnumerable<Sach> result;
+			using (var db = new LiteDatabase(DatabasePath)) {
+				result = db.GetCollection<Sach>("Sach")
+						   .Include(x => x.TacGia)
+						   .Include(x => x.TheLoai)
+						   .FindAll();
+			}
+			return result;
+		}
+
+		/// <summary>
 		/// cập nhật thông tin sách vào database
 		/// </summary>
 		public static bool SetSach(Sach Sach) {
@@ -499,6 +513,19 @@ namespace DataAccess {
 		}
 
 		/// <summary>
+		/// truy xuất tất cả thông tin phiếu thu tiền từ database
+		/// </summary>
+		public static IEnumerable<PhieuThuTien> GetAllPhieuThuTien() {
+			IEnumerable<PhieuThuTien> result;
+			using (var db = new LiteDatabase(DatabasePath)) {
+				result = db.GetCollection<PhieuThuTien>("PhieuThuTien")
+						   .Include(x => x.DocGia)
+						   .FindAll();
+			}
+			return result;
+		}
+
+		/// <summary>
 		/// cập nhật thông tin phiếu thu tiền vào database
 		/// </summary>
 		public static bool SetPhieuThuTien(PhieuThuTien PhieuThuTien) {
@@ -566,6 +593,19 @@ namespace DataAccess {
 				result = db.GetCollection<PhieuTraSach>("PhieuTraSach")
 						   .Include(x => x.DocGia)
 						   .Find(dieukienloc);
+			}
+			return result;
+		}
+
+		/// <summary>
+		/// truy xuất tất cả thông tin phiếu trả sách từ database
+		/// </summary>
+		public static IEnumerable<PhieuTraSach> GetAllPhieuTraSach() {
+			IEnumerable<PhieuTraSach> result;
+			using (var db = new LiteDatabase(DatabasePath)) {
+				result = db.GetCollection<PhieuTraSach>("PhieuTraSach")
+						   .Include(x => x.DocGia)
+						   .FindAll();
 			}
 			return result;
 		}
@@ -646,6 +686,20 @@ namespace DataAccess {
 		}
 
 		/// <summary>
+		/// truy xuất tất cả thông tin sách trả từ database
+		/// </summary>
+		public static IEnumerable<SachTra> GetAllSachTra() {
+			IEnumerable<SachTra> result;
+			using (var db = new LiteDatabase(DatabasePath)) {
+				result = db.GetCollection<SachTra>("SachTra")
+						   .Include(x => x.PhieuTraSach)
+						   .Include(x => x.Sach)
+						   .FindAll();
+			}
+			return result;
+		}
+
+		/// <summary>
 		/// cập nhật thông tin sách trả vào database
 		/// </summary>
 		public static bool SetSachTra(SachTra SachTra) {
@@ -716,6 +770,20 @@ namespace DataAccess {
 						   .Include(x => x.DocGia)
 						   .Include(x => x.Sach)
 						   .Find(dieukienloc);
+			}
+			return result;
+		}
+
+		/// <summary>
+		/// truy xuất tất cả thông tin mượn sách từ database
+		/// </summary>
+		public static IEnumerable<ThongTinMuonSach> GetAllThongTinMuonSach() {
+			IEnumerable<ThongTinMuonSach> result;
+			using (var db = new LiteDatabase(DatabasePath)) {
+				result = db.GetCollection<ThongTinMuonSach>("ThongTinMuonSach")
+						   .Include(x => x.DocGia)
+						   .Include(x => x.Sach)
+						   .FindAll();
 			}
 			return result;
 		}
