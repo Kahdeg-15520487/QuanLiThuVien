@@ -34,7 +34,7 @@
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.button_Huy = new System.Windows.Forms.Button();
-			this.button_LapThe = new System.Windows.Forms.Button();
+			this.button_CapNhatThe = new System.Windows.Forms.Button();
 			this.textBox_Email = new System.Windows.Forms.TextBox();
 			this.dateTimePicker_NgayLapThe = new System.Windows.Forms.DateTimePicker();
 			this.textBox_DiaChi = new System.Windows.Forms.TextBox();
@@ -45,6 +45,8 @@
 			this.label8 = new System.Windows.Forms.Label();
 			this.label9 = new System.Windows.Forms.Label();
 			this.dateTimePicker_NgayHetHan = new System.Windows.Forms.DateTimePicker();
+			this.textBox_tongno = new System.Windows.Forms.TextBox();
+			this.label10 = new System.Windows.Forms.Label();
 			this.groupBox_LoaiDocGia.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -69,6 +71,7 @@
 			this.radioButton_Y.TabStop = true;
 			this.radioButton_Y.Text = "Y";
 			this.radioButton_Y.UseVisualStyleBackColor = true;
+			this.radioButton_Y.CheckedChanged += new System.EventHandler(this.radioButton_Y_CheckedChanged);
 			// 
 			// radioButton_X
 			// 
@@ -81,6 +84,7 @@
 			this.radioButton_X.TabStop = true;
 			this.radioButton_X.Text = "X";
 			this.radioButton_X.UseVisualStyleBackColor = true;
+			this.radioButton_X.CheckedChanged += new System.EventHandler(this.radioButton_X_CheckedChanged);
 			// 
 			// textBox_HoTen
 			// 
@@ -145,7 +149,7 @@
 			// 
 			// button_Huy
 			// 
-			this.button_Huy.Location = new System.Drawing.Point(151, 240);
+			this.button_Huy.Location = new System.Drawing.Point(231, 264);
 			this.button_Huy.Name = "button_Huy";
 			this.button_Huy.Size = new System.Drawing.Size(75, 23);
 			this.button_Huy.TabIndex = 29;
@@ -153,15 +157,15 @@
 			this.button_Huy.UseVisualStyleBackColor = true;
 			this.button_Huy.Click += new System.EventHandler(this.button_Huy_Click);
 			// 
-			// button_LapThe
+			// button_CapNhatThe
 			// 
-			this.button_LapThe.Location = new System.Drawing.Point(29, 240);
-			this.button_LapThe.Name = "button_LapThe";
-			this.button_LapThe.Size = new System.Drawing.Size(75, 23);
-			this.button_LapThe.TabIndex = 28;
-			this.button_LapThe.Text = "Cập nhật thẻ";
-			this.button_LapThe.UseVisualStyleBackColor = true;
-			this.button_LapThe.Click += new System.EventHandler(this.button_LapThe_Click);
+			this.button_CapNhatThe.Location = new System.Drawing.Point(109, 264);
+			this.button_CapNhatThe.Name = "button_CapNhatThe";
+			this.button_CapNhatThe.Size = new System.Drawing.Size(75, 23);
+			this.button_CapNhatThe.TabIndex = 28;
+			this.button_CapNhatThe.Text = "Cập nhật thẻ";
+			this.button_CapNhatThe.UseVisualStyleBackColor = true;
+			this.button_CapNhatThe.Click += new System.EventHandler(this.button_CapNhatThe_Click);
 			// 
 			// textBox_Email
 			// 
@@ -176,6 +180,7 @@
 			this.dateTimePicker_NgayLapThe.Name = "dateTimePicker_NgayLapThe";
 			this.dateTimePicker_NgayLapThe.Size = new System.Drawing.Size(200, 20);
 			this.dateTimePicker_NgayLapThe.TabIndex = 26;
+			this.dateTimePicker_NgayLapThe.ValueChanged += new System.EventHandler(this.dateTimePicker_NgayLapThe_ValueChanged);
 			// 
 			// textBox_DiaChi
 			// 
@@ -212,9 +217,9 @@
 			// 
 			this.textBox_MaDocGia.Location = new System.Drawing.Point(84, 33);
 			this.textBox_MaDocGia.Name = "textBox_MaDocGia";
+			this.textBox_MaDocGia.ReadOnly = true;
 			this.textBox_MaDocGia.Size = new System.Drawing.Size(100, 20);
 			this.textBox_MaDocGia.TabIndex = 33;
-			this.textBox_MaDocGia.TextChanged += new System.EventHandler(this.textBox_MaDocGia_TextChanged);
 			// 
 			// label8
 			// 
@@ -242,11 +247,29 @@
 			this.dateTimePicker_NgayHetHan.Size = new System.Drawing.Size(200, 20);
 			this.dateTimePicker_NgayHetHan.TabIndex = 36;
 			// 
+			// textBox_tongno
+			// 
+			this.textBox_tongno.Location = new System.Drawing.Point(77, 237);
+			this.textBox_tongno.Name = "textBox_tongno";
+			this.textBox_tongno.Size = new System.Drawing.Size(119, 20);
+			this.textBox_tongno.TabIndex = 38;
+			// 
+			// label10
+			// 
+			this.label10.AutoSize = true;
+			this.label10.Location = new System.Drawing.Point(17, 240);
+			this.label10.Name = "label10";
+			this.label10.Size = new System.Drawing.Size(47, 13);
+			this.label10.TabIndex = 37;
+			this.label10.Text = "Tổng nợ";
+			// 
 			// CapNhatTheDocGia
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(403, 275);
+			this.ClientSize = new System.Drawing.Size(403, 299);
+			this.Controls.Add(this.textBox_tongno);
+			this.Controls.Add(this.label10);
 			this.Controls.Add(this.label9);
 			this.Controls.Add(this.dateTimePicker_NgayHetHan);
 			this.Controls.Add(this.label8);
@@ -262,13 +285,14 @@
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.button_Huy);
-			this.Controls.Add(this.button_LapThe);
+			this.Controls.Add(this.button_CapNhatThe);
 			this.Controls.Add(this.textBox_Email);
 			this.Controls.Add(this.dateTimePicker_NgayLapThe);
 			this.Controls.Add(this.textBox_DiaChi);
 			this.Controls.Add(this.dateTimePicker_NgaySinh);
 			this.Name = "CapNhatTheDocGia";
 			this.Text = "Cập nhật thẻ đọc giả";
+			this.Load += new System.EventHandler(this.CapNhatTheDocGia_Load);
 			this.groupBox_LoaiDocGia.ResumeLayout(false);
 			this.groupBox_LoaiDocGia.PerformLayout();
 			this.ResumeLayout(false);
@@ -289,7 +313,7 @@
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Button button_Huy;
-		private System.Windows.Forms.Button button_LapThe;
+		private System.Windows.Forms.Button button_CapNhatThe;
 		private System.Windows.Forms.TextBox textBox_Email;
 		private System.Windows.Forms.DateTimePicker dateTimePicker_NgayLapThe;
 		private System.Windows.Forms.TextBox textBox_DiaChi;
@@ -300,5 +324,7 @@
 		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.Label label9;
 		private System.Windows.Forms.DateTimePicker dateTimePicker_NgayHetHan;
+		private System.Windows.Forms.TextBox textBox_tongno;
+		private System.Windows.Forms.Label label10;
 	}
 }

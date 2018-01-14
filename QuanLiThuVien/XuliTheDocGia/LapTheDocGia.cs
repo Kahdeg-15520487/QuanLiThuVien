@@ -18,12 +18,24 @@ namespace QuanLiThuVien {
 
 		private void LapTheDocGia_Load(object sender, EventArgs e) {
 			textBox_MaDocGia.Text = RandomIdGenerator.GetBase36(10);
+			dateTimePicker_NgayLapThe.Value = DateTime.Today;
 			//groupBox_LoaiDocGia.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
 		}
 
 		private void button_LapThe_Click(object sender, EventArgs e) {
 			if (CheckInfo()) {
 				MessageBox.Show("lapthe");
+				Database.AddDocGia(new DataAccess.DataObject.DocGia() {
+					MaTheDG = textBox_MaDocGia.Text,
+					HoTen = textBox_HoTen.Text,
+					LoaiDG = new DataAccess.DataObject.LoaiDocGia() { TenLoaiDocGia = textBox_TenLoaiDocGia.Text },
+					NgaySinh = dateTimePicker_NgaySinh.Value,
+					DiaChi = textBox_DiaChi.Text,
+					Email = textBox_Email.Text,
+					NgayLapThe = dateTimePicker_NgayLapThe.Value,
+					NgayHetHan = dateTimePicker_NgayHetHan.Value,
+					TongNo = int.Parse(textBox_TongNo.Text)
+				});
 			}
 		}
 
@@ -46,6 +58,11 @@ namespace QuanLiThuVien {
 
 			if (string.IsNullOrWhiteSpace(textBox_DiaChi.Text)) {
 				MessageBox.Show("Địa chỉ không thể để trống");
+				goto f;
+			}
+
+			if (!int.TryParse(textBox_TongNo.Text, out int tongno)) {
+				MessageBox.Show("Tổng nợ không hợp lệ");
 				goto f;
 			}
 

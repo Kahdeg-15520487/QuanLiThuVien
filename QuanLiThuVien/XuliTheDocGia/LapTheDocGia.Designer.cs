@@ -45,6 +45,8 @@
 			this.label8 = new System.Windows.Forms.Label();
 			this.label9 = new System.Windows.Forms.Label();
 			this.dateTimePicker_NgayHetHan = new System.Windows.Forms.DateTimePicker();
+			this.textBox_TongNo = new System.Windows.Forms.TextBox();
+			this.label10 = new System.Windows.Forms.Label();
 			this.groupBox_LoaiDocGia.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -147,7 +149,7 @@
 			// 
 			// button_Huy
 			// 
-			this.button_Huy.Location = new System.Drawing.Point(151, 240);
+			this.button_Huy.Location = new System.Drawing.Point(231, 265);
 			this.button_Huy.Name = "button_Huy";
 			this.button_Huy.Size = new System.Drawing.Size(75, 23);
 			this.button_Huy.TabIndex = 29;
@@ -157,7 +159,7 @@
 			// 
 			// button_LapThe
 			// 
-			this.button_LapThe.Location = new System.Drawing.Point(29, 240);
+			this.button_LapThe.Location = new System.Drawing.Point(109, 265);
 			this.button_LapThe.Name = "button_LapThe";
 			this.button_LapThe.Size = new System.Drawing.Size(75, 23);
 			this.button_LapThe.TabIndex = 28;
@@ -247,11 +249,29 @@
 			this.dateTimePicker_NgayHetHan.Size = new System.Drawing.Size(200, 20);
 			this.dateTimePicker_NgayHetHan.TabIndex = 36;
 			// 
+			// textBox_TongNo
+			// 
+			this.textBox_TongNo.Location = new System.Drawing.Point(84, 237);
+			this.textBox_TongNo.Name = "textBox_TongNo";
+			this.textBox_TongNo.Size = new System.Drawing.Size(119, 20);
+			this.textBox_TongNo.TabIndex = 40;
+			// 
+			// label10
+			// 
+			this.label10.AutoSize = true;
+			this.label10.Location = new System.Drawing.Point(24, 240);
+			this.label10.Name = "label10";
+			this.label10.Size = new System.Drawing.Size(47, 13);
+			this.label10.TabIndex = 39;
+			this.label10.Text = "Tổng nợ";
+			// 
 			// LapTheDocGia
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(403, 275);
+			this.ClientSize = new System.Drawing.Size(403, 300);
+			this.Controls.Add(this.textBox_TongNo);
+			this.Controls.Add(this.label10);
 			this.Controls.Add(this.label9);
 			this.Controls.Add(this.dateTimePicker_NgayHetHan);
 			this.Controls.Add(this.label8);
@@ -306,5 +326,7 @@
 		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.Label label9;
 		private System.Windows.Forms.DateTimePicker dateTimePicker_NgayHetHan;
+		private System.Windows.Forms.TextBox textBox_TongNo;
+		private System.Windows.Forms.Label label10;
 	}
 }
