@@ -39,6 +39,7 @@ namespace InitDatabase {
 			Database.DropDatabase("secret");
 
 			//insert quy định
+			Console.WriteLine("inserting quydinh");
 			var qdcount = 0;
 			Database.AddQuyDinh(new QuyDinh() {
 				MaQuyDinh = qdcount++.ToString(),
@@ -75,7 +76,6 @@ namespace InitDatabase {
 				TenQuiDinh = "SoNgaymuon <= 4",
 				NoiDungQuiDinh = "songaymuon <= 4"
 			});
-
 
 			var datadocgia = JsonConvert.DeserializeObject<List<docgia>>(Properties.Resources.docgia);
 			var datasach = JsonConvert.DeserializeObject<List<sach>>(Properties.Resources.sach);
