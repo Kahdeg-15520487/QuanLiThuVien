@@ -5,8 +5,8 @@ using System.Text;
 using System.Windows.Forms;
 
 namespace QuanLiThuVien.XuliTheDocGia {
-	public partial class ThaoTacDocGia : Form {
-		public ThaoTacDocGia() {
+	public partial class QuanLiDocGia : Form {
+		public QuanLiDocGia() {
 			InitializeComponent();
 		}
 

@@ -1,5 +1,5 @@
 ﻿namespace QuanLiThuVien.XuliTheDocGia {
-	partial class ThaoTacDocGia {
+	partial class QuanLiDocGia {
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>

@@ -45,11 +45,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaocaoSachtratre\BaoCaoSachTraTre.cs">
+    <Compile Include="BaocaoSachtratre\LapBaoCaoSachTraTre.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BaocaoSachtratre\BaoCaoSachTraTre.Designer.cs">
-      <DependentUpon>BaoCaoSachTraTre.cs</DependentUpon>
+    <Compile Include="BaocaoSachtratre\LapBaoCaoSachTraTre.Designer.cs">
+      <DependentUpon>LapBaoCaoSachTraTre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaocaoSachtratre\QuanliBaocaoThongkeSachTratre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaocaoSachtratre\QuanliBaocaoThongkeSachTratre.Designer.cs">
+      <DependentUpon>QuanliBaocaoThongkeSachTratre.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -84,8 +90,11 @@
     <Compile Include="XuliTheDocGia\ThaoTacDocGia.Designer.cs">
       <DependentUpon>ThaoTacDocGia.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="BaocaoSachtratre\BaoCaoSachTraTre.resx">
-      <DependentUpon>BaoCaoSachTraTre.cs</DependentUpon>
+    <EmbeddedResource Include="BaocaoSachtratre\LapBaoCaoSachTraTre.resx">
+      <DependentUpon>LapBaoCaoSachTraTre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaocaoSachtratre\QuanliBaocaoThongkeSachTratre.resx">
+      <DependentUpon>QuanliBaocaoThongkeSachTratre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

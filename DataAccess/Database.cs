@@ -30,8 +30,8 @@ namespace DataAccess {
 			mapper.Entity<LoaiDocGia>()
 				  .Id(x => x.TenLoaiDocGia);
 
-			mapper.Entity<PhieuThuTien>()
-				  .Id(x => x.MaPhieuThuTien)
+			mapper.Entity<PhieuThuTienPhat>()
+				  .Id(x => x.MaPhieuThuTienPhat)
 				  .DbRef(x => x.DocGia, "DocGia");
 
 			mapper.Entity<PhieuTraSach>()
@@ -59,6 +59,9 @@ namespace DataAccess {
 			mapper.Entity<ThongTinMuonSach>()
 				  .DbRef(x => x.Sach, "Sach")
 				  .DbRef(x => x.DocGia, "DocGia");
+
+			mapper.Entity<BaocaoThongkeSachTraTre>()
+				  .Id(x => x.MaBaoCao);
 		}
 		#endregion
 
@@ -483,25 +486,25 @@ namespace DataAccess {
 
 		#region PhieuThuTien
 		/// <summary>
-		/// truy xuất thông tin phiếu thu tiền từ database
+		/// truy xuất thông tin phiếu thu tiền phạttừ database
 		/// </summary>
-		public static PhieuThuTien GetPhieuThuTien(string maPhieuThuTien) {
-			PhieuThuTien result;
+		public static PhieuThuTienPhat GetPhieuThuTienPhat(string maPhieuThuTienPhat) {
+			PhieuThuTienPhat result;
 			using (var db = new LiteDatabase(DatabaseConnectionString)) {
-				result = db.GetCollection<PhieuThuTien>("PhieuThuTien")
+				result = db.GetCollection<PhieuThuTienPhat>("PhieuThuTienPhat")
 						   .Include(x => x.DocGia)
-						   .FindOne(x => x.MaPhieuThuTien == maPhieuThuTien);
+						   .FindOne(x => x.MaPhieuThuTienPhat == maPhieuThuTienPhat);
 			}
 			return result;
 		}
 
 		/// <summary>
-		/// truy xuất thông tin phiếu thu tiền từ database
+		/// truy xuất thông tin phiếu thu tiền phạttừ database
 		/// </summary>
-		public static PhieuThuTien GetPhieuThuTien(Expression<Func<PhieuThuTien, bool>> dieukienloc) {
-			PhieuThuTien result;
+		public static PhieuThuTienPhat GetPhieuThuTienPhat(Expression<Func<PhieuThuTienPhat, bool>> dieukienloc) {
+			PhieuThuTienPhat result;
 			using (var db = new LiteDatabase(DatabaseConnectionString)) {
-				result = db.GetCollection<PhieuThuTien>("PhieuThuTien")
+				result = db.GetCollection<PhieuThuTienPhat>("PhieuThuTienPhat")
 						   .Include(x => x.DocGia)
 						   .FindOne(dieukienloc);
 			}
@@ -509,12 +512,12 @@ namespace DataAccess {
 		}
 
 		/// <summary>
-		/// truy xuất thông tin phiếu thu tiền từ database
+		/// truy xuất thông tin phiếu thu tiền phạttừ database
 		/// </summary>
-		public static IEnumerable<PhieuThuTien> GetPhieuThuTiens(Expression<Func<PhieuThuTien, bool>> dieukienloc) {
-			IEnumerable<PhieuThuTien> result;
+		public static IEnumerable<PhieuThuTienPhat> GetPhieuThuTienPhats(Expression<Func<PhieuThuTienPhat, bool>> dieukienloc) {
+			IEnumerable<PhieuThuTienPhat> result;
 			using (var db = new LiteDatabase(DatabaseConnectionString)) {
-				result = db.GetCollection<PhieuThuTien>("PhieuThuTien")
+				result = db.GetCollection<PhieuThuTienPhat>("PhieuThuTienPhat")
 						   .Include(x => x.DocGia)
 						   .Find(dieukienloc);
 			}
@@ -522,12 +525,12 @@ namespace DataAccess {
 		}
 
 		/// <summary>
-		/// truy xuất tất cả thông tin phiếu thu tiền từ database
+		/// truy xuất tất cả thông tin phiếu thu tiền phạttừ database
 		/// </summary>
-		public static IEnumerable<PhieuThuTien> GetAllPhieuThuTien() {
-			IEnumerable<PhieuThuTien> result;
+		public static IEnumerable<PhieuThuTienPhat> GetAllPhieuThuTienPhat() {
+			IEnumerable<PhieuThuTienPhat> result;
 			using (var db = new LiteDatabase(DatabaseConnectionString)) {
-				result = db.GetCollection<PhieuThuTien>("PhieuThuTien")
+				result = db.GetCollection<PhieuThuTienPhat>("PhieuThuTienPhat")
 						   .Include(x => x.DocGia)
 						   .FindAll();
 			}
@@ -535,32 +538,32 @@ namespace DataAccess {
 		}
 
 		/// <summary>
-		/// cập nhật thông tin phiếu thu tiền vào database
+		/// cập nhật thông tin phiếu thu tiền phạtvào database
 		/// </summary>
-		public static bool SetPhieuThuTien(PhieuThuTien PhieuThuTien) {
+		public static bool SetPhieuThuTienPhat(PhieuThuTienPhat PhieuThuTienPhat) {
 			bool result;
 			using (var db = new LiteDatabase(DatabaseConnectionString)) {
-				result = db.GetCollection<PhieuThuTien>("PhieuThuTien").Update(PhieuThuTien);
+				result = db.GetCollection<PhieuThuTienPhat>("PhieuThuTienPhat").Update(PhieuThuTienPhat);
 			}
 			return result;
 		}
 
 		/// <summary>
-		/// thêm thông tin phiếu thu tiền vào database
+		/// thêm thông tin phiếu thu tiền phạtvào database
 		/// </summary>
-		public static void AddPhieuThuTien(PhieuThuTien PhieuThuTien) {
+		public static void AddPhieuThuTienPhat(PhieuThuTienPhat PhieuThuTienPhat) {
 			using (var db = new LiteDatabase(DatabaseConnectionString)) {
-				db.GetCollection<PhieuThuTien>("PhieuThuTien").Insert(PhieuThuTien);
+				db.GetCollection<PhieuThuTienPhat>("PhieuThuTienPhat").Insert(PhieuThuTienPhat);
 			}
 		}
 
 		/// <summary>
-		/// xóa thông tin phiếu thu tiền khỏi database
+		/// xóa thông tin phiếu thu tiền phạtkhỏi database
 		/// </summary>
-		public static bool RemovePhieuThuTien(string maPhieuThuTien) {
+		public static bool RemovePhieuThuTienPhat(string maPhieuThuTienPhat) {
 			bool result;
 			using (var db = new LiteDatabase(DatabaseConnectionString)) {
-				result = db.GetCollection<PhieuThuTien>("PhieuThuTien").Delete(x => x.MaPhieuThuTien == maPhieuThuTien) > 0;
+				result = db.GetCollection<PhieuThuTienPhat>("PhieuThuTienPhat").Delete(x => x.MaPhieuThuTienPhat == maPhieuThuTienPhat) > 0;
 			}
 			return result;
 		}
@@ -824,6 +827,87 @@ namespace DataAccess {
 			bool result;
 			using (var db = new LiteDatabase(DatabaseConnectionString)) {
 				result = db.GetCollection<ThongTinMuonSach>("ThongTinMuonSach").Delete(x => x.DocGia.MaTheDG == maTheDocGia && x.Sach.MaSach == maSach) > 0;
+			}
+			return result;
+		}
+		#endregion
+
+		#region BaocaoThongkeSachTraTre
+		/// <summary>
+		/// truy xuất báo cáo thống kê sách trả trễ từ database
+		/// </summary>
+		public static BaocaoThongkeSachTraTre GetBaocaoThongkeSachTraTre(string maBaoCao) {
+			BaocaoThongkeSachTraTre result;
+			using (var db = new LiteDatabase(DatabaseConnectionString)) {
+				result = db.GetCollection<BaocaoThongkeSachTraTre>("BaocaoThongkeSachTraTre")
+						   .FindOne(x => x.MaBaoCao == maBaoCao);
+			}
+			return result;
+		}
+
+		/// <summary>
+		/// truy xuất báo cáo thống kê sách trả trễ từ database
+		/// </summary>
+		public static BaocaoThongkeSachTraTre GetBaocaoThongkeSachTraTre(Expression<Func<BaocaoThongkeSachTraTre, bool>> dieukienloc) {
+			BaocaoThongkeSachTraTre result;
+			using (var db = new LiteDatabase(DatabaseConnectionString)) {
+				result = db.GetCollection<BaocaoThongkeSachTraTre>("BaocaoThongkeSachTraTre")
+						   .FindOne(dieukienloc);
+			}
+			return result;
+		}
+
+		/// <summary>
+		/// truy xuất báo cáo thống kê sách trả trễ từ database
+		/// </summary>
+		public static IEnumerable<BaocaoThongkeSachTraTre> GetBaocaoThongkeSachTraTres(Expression<Func<BaocaoThongkeSachTraTre, bool>> dieukienloc) {
+			IEnumerable<BaocaoThongkeSachTraTre> result;
+			using (var db = new LiteDatabase(DatabaseConnectionString)) {
+				result = db.GetCollection<BaocaoThongkeSachTraTre>("BaocaoThongkeSachTraTre")
+						   .Find(dieukienloc);
+			}
+			return result;
+		}
+
+		/// <summary>
+		/// truy xuất tất cả báo cáo thống kê sách trả trễ từ database
+		/// </summary>
+		public static IEnumerable<BaocaoThongkeSachTraTre> GetAllBaocaoThongkeSachTraTre() {
+			IEnumerable<BaocaoThongkeSachTraTre> result;
+			using (var db = new LiteDatabase(DatabaseConnectionString)) {
+				result = db.GetCollection<BaocaoThongkeSachTraTre>("BaocaoThongkeSachTraTre")
+						   .FindAll();
+			}
+			return result;
+		}
+
+		/// <summary>
+		/// cập nhật báo cáo thống kê sách trả trễ vào database
+		/// </summary>
+		public static bool SetBaocaoThongkeSachTraTre(BaocaoThongkeSachTraTre BaocaoThongkeSachTraTre) {
+			bool result;
+			using (var db = new LiteDatabase(DatabaseConnectionString)) {
+				result = db.GetCollection<BaocaoThongkeSachTraTre>("BaocaoThongkeSachTraTre").Update(BaocaoThongkeSachTraTre);
+			}
+			return result;
+		}
+
+		/// <summary>
+		/// thêm báo cáo thống kê sách trả trễ vào database
+		/// </summary>
+		public static void AddBaocaoThongkeSachTraTre(BaocaoThongkeSachTraTre BaocaoThongkeSachTraTre) {
+			using (var db = new LiteDatabase(DatabaseConnectionString)) {
+				db.GetCollection<BaocaoThongkeSachTraTre>("BaocaoThongkeSachTraTre").Insert(BaocaoThongkeSachTraTre);
+			}
+		}
+
+		/// <summary>
+		/// xóa báo cáo thống kê sách trả trễ khỏi database
+		/// </summary>
+		public static bool RemoveBaocaoThongkeSachTraTre(string maBaoCao) {
+			bool result;
+			using (var db = new LiteDatabase(DatabaseConnectionString)) {
+				result = db.GetCollection<BaocaoThongkeSachTraTre>("BaocaoThongkeSachTraTre").Delete(x => x.MaBaoCao == maBaoCao) > 0;
 			}
 			return result;
 		}

@@ -1,13 +1,8 @@
-﻿using QuanLiThuVien.XuliTheDocGia;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
+
+using QuanLiThuVien.BaocaoSachtratre;
+using QuanLiThuVien.XuliTheDocGia;
 
 namespace QuanLiThuVien {
 	public partial class MainForm : Form {
@@ -16,7 +11,7 @@ namespace QuanLiThuVien {
 		}
 
 		private void button_docgia_Click(object sender, EventArgs e) {
-			new ThaoTacDocGia().ShowDialog();
+			new QuanLiDocGia().ShowDialog();
 		}
 
 		private void button_sach_Click(object sender, EventArgs e) {
@@ -24,7 +19,7 @@ namespace QuanLiThuVien {
 		}
 
 		private void button_baocao_Click(object sender, EventArgs e) {
-
+			new QuanliBaocaoThongkeSachTratre().ShowDialog();
 		}
 
 		private void button_muonsach_Click(object sender, EventArgs e) {
