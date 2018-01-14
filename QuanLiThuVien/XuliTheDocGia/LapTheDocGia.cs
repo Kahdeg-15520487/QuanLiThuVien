@@ -56,8 +56,10 @@ namespace QuanLiThuVien {
 			}
 
 			var tuoi = DateTime.Today.Year - dateTimePicker_NgaySinh.Value.Year;
-			if (tuoi < 18 || tuoi > 55) {
-				MessageBox.Show("Tuổi đọc giả phải từ 18 tới 55");
+			int.TryParse(Database.GetQuyDinh("TuoiToithieu").NoiDungQuiDinh, out int tuoitoithieu);
+			int.TryParse(Database.GetQuyDinh("TuoiToida").NoiDungQuiDinh, out int tuoitoida);
+			if (tuoi < tuoitoithieu || tuoi > tuoitoida) {
+				MessageBox.Show(string.Format("Tuổi đọc giả phải từ {0} tới {1}",tuoitoithieu,tuoitoida));
 				goto f;
 			}
 
