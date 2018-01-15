@@ -41,6 +41,7 @@ namespace QuanLiThuVien {
 				if (isPrint == DialogResult.Yes) {
 					MessageBox.Show("saved to " + Printer.Print(docgia.ToString()));
 				}
+				Close();
 			}
 		}
 
@@ -57,11 +58,11 @@ namespace QuanLiThuVien {
 
 			var tuoi = DateTime.Today.Year - dateTimePicker_NgaySinh.Value.Year;
 			int tuoitoithieu;
-			int.TryParse(Database.GetQuyDinh("TuoiToithieu").NoiDungQuiDinh, out tuoitoithieu);
+			int.TryParse(Database.GetQuyDinh(x => x.TenQuiDinh == "TuoiToithieu").NoiDungQuiDinh, out tuoitoithieu);
 			int tuoitoida;
-			int.TryParse(Database.GetQuyDinh("TuoiToida").NoiDungQuiDinh, out tuoitoida);
+			int.TryParse(Database.GetQuyDinh(x => x.TenQuiDinh == "TuoiToida").NoiDungQuiDinh, out tuoitoida);
 			if (tuoi < tuoitoithieu || tuoi > tuoitoida) {
-				MessageBox.Show(string.Format("Tuổi đọc giả phải từ {0} tới {1}",tuoitoithieu,tuoitoida));
+				MessageBox.Show(string.Format("Tuổi đọc giả phải từ {0} tới {1}", tuoitoithieu, tuoitoida));
 				goto f;
 			}
 

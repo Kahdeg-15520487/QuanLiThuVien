@@ -110,6 +110,18 @@ namespace DataAccess {
 		}
 
 		/// <summary>
+		/// truy xuất thông tin tác giả từ database
+		/// </summary>
+		public static IEnumerable<TacGia> GetAllTacGia() {
+			IEnumerable<TacGia> result;
+			using (var db = new LiteDatabase(DatabaseConnectionString)) {
+				result = db.GetCollection<TacGia>("TacGia")
+						   .FindAll();
+			}
+			return result;
+		}
+
+		/// <summary>
 		/// cập nhật thông tin tác giả vào database
 		/// </summary>
 		public static bool SetTacGia(TacGia TacGia) {
@@ -162,6 +174,18 @@ namespace DataAccess {
 			using (var db = new LiteDatabase(DatabaseConnectionString)) {
 				result = db.GetCollection<TheLoai>("TheLoai")
 						   .FindOne(dieukienloc);
+			}
+			return result;
+		}
+
+		/// <summary>
+		/// truy xuất thông tin thể loại từ database
+		/// </summary>
+		public static IEnumerable<TheLoai> GetAllTheLoai() {
+			IEnumerable<TheLoai> result;
+			using (var db = new LiteDatabase(DatabaseConnectionString)) {
+				result = db.GetCollection<TheLoai>("TheLoai")
+						   .FindAll();
 			}
 			return result;
 		}

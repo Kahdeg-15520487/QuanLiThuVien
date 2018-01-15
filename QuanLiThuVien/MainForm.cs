@@ -3,6 +3,7 @@ using System.Windows.Forms;
 
 using QuanLiThuVien.BaocaoSachtratre;
 using QuanLiThuVien.XuliTheDocGia;
+using QuanLiThuVien.XuliSach;
 
 namespace QuanLiThuVien {
 	public partial class MainForm : Form {
@@ -15,11 +16,11 @@ namespace QuanLiThuVien {
 		}
 
 		private void button_sach_Click(object sender, EventArgs e) {
-
+			new QuanLiSach().ShowDialog();
 		}
 
 		private void button_muonsach_Click(object sender, EventArgs e) {
-
+			new LapPhieuMuonSach().ShowDialog();
 		}
 
 		private void button_trasach_Click(object sender, EventArgs e) {

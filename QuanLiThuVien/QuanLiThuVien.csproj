@@ -88,13 +88,31 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Phieu Muon Sach\PhieuMuonSach.cs">
+    <Compile Include="Printer.cs" />
+    <Compile Include="XuliSach\LapPhieuMuonSach.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Phieu Muon Sach\PhieuMuonSach.Designer.cs">
-      <DependentUpon>PhieuMuonSach.cs</DependentUpon>
+    <Compile Include="XuliSach\LapPhieuMuonSach.Designer.cs">
+      <DependentUpon>LapPhieuMuonSach.cs</DependentUpon>
     </Compile>
-    <Compile Include="Printer.cs" />
+    <Compile Include="XuliSach\LapSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XuliSach\LapSach.Designer.cs">
+      <DependentUpon>LapSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XuliSach\CapNhatSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XuliSach\CapNhatSach.Designer.cs">
+      <DependentUpon>CapNhatSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XuliSach\QuanLiSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XuliSach\QuanLiSach.Designer.cs">
+      <DependentUpon>QuanLiSach.cs</DependentUpon>
+    </Compile>
     <Compile Include="XuliTheDocGia\LapPhieuThuTienPhat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,7 +160,18 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Phieu Muon Sach\PhieuMuonSach.resx" />
+    <EmbeddedResource Include="XuliSach\LapPhieuMuonSach.resx">
+      <DependentUpon>LapPhieuMuonSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XuliSach\LapSach.resx">
+      <DependentUpon>LapSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XuliSach\CapNhatSach.resx">
+      <DependentUpon>CapNhatSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XuliSach\QuanLiSach.resx">
+      <DependentUpon>QuanLiSach.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="XuliTheDocGia\LapPhieuThuTienPhat.resx">
       <DependentUpon>LapPhieuThuTienPhat.cs</DependentUpon>
     </EmbeddedResource>
@@ -184,5 +213,6 @@
       <Name>DataAccess</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
