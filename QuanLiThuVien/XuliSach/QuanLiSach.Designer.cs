@@ -156,7 +156,7 @@
 			this.Controls.Add(this.button_lapthedocgia);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
 			this.Name = "QuanLiSach";
-			this.Text = "ThaoTacDocGia";
+			this.Text = "Thao tac sach";
 			this.Load += new System.EventHandler(this.ThaoTacDocGia_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();
