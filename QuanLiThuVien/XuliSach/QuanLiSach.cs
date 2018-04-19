@@ -5,109 +5,138 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Windows.Forms;
 
-namespace QuanLiThuVien.XuliSach {
-	public partial class QuanLiSach : Form {
-		public QuanLiSach() {
-			InitializeComponent();
-		}
+namespace QuanLiThuVien.XuliSach
+{
+    public partial class QuanLiSach : Form
+    {
+        public QuanLiSach()
+        {
+            InitializeComponent();
+        }
 
-		private void button_lapthedocgia_Click(object sender, EventArgs e) {
-			new LapSach().ShowDialog();
-			PopulateListView(GetAll());
-			//update listview
-		}
+        private void button_lapthedocgia_Click(object sender, EventArgs e)
+        {
+            new LapSach().ShowDialog();
+            PopulateListView(GetAll());
+            //update listview
+        }
 
-		private void button_capnhatdocgia_Click(object sender, EventArgs e) {
-			var slvis = listView_danhsachsach.SelectedItems;
-			foreach (ListViewItem slvi in slvis) {
-				var masach = slvi.SubItems[1].Text;
-				new CapNhatSach(masach).ShowDialog();
-			}
-			PopulateListView(GetAll());
-			//get selected item
-			//new CapNhatTheDocGia().Show();
-			//update listview
-		}
+        private void button_capnhatdocgia_Click(object sender, EventArgs e)
+        {
+            var slvis = listView_danhsachsach.SelectedItems;
+            foreach (ListViewItem slvi in slvis)
+            {
+                var masach = slvi.SubItems[1].Text;
+                new CapNhatSach(masach).ShowDialog();
+            }
+            PopulateListView(GetAll());
+            //get selected item
+            //new CapNhatTheDocGia().Show();
+            //update listview
+        }
 
-		private void button_xoadocgia_Click(object sender, EventArgs e) {
-			var slvis = listView_danhsachsach.SelectedItems;
-			StringBuilder deletedsach = new StringBuilder();
-			deletedsach.AppendLine("Đã xóa các sách có mã: ");
-			foreach (ListViewItem slvi in slvis) {
-				var masach = slvi.SubItems[1].Text;
-				DataAccess.Database.RemoveSach(masach);
-				deletedsach.AppendLine(masach);
-			}
-			MessageBox.Show(deletedsach.ToString());
-			PopulateListView(GetAll());
-			//get selected item
-			//delete from database
-			//update listview
-		}
+        private void button_xoadocgia_Click(object sender, EventArgs e)
+        {
+            var slvis = listView_danhsachsach.SelectedItems;
+            var danhsachsachcanxoa = new List<string>();
+            foreach (ListViewItem slvi in slvis)
+            {
+                danhsachsachcanxoa.Add(slvi.SubItems[1].Text);
+            }
 
-		private void button_timdocgia_Click(object sender, EventArgs e) {
-			if (textBox_MaDocGia.Text.Length != 10) {
-				MessageBox.Show("Mã đọc giả không hợp lệ");
-				return;
-			}
-			PopulateListView(GetQuerry(x => x.MaSach == textBox_MaDocGia.Text));
-			//generate querry, just querry madg for now
-			//update listview
-		}
+            var result = MessageBox.Show("Bạn có muốn xóa những sách sau?\n" + string.Join("\n", danhsachsachcanxoa), "Xóa sách", MessageBoxButtons.YesNo);
+            if (result == DialogResult.No)
+            {
+                return;
+            }
 
-		private void ThaoTacDocGia_Load(object sender, EventArgs e) {
-			PopulateListView(GetAll());
-		}
+            StringBuilder deletedsach = new StringBuilder();
+            deletedsach.AppendLine("Đã xóa các sách có mã: ");
+            foreach (var masach in danhsachsachcanxoa)
+            {
+                DataAccess.Database.RemoveSach(masach);
+                deletedsach.AppendLine(masach);
+            }
+            MessageBox.Show(deletedsach.ToString());
+            PopulateListView(GetAll());
+            //get selected item
+            //delete from database
+            //update listview
+        }
 
-		private void PopulateListView(List<ListViewItem> lvis) {
-			listView_danhsachsach.Items.Clear();
-			foreach (var lvi in lvis) {
-				listView_danhsachsach.Items.Add(lvi);
-			}
-		}
+        private void button_timdocgia_Click(object sender, EventArgs e)
+        {
+            if (textBox_MaDocGia.Text.Length != 10)
+            {
+                MessageBox.Show("Mã đọc giả không hợp lệ");
+                return;
+            }
+            PopulateListView(GetQuerry(x => x.MaSach == textBox_MaDocGia.Text));
+            //generate querry, just querry madg for now
+            //update listview
+        }
 
-		private List<ListViewItem> GetAll() {
-			var lvis = new List<ListViewItem>();
-			foreach (var dg in DataAccess.Database.GetAllSach()) {
-				ListViewItem item = new ListViewItem(lvis.Count.ToString());
-				item.SubItems.Add(dg.MaSach);
-				item.SubItems.Add(dg.TenSach);
-				item.SubItems.Add(dg.TheLoai.TenTheLoai);
-				item.SubItems.Add(dg.TacGia.TenTacGia);
-				item.SubItems.Add(dg.TinhTrang);
-				lvis.Add(item);
-			}
-			return lvis;
-		}
+        private void ThaoTacDocGia_Load(object sender, EventArgs e)
+        {
+            PopulateListView(GetAll());
+        }
 
-		private List<ListViewItem> GetQuerry(Expression<Func<DataAccess.DataObject.Sach, bool>> dieukienloc) {
-			var lvis = new List<ListViewItem>();
-			foreach (var dg in DataAccess.Database.GetSachs(dieukienloc)) {
-				ListViewItem item = new ListViewItem(lvis.Count.ToString());
-				item.SubItems.Add(dg.MaSach);
-				item.SubItems.Add(dg.TenSach);
-				item.SubItems.Add(dg.TheLoai.TenTheLoai);
-				item.SubItems.Add(dg.TacGia.TenTacGia);
-				item.SubItems.Add(dg.TinhTrang);
-				lvis.Add(item);
-			}
-			return lvis;
-		}
+        private void PopulateListView(List<ListViewItem> lvis)
+        {
+            listView_danhsachsach.Items.Clear();
+            foreach (var lvi in lvis)
+            {
+                listView_danhsachsach.Items.Add(lvi);
+            }
+        }
 
-		private void listView_docgia_MouseClick(object sender, MouseEventArgs e) {
-			if (e.Button == MouseButtons.Right) {
-				if (listView_danhsachsach.FocusedItem.Bounds.Contains(e.Location) == true) {
-					//contextMenuStrip_listview.Show(Cursor.Position);
-				}
-			}
-		}
+        private List<ListViewItem> GetAll()
+        {
+            var lvis = new List<ListViewItem>();
+            foreach (var dg in DataAccess.Database.GetAllSach())
+            {
+                ListViewItem item = new ListViewItem(lvis.Count.ToString());
+                item.SubItems.Add(dg.MaSach);
+                item.SubItems.Add(dg.TenSach);
+                item.SubItems.Add(dg.TheLoai.TenTheLoai);
+                item.SubItems.Add(dg.TacGia.TenTacGia);
+                item.SubItems.Add(dg.TinhTrang);
+                lvis.Add(item);
+            }
+            return lvis;
+        }
 
-		private void toolStripMenuItem_lapphieuthutienphat_Click(object sender, EventArgs e) {
-			var madocgia = listView_danhsachsach.SelectedItems[0].SubItems[1].Text;
-			var result = new LapPhieuThuTienPhat(madocgia).ShowDialog();
-			if (result == DialogResult.Yes) {
-				PopulateListView(GetAll());
-			}
-		}
-	}
+        private List<ListViewItem> GetQuerry(Expression<Func<DataAccess.DataObject.Sach, bool>> dieukienloc)
+        {
+            var lvis = new List<ListViewItem>();
+            foreach (var dg in DataAccess.Database.GetSachs(dieukienloc))
+            {
+                ListViewItem item = new ListViewItem(lvis.Count.ToString());
+                item.SubItems.Add(dg.MaSach);
+                item.SubItems.Add(dg.TenSach);
+                item.SubItems.Add(dg.TheLoai.TenTheLoai);
+                item.SubItems.Add(dg.TacGia.TenTacGia);
+                item.SubItems.Add(dg.TinhTrang);
+                lvis.Add(item);
+            }
+            return lvis;
+        }
+
+        private void listView_docgia_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                if (listView_danhsachsach.FocusedItem.Bounds.Contains(e.Location) == true)
+                {
+                    contextMenuStrip.Show(Cursor.Position);
+                }
+            }
+        }
+
+        private void toolStripMenuItem_copyMaSach_Click(object sender, EventArgs e)
+        {
+            var masach = listView_danhsachsach.SelectedItems[0].SubItems[1].Text;
+            Clipboard.SetText(masach);
+        }
+    }
 }

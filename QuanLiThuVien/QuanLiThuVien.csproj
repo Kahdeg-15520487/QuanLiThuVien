@@ -113,6 +113,12 @@
     <Compile Include="XuliSach\QuanLiSach.Designer.cs">
       <DependentUpon>QuanLiSach.cs</DependentUpon>
     </Compile>
+    <Compile Include="XuliSach\XuLiTraSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XuliSach\XuLiTraSach.Designer.cs">
+      <DependentUpon>XuLiTraSach.cs</DependentUpon>
+    </Compile>
     <Compile Include="XuliTheDocGia\LapPhieuThuTienPhat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="XuliSach\QuanLiSach.resx">
       <DependentUpon>QuanLiSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XuliSach\XuLiTraSach.resx">
+      <DependentUpon>XuLiTraSach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="XuliTheDocGia\LapPhieuThuTienPhat.resx">
       <DependentUpon>LapPhieuThuTienPhat.cs</DependentUpon>
