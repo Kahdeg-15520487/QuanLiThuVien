@@ -230,6 +230,7 @@
             this.Controls.Add(this.button_Huy);
             this.Controls.Add(this.button_CapNhatThe);
             this.Controls.Add(this.textBox_nxb);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "LapSach";
             this.Text = "Lập sách";
             this.Load += new System.EventHandler(this.CapNhatTheDocGia_Load);

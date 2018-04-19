@@ -292,6 +292,7 @@
             this.Controls.Add(this.dateTimePicker_NgayLapThe);
             this.Controls.Add(this.textBox_DiaChi);
             this.Controls.Add(this.dateTimePicker_NgaySinh);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "CapNhatTheDocGia";
             this.Text = "Cập nhật thẻ đọc giả";
             this.Load += new System.EventHandler(this.CapNhatTheDocGia_Load);
