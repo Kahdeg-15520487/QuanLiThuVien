@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Windows.Forms;
 using System.Xml;
 using DataAccess;
@@ -36,6 +37,11 @@ namespace QuanLiThuVien
         [STAThread]
         static void Main(string[] args)
         {
+            if (!File.Exists("config.xml"))
+            {
+                MessageBox.Show("Không tìm thấy file config!", "Lỗi");
+            }
+
             config config = config.GetConfig();
 
             //setup database

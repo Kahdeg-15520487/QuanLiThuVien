@@ -37,24 +37,31 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 70);
+            this.label1.Depth = 0;
+            this.label1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label1.Location = new System.Drawing.Point(4, 116);
+            this.label1.MouseState = MaterialSkin.MouseState.HOVER;
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 13);
+            this.label1.Size = new System.Drawing.Size(88, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã báo cáo";
             // 
             // textBox_mabaocao
             // 
-            this.textBox_mabaocao.Location = new System.Drawing.Point(92, 67);
+            this.textBox_mabaocao.Location = new System.Drawing.Point(108, 116);
             this.textBox_mabaocao.Name = "textBox_mabaocao";
             this.textBox_mabaocao.Size = new System.Drawing.Size(100, 20);
             this.textBox_mabaocao.TabIndex = 1;
             // 
             // button_timbaocao
             // 
-            this.button_timbaocao.Location = new System.Drawing.Point(198, 65);
+            this.button_timbaocao.Depth = 0;
+            this.button_timbaocao.Location = new System.Drawing.Point(214, 110);
+            this.button_timbaocao.MouseState = MaterialSkin.MouseState.HOVER;
             this.button_timbaocao.Name = "button_timbaocao";
-            this.button_timbaocao.Size = new System.Drawing.Size(81, 23);
+            this.button_timbaocao.Primary = true;
+            this.button_timbaocao.Size = new System.Drawing.Size(81, 35);
             this.button_timbaocao.TabIndex = 2;
             this.button_timbaocao.Text = "Tìm báo cáo";
             this.button_timbaocao.UseVisualStyleBackColor = true;
@@ -68,10 +75,10 @@
             this.columnHeader3});
             this.listView_baocao.FullRowSelect = true;
             this.listView_baocao.HideSelection = false;
-            this.listView_baocao.Location = new System.Drawing.Point(16, 93);
+            this.listView_baocao.Location = new System.Drawing.Point(12, 151);
             this.listView_baocao.MultiSelect = false;
             this.listView_baocao.Name = "listView_baocao";
-            this.listView_baocao.Size = new System.Drawing.Size(272, 156);
+            this.listView_baocao.Size = new System.Drawing.Size(283, 156);
             this.listView_baocao.TabIndex = 3;
             this.listView_baocao.UseCompatibleStateImageBehavior = false;
             this.listView_baocao.View = System.Windows.Forms.View.Details;
@@ -93,8 +100,11 @@
             // 
             // button_lapbaocao
             // 
-            this.button_lapbaocao.Location = new System.Drawing.Point(12, 12);
+            this.button_lapbaocao.Depth = 0;
+            this.button_lapbaocao.Location = new System.Drawing.Point(8, 70);
+            this.button_lapbaocao.MouseState = MaterialSkin.MouseState.HOVER;
             this.button_lapbaocao.Name = "button_lapbaocao";
+            this.button_lapbaocao.Primary = true;
             this.button_lapbaocao.Size = new System.Drawing.Size(94, 35);
             this.button_lapbaocao.TabIndex = 4;
             this.button_lapbaocao.Text = "Lập báo cáo";
@@ -103,9 +113,12 @@
             // 
             // button_xembaocao
             // 
-            this.button_xembaocao.Location = new System.Drawing.Point(112, 12);
+            this.button_xembaocao.Depth = 0;
+            this.button_xembaocao.Location = new System.Drawing.Point(108, 70);
+            this.button_xembaocao.MouseState = MaterialSkin.MouseState.HOVER;
             this.button_xembaocao.Name = "button_xembaocao";
-            this.button_xembaocao.Size = new System.Drawing.Size(94, 35);
+            this.button_xembaocao.Primary = true;
+            this.button_xembaocao.Size = new System.Drawing.Size(104, 35);
             this.button_xembaocao.TabIndex = 6;
             this.button_xembaocao.Text = "Xem báo cáo";
             this.button_xembaocao.UseVisualStyleBackColor = true;
@@ -115,14 +128,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(301, 261);
+            this.ClientSize = new System.Drawing.Size(304, 319);
             this.Controls.Add(this.button_xembaocao);
             this.Controls.Add(this.button_lapbaocao);
             this.Controls.Add(this.listView_baocao);
             this.Controls.Add(this.button_timbaocao);
             this.Controls.Add(this.textBox_mabaocao);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "QuanliBaocaoSachMuonTheoTheloai";
             this.Text = "QuanliBaocaoSachMuonTheoTheloai";
             this.Load += new System.EventHandler(this.QuanliBaocaoSachMuonTheoTheloai_Load);

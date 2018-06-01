@@ -26,7 +26,6 @@
             this.textBox_tensach = new System.Windows.Forms.TextBox();
             this.label6 = new MaterialSkin.Controls.MaterialLabel();
             this.label1 = new MaterialSkin.Controls.MaterialLabel();
-            this.label2 = new MaterialSkin.Controls.MaterialLabel();
             this.button_Huy = new MaterialSkin.Controls.MaterialRaisedButton();
             this.button_CapNhatThe = new MaterialSkin.Controls.MaterialRaisedButton();
             this.textBox_nxb = new System.Windows.Forms.TextBox();
@@ -46,7 +45,7 @@
             // 
             // textBox_tensach
             // 
-            this.textBox_tensach.Location = new System.Drawing.Point(77, 58);
+            this.textBox_tensach.Location = new System.Drawing.Point(112, 97);
             this.textBox_tensach.Name = "textBox_tensach";
             this.textBox_tensach.Size = new System.Drawing.Size(119, 20);
             this.textBox_tensach.TabIndex = 0;
@@ -54,34 +53,36 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(17, 167);
+            this.label6.Depth = 0;
+            this.label6.Font = new System.Drawing.Font("Roboto", 11F);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label6.Location = new System.Drawing.Point(14, 205);
+            this.label6.MouseState = MaterialSkin.MouseState.HOVER;
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(29, 13);
+            this.label6.Size = new System.Drawing.Size(38, 19);
             this.label6.TabIndex = 21;
             this.label6.Text = "NXB";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 61);
+            this.label1.Depth = 0;
+            this.label1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label1.Location = new System.Drawing.Point(14, 96);
+            this.label1.MouseState = MaterialSkin.MouseState.HOVER;
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 13);
+            this.label1.Size = new System.Drawing.Size(70, 19);
             this.label1.TabIndex = 17;
             this.label1.Text = "Tên sách";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(131, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 13);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "Lập sách";
-            // 
             // button_Huy
             // 
-            this.button_Huy.Location = new System.Drawing.Point(234, 249);
+            this.button_Huy.Depth = 0;
+            this.button_Huy.Location = new System.Drawing.Point(206, 295);
+            this.button_Huy.MouseState = MaterialSkin.MouseState.HOVER;
             this.button_Huy.Name = "button_Huy";
+            this.button_Huy.Primary = true;
             this.button_Huy.Size = new System.Drawing.Size(75, 23);
             this.button_Huy.TabIndex = 8;
             this.button_Huy.Text = "Hủy";
@@ -90,8 +91,11 @@
             // 
             // button_CapNhatThe
             // 
-            this.button_CapNhatThe.Location = new System.Drawing.Point(112, 249);
+            this.button_CapNhatThe.Depth = 0;
+            this.button_CapNhatThe.Location = new System.Drawing.Point(40, 295);
+            this.button_CapNhatThe.MouseState = MaterialSkin.MouseState.HOVER;
             this.button_CapNhatThe.Name = "button_CapNhatThe";
+            this.button_CapNhatThe.Primary = true;
             this.button_CapNhatThe.Size = new System.Drawing.Size(75, 23);
             this.button_CapNhatThe.TabIndex = 7;
             this.button_CapNhatThe.Text = "Lập";
@@ -100,7 +104,7 @@
             // 
             // textBox_nxb
             // 
-            this.textBox_nxb.Location = new System.Drawing.Point(77, 164);
+            this.textBox_nxb.Location = new System.Drawing.Point(112, 204);
             this.textBox_nxb.Name = "textBox_nxb";
             this.textBox_nxb.Size = new System.Drawing.Size(232, 20);
             this.textBox_nxb.TabIndex = 4;
@@ -108,15 +112,19 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(17, 91);
+            this.label7.Depth = 0;
+            this.label7.Font = new System.Drawing.Font("Roboto", 11F);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label7.Location = new System.Drawing.Point(14, 126);
+            this.label7.MouseState = MaterialSkin.MouseState.HOVER;
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(45, 13);
+            this.label7.Size = new System.Drawing.Size(63, 19);
             this.label7.TabIndex = 31;
             this.label7.Text = "Thể loại";
             // 
             // textBox_masach
             // 
-            this.textBox_masach.Location = new System.Drawing.Point(84, 33);
+            this.textBox_masach.Location = new System.Drawing.Point(112, 70);
             this.textBox_masach.Name = "textBox_masach";
             this.textBox_masach.ReadOnly = true;
             this.textBox_masach.Size = new System.Drawing.Size(100, 20);
@@ -126,15 +134,19 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(17, 36);
+            this.label8.Depth = 0;
+            this.label8.Font = new System.Drawing.Font("Roboto", 11F);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label8.Location = new System.Drawing.Point(14, 71);
+            this.label8.MouseState = MaterialSkin.MouseState.HOVER;
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(48, 13);
+            this.label8.Size = new System.Drawing.Size(66, 19);
             this.label8.TabIndex = 34;
             this.label8.Text = "Mã sách";
             // 
             // textBox_tinhtrang
             // 
-            this.textBox_tinhtrang.Location = new System.Drawing.Point(77, 218);
+            this.textBox_tinhtrang.Location = new System.Drawing.Point(112, 258);
             this.textBox_tinhtrang.Name = "textBox_tinhtrang";
             this.textBox_tinhtrang.Size = new System.Drawing.Size(119, 20);
             this.textBox_tinhtrang.TabIndex = 6;
@@ -142,16 +154,20 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(17, 221);
+            this.label10.Depth = 0;
+            this.label10.Font = new System.Drawing.Font("Roboto", 11F);
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label10.Location = new System.Drawing.Point(14, 256);
+            this.label10.MouseState = MaterialSkin.MouseState.HOVER;
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(55, 13);
+            this.label10.Size = new System.Drawing.Size(76, 19);
             this.label10.TabIndex = 37;
             this.label10.Text = "Tình trạng";
             // 
             // comboBox_theloai
             // 
             this.comboBox_theloai.FormattingEnabled = true;
-            this.comboBox_theloai.Location = new System.Drawing.Point(77, 84);
+            this.comboBox_theloai.Location = new System.Drawing.Point(112, 124);
             this.comboBox_theloai.Name = "comboBox_theloai";
             this.comboBox_theloai.Size = new System.Drawing.Size(119, 21);
             this.comboBox_theloai.TabIndex = 1;
@@ -159,7 +175,7 @@
             // comboBox_tacgia
             // 
             this.comboBox_tacgia.FormattingEnabled = true;
-            this.comboBox_tacgia.Location = new System.Drawing.Point(77, 111);
+            this.comboBox_tacgia.Location = new System.Drawing.Point(112, 151);
             this.comboBox_tacgia.Name = "comboBox_tacgia";
             this.comboBox_tacgia.Size = new System.Drawing.Size(119, 21);
             this.comboBox_tacgia.TabIndex = 2;
@@ -167,15 +183,19 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 118);
+            this.label3.Depth = 0;
+            this.label3.Font = new System.Drawing.Font("Roboto", 11F);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label3.Location = new System.Drawing.Point(14, 153);
+            this.label3.MouseState = MaterialSkin.MouseState.HOVER;
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 13);
+            this.label3.Size = new System.Drawing.Size(58, 19);
             this.label3.TabIndex = 40;
             this.label3.Text = "Tác giả";
             // 
             // textBox_namxb
             // 
-            this.textBox_namxb.Location = new System.Drawing.Point(96, 138);
+            this.textBox_namxb.Location = new System.Drawing.Point(112, 178);
             this.textBox_namxb.Name = "textBox_namxb";
             this.textBox_namxb.Size = new System.Drawing.Size(100, 20);
             this.textBox_namxb.TabIndex = 3;
@@ -184,24 +204,32 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 141);
+            this.label4.Depth = 0;
+            this.label4.Font = new System.Drawing.Font("Roboto", 11F);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label4.Location = new System.Drawing.Point(12, 178);
+            this.label4.MouseState = MaterialSkin.MouseState.HOVER;
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 13);
+            this.label4.Size = new System.Drawing.Size(101, 19);
             this.label4.TabIndex = 42;
             this.label4.Text = "Năm xuất bản";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 195);
+            this.label5.Depth = 0;
+            this.label5.Font = new System.Drawing.Font("Roboto", 11F);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label5.Location = new System.Drawing.Point(14, 230);
+            this.label5.MouseState = MaterialSkin.MouseState.HOVER;
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 13);
+            this.label5.Size = new System.Drawing.Size(79, 19);
             this.label5.TabIndex = 44;
             this.label5.Text = "Ngày nhập";
             // 
             // dateTimePicker_ngaynhap
             // 
-            this.dateTimePicker_ngaynhap.Location = new System.Drawing.Point(77, 192);
+            this.dateTimePicker_ngaynhap.Location = new System.Drawing.Point(112, 230);
             this.dateTimePicker_ngaynhap.Name = "dateTimePicker_ngaynhap";
             this.dateTimePicker_ngaynhap.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker_ngaynhap.TabIndex = 5;
@@ -210,7 +238,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(403, 277);
+            this.ClientSize = new System.Drawing.Size(373, 330);
             this.Controls.Add(this.dateTimePicker_ngaynhap);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox_namxb);
@@ -226,11 +254,9 @@
             this.Controls.Add(this.textBox_tensach);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.button_Huy);
             this.Controls.Add(this.button_CapNhatThe);
             this.Controls.Add(this.textBox_nxb);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "LapSach";
             this.Text = "Lập sách";
             this.Load += new System.EventHandler(this.CapNhatTheDocGia_Load);
@@ -243,7 +269,6 @@
 		private System.Windows.Forms.TextBox textBox_tensach;
 		private MaterialSkin.Controls.MaterialLabel label6;
 		private MaterialSkin.Controls.MaterialLabel label1;
-		private MaterialSkin.Controls.MaterialLabel label2;
 		private MaterialSkin.Controls.MaterialRaisedButton button_Huy;
 		private MaterialSkin.Controls.MaterialRaisedButton button_CapNhatThe;
 		private System.Windows.Forms.TextBox textBox_nxb;

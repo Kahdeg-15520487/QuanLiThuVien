@@ -89,8 +89,7 @@ namespace InitDatabase
 
             if (!File.Exists(docgiadatapath))
             {
-                Console.WriteLine($"can't find {docgiadatapath}");
-                return;
+                datadocgia = new List<docgia>();
             }
             else
             {
@@ -99,8 +98,7 @@ namespace InitDatabase
 
             if (!File.Exists(sachdatapath))
             {
-                Console.WriteLine($"can't find {sachdatapath}");
-                return;
+                datasach = new List<sach>();
             }
             else
             {
@@ -109,8 +107,7 @@ namespace InitDatabase
 
             if (!File.Exists(quydinhdatapath))
             {
-                Console.WriteLine($"can't find {quydinhdatapath}");
-                return;
+                dataquydinh = new List<quydinh>();
             }
             else
             {

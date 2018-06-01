@@ -32,7 +32,6 @@
             this.label4 = new MaterialSkin.Controls.MaterialLabel();
             this.label3 = new MaterialSkin.Controls.MaterialLabel();
             this.label1 = new MaterialSkin.Controls.MaterialLabel();
-            this.label2 = new MaterialSkin.Controls.MaterialLabel();
             this.button_Huy = new MaterialSkin.Controls.MaterialRaisedButton();
             this.button_CapNhatThe = new MaterialSkin.Controls.MaterialRaisedButton();
             this.textBox_Email = new System.Windows.Forms.TextBox();
@@ -54,7 +53,7 @@
             // 
             this.groupBox_LoaiDocGia.Controls.Add(this.radioButton_Y);
             this.groupBox_LoaiDocGia.Controls.Add(this.radioButton_X);
-            this.groupBox_LoaiDocGia.Location = new System.Drawing.Point(214, 36);
+            this.groupBox_LoaiDocGia.Location = new System.Drawing.Point(247, 72);
             this.groupBox_LoaiDocGia.Name = "groupBox_LoaiDocGia";
             this.groupBox_LoaiDocGia.Size = new System.Drawing.Size(95, 48);
             this.groupBox_LoaiDocGia.TabIndex = 23;
@@ -88,7 +87,7 @@
             // 
             // textBox_HoTen
             // 
-            this.textBox_HoTen.Location = new System.Drawing.Point(77, 58);
+            this.textBox_HoTen.Location = new System.Drawing.Point(113, 99);
             this.textBox_HoTen.Name = "textBox_HoTen";
             this.textBox_HoTen.Size = new System.Drawing.Size(119, 20);
             this.textBox_HoTen.TabIndex = 0;
@@ -96,62 +95,76 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(17, 159);
+            this.label6.Depth = 0;
+            this.label6.Font = new System.Drawing.Font("Roboto", 11F);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label6.Location = new System.Drawing.Point(11, 198);
+            this.label6.MouseState = MaterialSkin.MouseState.HOVER;
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(32, 13);
+            this.label6.Size = new System.Drawing.Size(47, 19);
             this.label6.TabIndex = 21;
             this.label6.Text = "Email";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 188);
+            this.label5.Depth = 0;
+            this.label5.Font = new System.Drawing.Font("Roboto", 11F);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label5.Location = new System.Drawing.Point(11, 227);
+            this.label5.MouseState = MaterialSkin.MouseState.HOVER;
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 13);
+            this.label5.Size = new System.Drawing.Size(92, 19);
             this.label5.TabIndex = 20;
             this.label5.Text = "Ngày lập thẻ";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 127);
+            this.label4.Depth = 0;
+            this.label4.Font = new System.Drawing.Font("Roboto", 11F);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label4.Location = new System.Drawing.Point(11, 166);
+            this.label4.MouseState = MaterialSkin.MouseState.HOVER;
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 13);
+            this.label4.Size = new System.Drawing.Size(55, 19);
             this.label4.TabIndex = 19;
             this.label4.Text = "Địa chỉ";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 93);
+            this.label3.Depth = 0;
+            this.label3.Font = new System.Drawing.Font("Roboto", 11F);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label3.Location = new System.Drawing.Point(11, 132);
+            this.label3.MouseState = MaterialSkin.MouseState.HOVER;
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 13);
+            this.label3.Size = new System.Drawing.Size(75, 19);
             this.label3.TabIndex = 18;
             this.label3.Text = "Ngày sinh";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 61);
+            this.label1.Depth = 0;
+            this.label1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label1.Location = new System.Drawing.Point(11, 100);
+            this.label1.MouseState = MaterialSkin.MouseState.HOVER;
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 13);
+            this.label1.Size = new System.Drawing.Size(73, 19);
             this.label1.TabIndex = 17;
             this.label1.Text = "Họ và tên";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(131, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 13);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "Cập nhật thẻ đọc giả";
-            // 
             // button_Huy
             // 
-            this.button_Huy.Location = new System.Drawing.Point(231, 264);
+            this.button_Huy.Depth = 0;
+            this.button_Huy.Location = new System.Drawing.Point(219, 316);
+            this.button_Huy.MouseState = MaterialSkin.MouseState.HOVER;
             this.button_Huy.Name = "button_Huy";
-            this.button_Huy.Size = new System.Drawing.Size(75, 23);
+            this.button_Huy.Primary = true;
+            this.button_Huy.Size = new System.Drawing.Size(75, 35);
             this.button_Huy.TabIndex = 10;
             this.button_Huy.Text = "Hủy";
             this.button_Huy.UseVisualStyleBackColor = true;
@@ -159,9 +172,12 @@
             // 
             // button_CapNhatThe
             // 
-            this.button_CapNhatThe.Location = new System.Drawing.Point(109, 264);
+            this.button_CapNhatThe.Depth = 0;
+            this.button_CapNhatThe.Location = new System.Drawing.Point(48, 316);
+            this.button_CapNhatThe.MouseState = MaterialSkin.MouseState.HOVER;
             this.button_CapNhatThe.Name = "button_CapNhatThe";
-            this.button_CapNhatThe.Size = new System.Drawing.Size(75, 23);
+            this.button_CapNhatThe.Primary = true;
+            this.button_CapNhatThe.Size = new System.Drawing.Size(75, 35);
             this.button_CapNhatThe.TabIndex = 9;
             this.button_CapNhatThe.Text = "Cập nhật thẻ";
             this.button_CapNhatThe.UseVisualStyleBackColor = true;
@@ -169,14 +185,14 @@
             // 
             // textBox_Email
             // 
-            this.textBox_Email.Location = new System.Drawing.Point(77, 156);
+            this.textBox_Email.Location = new System.Drawing.Point(113, 199);
             this.textBox_Email.Name = "textBox_Email";
             this.textBox_Email.Size = new System.Drawing.Size(232, 20);
             this.textBox_Email.TabIndex = 5;
             // 
             // dateTimePicker_NgayLapThe
             // 
-            this.dateTimePicker_NgayLapThe.Location = new System.Drawing.Point(90, 185);
+            this.dateTimePicker_NgayLapThe.Location = new System.Drawing.Point(113, 227);
             this.dateTimePicker_NgayLapThe.Name = "dateTimePicker_NgayLapThe";
             this.dateTimePicker_NgayLapThe.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker_NgayLapThe.TabIndex = 6;
@@ -184,14 +200,14 @@
             // 
             // textBox_DiaChi
             // 
-            this.textBox_DiaChi.Location = new System.Drawing.Point(77, 124);
+            this.textBox_DiaChi.Location = new System.Drawing.Point(113, 165);
             this.textBox_DiaChi.Name = "textBox_DiaChi";
             this.textBox_DiaChi.Size = new System.Drawing.Size(232, 20);
             this.textBox_DiaChi.TabIndex = 4;
             // 
             // dateTimePicker_NgaySinh
             // 
-            this.dateTimePicker_NgaySinh.Location = new System.Drawing.Point(77, 90);
+            this.dateTimePicker_NgaySinh.Location = new System.Drawing.Point(113, 132);
             this.dateTimePicker_NgaySinh.Name = "dateTimePicker_NgaySinh";
             this.dateTimePicker_NgaySinh.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker_NgaySinh.TabIndex = 3;
@@ -199,15 +215,19 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(315, 36);
+            this.label7.Depth = 0;
+            this.label7.Font = new System.Drawing.Font("Roboto", 11F);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label7.Location = new System.Drawing.Point(348, 72);
+            this.label7.MouseState = MaterialSkin.MouseState.HOVER;
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(84, 13);
+            this.label7.Size = new System.Drawing.Size(117, 19);
             this.label7.TabIndex = 31;
             this.label7.Text = "Tên loại độc giả";
             // 
             // textBox_TenLoaiDocGia
             // 
-            this.textBox_TenLoaiDocGia.Location = new System.Drawing.Point(315, 60);
+            this.textBox_TenLoaiDocGia.Location = new System.Drawing.Point(352, 100);
             this.textBox_TenLoaiDocGia.Name = "textBox_TenLoaiDocGia";
             this.textBox_TenLoaiDocGia.ReadOnly = true;
             this.textBox_TenLoaiDocGia.Size = new System.Drawing.Size(84, 20);
@@ -216,7 +236,7 @@
             // 
             // textBox_MaDocGia
             // 
-            this.textBox_MaDocGia.Location = new System.Drawing.Point(84, 33);
+            this.textBox_MaDocGia.Location = new System.Drawing.Point(113, 73);
             this.textBox_MaDocGia.Name = "textBox_MaDocGia";
             this.textBox_MaDocGia.ReadOnly = true;
             this.textBox_MaDocGia.Size = new System.Drawing.Size(100, 20);
@@ -226,32 +246,40 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(17, 36);
+            this.label8.Depth = 0;
+            this.label8.Font = new System.Drawing.Font("Roboto", 11F);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label8.Location = new System.Drawing.Point(11, 75);
+            this.label8.MouseState = MaterialSkin.MouseState.HOVER;
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(61, 13);
+            this.label8.Size = new System.Drawing.Size(84, 19);
             this.label8.TabIndex = 34;
             this.label8.Text = "Mã đọc giả";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(17, 214);
+            this.label9.Depth = 0;
+            this.label9.Font = new System.Drawing.Font("Roboto", 11F);
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label9.Location = new System.Drawing.Point(11, 253);
+            this.label9.MouseState = MaterialSkin.MouseState.HOVER;
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(71, 13);
+            this.label9.Size = new System.Drawing.Size(96, 19);
             this.label9.TabIndex = 35;
             this.label9.Text = "Ngày hết hạn";
             // 
             // dateTimePicker_NgayHetHan
             // 
             this.dateTimePicker_NgayHetHan.Enabled = false;
-            this.dateTimePicker_NgayHetHan.Location = new System.Drawing.Point(90, 211);
+            this.dateTimePicker_NgayHetHan.Location = new System.Drawing.Point(113, 253);
             this.dateTimePicker_NgayHetHan.Name = "dateTimePicker_NgayHetHan";
             this.dateTimePicker_NgayHetHan.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker_NgayHetHan.TabIndex = 7;
             // 
             // textBox_tongno
             // 
-            this.textBox_tongno.Location = new System.Drawing.Point(77, 237);
+            this.textBox_tongno.Location = new System.Drawing.Point(113, 278);
             this.textBox_tongno.Name = "textBox_tongno";
             this.textBox_tongno.Size = new System.Drawing.Size(119, 20);
             this.textBox_tongno.TabIndex = 8;
@@ -259,9 +287,13 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(17, 240);
+            this.label10.Depth = 0;
+            this.label10.Font = new System.Drawing.Font("Roboto", 11F);
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label10.Location = new System.Drawing.Point(11, 279);
+            this.label10.MouseState = MaterialSkin.MouseState.HOVER;
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(47, 13);
+            this.label10.Size = new System.Drawing.Size(64, 19);
             this.label10.TabIndex = 37;
             this.label10.Text = "Tổng nợ";
             // 
@@ -269,7 +301,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(403, 299);
+            this.ClientSize = new System.Drawing.Size(477, 387);
             this.Controls.Add(this.textBox_tongno);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -285,14 +317,12 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.button_Huy);
             this.Controls.Add(this.button_CapNhatThe);
             this.Controls.Add(this.textBox_Email);
             this.Controls.Add(this.dateTimePicker_NgayLapThe);
             this.Controls.Add(this.textBox_DiaChi);
             this.Controls.Add(this.dateTimePicker_NgaySinh);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "CapNhatTheDocGia";
             this.Text = "Cập nhật thẻ đọc giả";
             this.Load += new System.EventHandler(this.CapNhatTheDocGia_Load);
@@ -314,7 +344,6 @@
 		private MaterialSkin.Controls.MaterialLabel label4;
 		private MaterialSkin.Controls.MaterialLabel label3;
 		private MaterialSkin.Controls.MaterialLabel label1;
-		private MaterialSkin.Controls.MaterialLabel label2;
 		private MaterialSkin.Controls.MaterialRaisedButton button_Huy;
 		private MaterialSkin.Controls.MaterialRaisedButton button_CapNhatThe;
 		private System.Windows.Forms.TextBox textBox_Email;

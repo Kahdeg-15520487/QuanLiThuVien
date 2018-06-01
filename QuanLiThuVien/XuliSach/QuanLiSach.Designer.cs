@@ -44,9 +44,12 @@
             // 
             // button_lapthedocgia
             // 
-            this.button_lapthedocgia.Location = new System.Drawing.Point(12, 12);
+            this.button_lapthedocgia.Depth = 0;
+            this.button_lapthedocgia.Location = new System.Drawing.Point(12, 66);
+            this.button_lapthedocgia.MouseState = MaterialSkin.MouseState.HOVER;
             this.button_lapthedocgia.Name = "button_lapthedocgia";
-            this.button_lapthedocgia.Size = new System.Drawing.Size(95, 32);
+            this.button_lapthedocgia.Primary = true;
+            this.button_lapthedocgia.Size = new System.Drawing.Size(95, 39);
             this.button_lapthedocgia.TabIndex = 1;
             this.button_lapthedocgia.Text = "Thêm sách";
             this.button_lapthedocgia.UseVisualStyleBackColor = true;
@@ -63,7 +66,7 @@
             this.columnHeader6});
             this.listView_danhsachsach.FullRowSelect = true;
             this.listView_danhsachsach.HideSelection = false;
-            this.listView_danhsachsach.Location = new System.Drawing.Point(12, 88);
+            this.listView_danhsachsach.Location = new System.Drawing.Point(12, 149);
             this.listView_danhsachsach.Name = "listView_danhsachsach";
             this.listView_danhsachsach.Size = new System.Drawing.Size(534, 206);
             this.listView_danhsachsach.TabIndex = 5;
@@ -102,9 +105,12 @@
             // 
             // button_capnhatdocgia
             // 
-            this.button_capnhatdocgia.Location = new System.Drawing.Point(113, 12);
+            this.button_capnhatdocgia.Depth = 0;
+            this.button_capnhatdocgia.Location = new System.Drawing.Point(113, 66);
+            this.button_capnhatdocgia.MouseState = MaterialSkin.MouseState.HOVER;
             this.button_capnhatdocgia.Name = "button_capnhatdocgia";
-            this.button_capnhatdocgia.Size = new System.Drawing.Size(100, 32);
+            this.button_capnhatdocgia.Primary = true;
+            this.button_capnhatdocgia.Size = new System.Drawing.Size(100, 39);
             this.button_capnhatdocgia.TabIndex = 2;
             this.button_capnhatdocgia.Text = "Cập nhật sách";
             this.button_capnhatdocgia.UseVisualStyleBackColor = true;
@@ -112,9 +118,12 @@
             // 
             // button_xoadocgia
             // 
-            this.button_xoadocgia.Location = new System.Drawing.Point(219, 12);
+            this.button_xoadocgia.Depth = 0;
+            this.button_xoadocgia.Location = new System.Drawing.Point(219, 66);
+            this.button_xoadocgia.MouseState = MaterialSkin.MouseState.HOVER;
             this.button_xoadocgia.Name = "button_xoadocgia";
-            this.button_xoadocgia.Size = new System.Drawing.Size(95, 32);
+            this.button_xoadocgia.Primary = true;
+            this.button_xoadocgia.Size = new System.Drawing.Size(95, 39);
             this.button_xoadocgia.TabIndex = 3;
             this.button_xoadocgia.Text = "Xóa sách";
             this.button_xoadocgia.UseVisualStyleBackColor = true;
@@ -122,8 +131,11 @@
             // 
             // button_timdocgia
             // 
-            this.button_timdocgia.Location = new System.Drawing.Point(219, 50);
+            this.button_timdocgia.Depth = 0;
+            this.button_timdocgia.Location = new System.Drawing.Point(219, 111);
+            this.button_timdocgia.MouseState = MaterialSkin.MouseState.HOVER;
             this.button_timdocgia.Name = "button_timdocgia";
+            this.button_timdocgia.Primary = true;
             this.button_timdocgia.Size = new System.Drawing.Size(95, 32);
             this.button_timdocgia.TabIndex = 4;
             this.button_timdocgia.Text = "Tìm sách";
@@ -132,7 +144,7 @@
             // 
             // textBox_MaDocGia
             // 
-            this.textBox_MaDocGia.Location = new System.Drawing.Point(113, 57);
+            this.textBox_MaDocGia.Location = new System.Drawing.Point(113, 118);
             this.textBox_MaDocGia.Name = "textBox_MaDocGia";
             this.textBox_MaDocGia.Size = new System.Drawing.Size(100, 20);
             this.textBox_MaDocGia.TabIndex = 0;
@@ -140,9 +152,13 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(46, 60);
+            this.label1.Depth = 0;
+            this.label1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label1.Location = new System.Drawing.Point(12, 119);
+            this.label1.MouseState = MaterialSkin.MouseState.HOVER;
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 13);
+            this.label1.Size = new System.Drawing.Size(66, 19);
             this.label1.TabIndex = 11;
             this.label1.Text = "Mã sách";
             // 
@@ -164,7 +180,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(557, 306);
+            this.ClientSize = new System.Drawing.Size(559, 367);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox_MaDocGia);
             this.Controls.Add(this.button_timdocgia);
@@ -172,7 +188,6 @@
             this.Controls.Add(this.button_capnhatdocgia);
             this.Controls.Add(this.listView_danhsachsach);
             this.Controls.Add(this.button_lapthedocgia);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "QuanLiSach";
             this.Text = "Thao tac sach";
             this.Load += new System.EventHandler(this.ThaoTacDocGia_Load);

@@ -31,7 +31,6 @@
             this.textBox_mabaocao = new System.Windows.Forms.TextBox();
             this.dateTimePicker_ngaylapbaocao = new System.Windows.Forms.DateTimePicker();
             this.label1 = new MaterialSkin.Controls.MaterialLabel();
-            this.label2 = new MaterialSkin.Controls.MaterialLabel();
             this.label3 = new MaterialSkin.Controls.MaterialLabel();
             this.label4 = new MaterialSkin.Controls.MaterialLabel();
             this.textBox_tongluotmuon = new System.Windows.Forms.TextBox();
@@ -44,7 +43,7 @@
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4});
-            this.listView_theloaitheoluotmuon.Location = new System.Drawing.Point(12, 79);
+            this.listView_theloaitheoluotmuon.Location = new System.Drawing.Point(12, 119);
             this.listView_theloaitheoluotmuon.Name = "listView_theloaitheoluotmuon";
             this.listView_theloaitheoluotmuon.Size = new System.Drawing.Size(333, 170);
             this.listView_theloaitheoluotmuon.TabIndex = 0;
@@ -72,7 +71,7 @@
             // 
             // textBox_mabaocao
             // 
-            this.textBox_mabaocao.Location = new System.Drawing.Point(82, 29);
+            this.textBox_mabaocao.Location = new System.Drawing.Point(106, 69);
             this.textBox_mabaocao.Name = "textBox_mabaocao";
             this.textBox_mabaocao.ReadOnly = true;
             this.textBox_mabaocao.Size = new System.Drawing.Size(100, 20);
@@ -81,7 +80,7 @@
             // dateTimePicker_ngaylapbaocao
             // 
             this.dateTimePicker_ngaylapbaocao.Enabled = false;
-            this.dateTimePicker_ngaylapbaocao.Location = new System.Drawing.Point(82, 53);
+            this.dateTimePicker_ngaylapbaocao.Location = new System.Drawing.Point(106, 93);
             this.dateTimePicker_ngaylapbaocao.Name = "dateTimePicker_ngaylapbaocao";
             this.dateTimePicker_ngaylapbaocao.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker_ngaylapbaocao.TabIndex = 2;
@@ -89,42 +88,45 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 29);
+            this.label1.Depth = 0;
+            this.label1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label1.Location = new System.Drawing.Point(12, 69);
+            this.label1.MouseState = MaterialSkin.MouseState.HOVER;
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 13);
+            this.label1.Size = new System.Drawing.Size(88, 19);
             this.label1.TabIndex = 3;
             this.label1.Text = "Mã báo cáo";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(112, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(148, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Báo cáo thống kê sách trả trễ";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 56);
+            this.label3.Depth = 0;
+            this.label3.Font = new System.Drawing.Font("Roboto", 11F);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label3.Location = new System.Drawing.Point(12, 95);
+            this.label3.MouseState = MaterialSkin.MouseState.HOVER;
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 13);
+            this.label3.Size = new System.Drawing.Size(43, 19);
             this.label3.TabIndex = 5;
             this.label3.Text = "Ngày";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(161, 258);
+            this.label4.Depth = 0;
+            this.label4.Font = new System.Drawing.Font("Roboto", 11F);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label4.Location = new System.Drawing.Point(122, 295);
+            this.label4.MouseState = MaterialSkin.MouseState.HOVER;
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 13);
+            this.label4.Size = new System.Drawing.Size(117, 19);
             this.label4.TabIndex = 10;
             this.label4.Text = "Tổng lượt mượn";
             // 
             // textBox_tongluotmuon
             // 
-            this.textBox_tongluotmuon.Location = new System.Drawing.Point(245, 255);
+            this.textBox_tongluotmuon.Location = new System.Drawing.Point(245, 295);
             this.textBox_tongluotmuon.Name = "textBox_tongluotmuon";
             this.textBox_tongluotmuon.ReadOnly = true;
             this.textBox_tongluotmuon.Size = new System.Drawing.Size(100, 20);
@@ -134,16 +136,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(357, 286);
+            this.ClientSize = new System.Drawing.Size(357, 325);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox_tongluotmuon);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dateTimePicker_ngaylapbaocao);
             this.Controls.Add(this.textBox_mabaocao);
             this.Controls.Add(this.listView_theloaitheoluotmuon);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "LapBaocaoSachMuonTheoTheloai";
             this.Text = "LapBaocaoSachMuonTheoTheloai";
             this.Load += new System.EventHandler(this.LapBaocaoSachMuonTheoTheloai_Load);
@@ -161,7 +161,6 @@
 		private System.Windows.Forms.TextBox textBox_mabaocao;
 		private System.Windows.Forms.DateTimePicker dateTimePicker_ngaylapbaocao;
 		private MaterialSkin.Controls.MaterialLabel label1;
-		private MaterialSkin.Controls.MaterialLabel label2;
 		private MaterialSkin.Controls.MaterialLabel label3;
 		private System.Windows.Forms.ColumnHeader columnHeader3;
 		private MaterialSkin.Controls.MaterialLabel label4;

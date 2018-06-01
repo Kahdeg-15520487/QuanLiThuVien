@@ -47,24 +47,31 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 92);
+            this.label1.Depth = 0;
+            this.label1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label1.Location = new System.Drawing.Point(11, 156);
+            this.label1.MouseState = MaterialSkin.MouseState.HOVER;
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 13);
+            this.label1.Size = new System.Drawing.Size(66, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã sách";
             // 
             // textBox_masach
             // 
-            this.textBox_masach.Location = new System.Drawing.Point(74, 89);
+            this.textBox_masach.Location = new System.Drawing.Point(83, 155);
             this.textBox_masach.Name = "textBox_masach";
             this.textBox_masach.Size = new System.Drawing.Size(100, 20);
             this.textBox_masach.TabIndex = 1;
             // 
             // button_themsach
             // 
-            this.button_themsach.Location = new System.Drawing.Point(180, 89);
+            this.button_themsach.Depth = 0;
+            this.button_themsach.Location = new System.Drawing.Point(195, 142);
+            this.button_themsach.MouseState = MaterialSkin.MouseState.HOVER;
             this.button_themsach.Name = "button_themsach";
-            this.button_themsach.Size = new System.Drawing.Size(75, 23);
+            this.button_themsach.Primary = true;
+            this.button_themsach.Size = new System.Drawing.Size(75, 41);
             this.button_themsach.TabIndex = 2;
             this.button_themsach.Text = "Thêm sách";
             this.button_themsach.UseVisualStyleBackColor = true;
@@ -72,8 +79,11 @@
             // 
             // button_muon
             // 
-            this.button_muon.Location = new System.Drawing.Point(393, 12);
+            this.button_muon.Depth = 0;
+            this.button_muon.Location = new System.Drawing.Point(437, 66);
+            this.button_muon.MouseState = MaterialSkin.MouseState.HOVER;
             this.button_muon.Name = "button_muon";
+            this.button_muon.Primary = true;
             this.button_muon.Size = new System.Drawing.Size(116, 57);
             this.button_muon.TabIndex = 5;
             this.button_muon.Text = "Lập phiếu mượn sách";
@@ -82,8 +92,11 @@
             // 
             // button_huy
             // 
-            this.button_huy.Location = new System.Drawing.Point(520, 12);
+            this.button_huy.Depth = 0;
+            this.button_huy.Location = new System.Drawing.Point(559, 65);
+            this.button_huy.MouseState = MaterialSkin.MouseState.HOVER;
             this.button_huy.Name = "button_huy";
+            this.button_huy.Primary = true;
             this.button_huy.Size = new System.Drawing.Size(116, 57);
             this.button_huy.TabIndex = 6;
             this.button_huy.Text = "Hủy";
@@ -101,9 +114,9 @@
             this.columnHeader6});
             this.listView_danhsachsachmuon.FullRowSelect = true;
             this.listView_danhsachsachmuon.HideSelection = false;
-            this.listView_danhsachsachmuon.Location = new System.Drawing.Point(15, 118);
+            this.listView_danhsachsachmuon.Location = new System.Drawing.Point(15, 189);
             this.listView_danhsachsachmuon.Name = "listView_danhsachsachmuon";
-            this.listView_danhsachsachmuon.Size = new System.Drawing.Size(621, 168);
+            this.listView_danhsachsachmuon.Size = new System.Drawing.Size(660, 168);
             this.listView_danhsachsachmuon.TabIndex = 4;
             this.listView_danhsachsachmuon.UseCompatibleStateImageBehavior = false;
             this.listView_danhsachsachmuon.View = System.Windows.Forms.View.Details;
@@ -139,7 +152,7 @@
             // 
             // textBox_madocgia
             // 
-            this.textBox_madocgia.Location = new System.Drawing.Point(74, 12);
+            this.textBox_madocgia.Location = new System.Drawing.Point(117, 69);
             this.textBox_madocgia.Name = "textBox_madocgia";
             this.textBox_madocgia.Size = new System.Drawing.Size(100, 20);
             this.textBox_madocgia.TabIndex = 0;
@@ -148,15 +161,19 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 15);
+            this.label2.Depth = 0;
+            this.label2.Font = new System.Drawing.Font("Roboto", 11F);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label2.Location = new System.Drawing.Point(11, 68);
+            this.label2.MouseState = MaterialSkin.MouseState.HOVER;
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 13);
+            this.label2.Size = new System.Drawing.Size(84, 19);
             this.label2.TabIndex = 8;
             this.label2.Text = "Mã đọc giả";
             // 
             // textBox_hoten
             // 
-            this.textBox_hoten.Location = new System.Drawing.Point(244, 12);
+            this.textBox_hoten.Location = new System.Drawing.Point(331, 69);
             this.textBox_hoten.Name = "textBox_hoten";
             this.textBox_hoten.ReadOnly = true;
             this.textBox_hoten.Size = new System.Drawing.Size(100, 20);
@@ -166,25 +183,33 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(182, 15);
+            this.label3.Depth = 0;
+            this.label3.Font = new System.Drawing.Font("Roboto", 11F);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label3.Location = new System.Drawing.Point(237, 68);
+            this.label3.MouseState = MaterialSkin.MouseState.HOVER;
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 13);
+            this.label3.Size = new System.Drawing.Size(88, 19);
             this.label3.TabIndex = 10;
             this.label3.Text = "Tên đọc giả";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 46);
+            this.label4.Depth = 0;
+            this.label4.Font = new System.Drawing.Font("Roboto", 11F);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label4.Location = new System.Drawing.Point(11, 104);
+            this.label4.MouseState = MaterialSkin.MouseState.HOVER;
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 13);
+            this.label4.Size = new System.Drawing.Size(86, 19);
             this.label4.TabIndex = 12;
             this.label4.Text = "Ngày mượn";
             // 
             // dateTimePicker_ngaymuon
             // 
             this.dateTimePicker_ngaymuon.Enabled = false;
-            this.dateTimePicker_ngaymuon.Location = new System.Drawing.Point(74, 40);
+            this.dateTimePicker_ngaymuon.Location = new System.Drawing.Point(117, 102);
             this.dateTimePicker_ngaymuon.Name = "dateTimePicker_ngaymuon";
             this.dateTimePicker_ngaymuon.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker_ngaymuon.TabIndex = 1;
@@ -192,9 +217,12 @@
             // 
             // button_xoadsssach
             // 
-            this.button_xoadsssach.Location = new System.Drawing.Point(261, 89);
+            this.button_xoadsssach.Depth = 0;
+            this.button_xoadsssach.Location = new System.Drawing.Point(276, 142);
+            this.button_xoadsssach.MouseState = MaterialSkin.MouseState.HOVER;
             this.button_xoadsssach.Name = "button_xoadsssach";
-            this.button_xoadsssach.Size = new System.Drawing.Size(145, 23);
+            this.button_xoadsssach.Primary = true;
+            this.button_xoadsssach.Size = new System.Drawing.Size(145, 41);
             this.button_xoadsssach.TabIndex = 3;
             this.button_xoadsssach.Text = "Xóa danh sách sách mượn";
             this.button_xoadsssach.UseVisualStyleBackColor = true;
@@ -204,7 +232,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(648, 298);
+            this.ClientSize = new System.Drawing.Size(687, 369);
             this.Controls.Add(this.button_xoadsssach);
             this.Controls.Add(this.dateTimePicker_ngaymuon);
             this.Controls.Add(this.label4);
@@ -218,7 +246,6 @@
             this.Controls.Add(this.button_themsach);
             this.Controls.Add(this.textBox_masach);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "LapPhieuMuonSach";
             this.Text = "LapPhieuMuonSach";
             this.Load += new System.EventHandler(this.LapPhieuMuonSach_Load);
