@@ -23,18 +23,18 @@
 		/// the contents of this method with the code editor.
 		/// </summary>
 		private void InitializeComponent() {
-            this.button_huy = new System.Windows.Forms.Button();
-            this.button_lapphieuthutienphat = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.button_huy = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.button_lapphieuthutienphat = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.label5 = new MaterialSkin.Controls.MaterialLabel();
+            this.label4 = new MaterialSkin.Controls.MaterialLabel();
+            this.label3 = new MaterialSkin.Controls.MaterialLabel();
+            this.label2 = new MaterialSkin.Controls.MaterialLabel();
+            this.label1 = new MaterialSkin.Controls.MaterialLabel();
             this.textBox_noconlai = new System.Windows.Forms.TextBox();
             this.textBox_sotienthu = new System.Windows.Forms.TextBox();
             this.textBox_tongno = new System.Windows.Forms.TextBox();
             this.textBox_hoten = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.label6 = new MaterialSkin.Controls.MaterialLabel();
             this.textBox_madocgia = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
@@ -187,18 +187,18 @@
 
 		#endregion
 
-		private System.Windows.Forms.Button button_huy;
-		private System.Windows.Forms.Button button_lapphieuthutienphat;
-		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.Label label1;
+		private MaterialSkin.Controls.MaterialRaisedButton button_huy;
+		private MaterialSkin.Controls.MaterialRaisedButton button_lapphieuthutienphat;
+		private MaterialSkin.Controls.MaterialLabel label5;
+		private MaterialSkin.Controls.MaterialLabel label4;
+		private MaterialSkin.Controls.MaterialLabel label3;
+		private MaterialSkin.Controls.MaterialLabel label2;
+		private MaterialSkin.Controls.MaterialLabel label1;
 		private System.Windows.Forms.TextBox textBox_noconlai;
 		private System.Windows.Forms.TextBox textBox_sotienthu;
 		private System.Windows.Forms.TextBox textBox_tongno;
 		private System.Windows.Forms.TextBox textBox_hoten;
-		private System.Windows.Forms.Label label6;
+		private MaterialSkin.Controls.MaterialLabel label6;
 		private System.Windows.Forms.TextBox textBox_madocgia;
 	}
 }

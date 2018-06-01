@@ -23,35 +23,38 @@
 		/// the contents of this method with the code editor.
 		/// </summary>
 		private void InitializeComponent() {
-            this.button_docgia = new System.Windows.Forms.Button();
-            this.button_sach = new System.Windows.Forms.Button();
-            this.button_baocao = new System.Windows.Forms.Button();
-            this.button_muonsach = new System.Windows.Forms.Button();
-            this.button_trasach = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.button_docgia = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.button_sach = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.button_baocao = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.button_muonsach = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.button_trasach = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.button6 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button_luuquydinh = new System.Windows.Forms.Button();
-            this.textBox_songaymuontoida = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox_slsachtoidadcmuon = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox_namxuatban = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox_thoihanthe = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox_tuoitoida = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox_tuoitoithieu = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.textBox_tienphattre = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.label7 = new MaterialSkin.Controls.MaterialLabel();
+            this.button_luuquydinh = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.textBox_songaymuontoida = new System.Windows.Forms.TextBox();
+            this.label6 = new MaterialSkin.Controls.MaterialLabel();
+            this.textBox_slsachtoidadcmuon = new System.Windows.Forms.TextBox();
+            this.label5 = new MaterialSkin.Controls.MaterialLabel();
+            this.textBox_namxuatban = new System.Windows.Forms.TextBox();
+            this.label4 = new MaterialSkin.Controls.MaterialLabel();
+            this.textBox_thoihanthe = new System.Windows.Forms.TextBox();
+            this.label3 = new MaterialSkin.Controls.MaterialLabel();
+            this.textBox_tuoitoida = new System.Windows.Forms.TextBox();
+            this.label2 = new MaterialSkin.Controls.MaterialLabel();
+            this.textBox_tuoitoithieu = new System.Windows.Forms.TextBox();
+            this.label1 = new MaterialSkin.Controls.MaterialLabel();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button_docgia
             // 
-            this.button_docgia.Location = new System.Drawing.Point(12, 12);
+            this.button_docgia.Depth = 0;
+            this.button_docgia.Location = new System.Drawing.Point(13, 62);
+            this.button_docgia.MouseState = MaterialSkin.MouseState.HOVER;
             this.button_docgia.Name = "button_docgia";
+            this.button_docgia.Primary = true;
             this.button_docgia.Size = new System.Drawing.Size(97, 51);
             this.button_docgia.TabIndex = 0;
             this.button_docgia.Text = "Thao tác thẻ đọc giả";
@@ -60,8 +63,11 @@
             // 
             // button_sach
             // 
-            this.button_sach.Location = new System.Drawing.Point(115, 12);
+            this.button_sach.Depth = 0;
+            this.button_sach.Location = new System.Drawing.Point(116, 62);
+            this.button_sach.MouseState = MaterialSkin.MouseState.HOVER;
             this.button_sach.Name = "button_sach";
+            this.button_sach.Primary = true;
             this.button_sach.Size = new System.Drawing.Size(97, 51);
             this.button_sach.TabIndex = 1;
             this.button_sach.Text = "Thao tác sách";
@@ -70,8 +76,11 @@
             // 
             // button_baocao
             // 
-            this.button_baocao.Location = new System.Drawing.Point(424, 12);
+            this.button_baocao.Depth = 0;
+            this.button_baocao.Location = new System.Drawing.Point(425, 62);
+            this.button_baocao.MouseState = MaterialSkin.MouseState.HOVER;
             this.button_baocao.Name = "button_baocao";
+            this.button_baocao.Primary = true;
             this.button_baocao.Size = new System.Drawing.Size(97, 51);
             this.button_baocao.TabIndex = 2;
             this.button_baocao.Text = "Báo cáo thống kê sách trả trễ";
@@ -80,8 +89,11 @@
             // 
             // button_muonsach
             // 
-            this.button_muonsach.Location = new System.Drawing.Point(218, 12);
+            this.button_muonsach.Depth = 0;
+            this.button_muonsach.Location = new System.Drawing.Point(219, 62);
+            this.button_muonsach.MouseState = MaterialSkin.MouseState.HOVER;
             this.button_muonsach.Name = "button_muonsach";
+            this.button_muonsach.Primary = true;
             this.button_muonsach.Size = new System.Drawing.Size(97, 51);
             this.button_muonsach.TabIndex = 3;
             this.button_muonsach.Text = "Mượn sách";
@@ -90,8 +102,11 @@
             // 
             // button_trasach
             // 
-            this.button_trasach.Location = new System.Drawing.Point(321, 12);
+            this.button_trasach.Depth = 0;
+            this.button_trasach.Location = new System.Drawing.Point(322, 62);
+            this.button_trasach.MouseState = MaterialSkin.MouseState.HOVER;
             this.button_trasach.Name = "button_trasach";
+            this.button_trasach.Primary = true;
             this.button_trasach.Size = new System.Drawing.Size(97, 51);
             this.button_trasach.TabIndex = 4;
             this.button_trasach.Text = "Trả sách";
@@ -100,8 +115,11 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(527, 12);
+            this.button6.Depth = 0;
+            this.button6.Location = new System.Drawing.Point(528, 62);
+            this.button6.MouseState = MaterialSkin.MouseState.HOVER;
             this.button6.Name = "button6";
+            this.button6.Primary = true;
             this.button6.Size = new System.Drawing.Size(97, 51);
             this.button6.TabIndex = 5;
             this.button6.Text = "Báo cáo thống kê thể loại theo lượt mượn";
@@ -125,17 +143,41 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.textBox_tuoitoithieu);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 97);
+            this.groupBox1.Location = new System.Drawing.Point(12, 119);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(612, 187);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Quy định";
             // 
+            // textBox_tienphattre
+            // 
+            this.textBox_tienphattre.Location = new System.Drawing.Point(460, 17);
+            this.textBox_tienphattre.Name = "textBox_tienphattre";
+            this.textBox_tienphattre.Size = new System.Drawing.Size(100, 20);
+            this.textBox_tienphattre.TabIndex = 13;
+            this.textBox_tienphattre.TextChanged += new System.EventHandler(this.CheckTextboxNumeric);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Depth = 0;
+            this.label7.Font = new System.Drawing.Font("Roboto", 11F);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label7.Location = new System.Drawing.Point(296, 20);
+            this.label7.MouseState = MaterialSkin.MouseState.HOVER;
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(133, 19);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Số tiền phạt trả trễ";
+            // 
             // button_luuquydinh
             // 
+            this.button_luuquydinh.Depth = 0;
             this.button_luuquydinh.Location = new System.Drawing.Point(531, 124);
+            this.button_luuquydinh.MouseState = MaterialSkin.MouseState.HOVER;
             this.button_luuquydinh.Name = "button_luuquydinh";
+            this.button_luuquydinh.Primary = true;
             this.button_luuquydinh.Size = new System.Drawing.Size(75, 46);
             this.button_luuquydinh.TabIndex = 7;
             this.button_luuquydinh.Text = "Lưu quy định";
@@ -153,9 +195,13 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Depth = 0;
+            this.label6.Font = new System.Drawing.Font("Roboto", 11F);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label6.Location = new System.Drawing.Point(6, 150);
+            this.label6.MouseState = MaterialSkin.MouseState.HOVER;
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(105, 13);
+            this.label6.Size = new System.Drawing.Size(148, 19);
             this.label6.TabIndex = 10;
             this.label6.Text = "Số ngày mượn tối đa";
             // 
@@ -170,9 +216,13 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Depth = 0;
+            this.label5.Font = new System.Drawing.Font("Roboto", 11F);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label5.Location = new System.Drawing.Point(6, 124);
+            this.label5.MouseState = MaterialSkin.MouseState.HOVER;
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(162, 13);
+            this.label5.Size = new System.Drawing.Size(230, 19);
             this.label5.TabIndex = 8;
             this.label5.Text = "Số lượng sách tối đa được mượn";
             // 
@@ -187,9 +237,13 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Depth = 0;
+            this.label4.Font = new System.Drawing.Font("Roboto", 11F);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label4.Location = new System.Drawing.Point(6, 98);
+            this.label4.MouseState = MaterialSkin.MouseState.HOVER;
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 13);
+            this.label4.Size = new System.Drawing.Size(101, 19);
             this.label4.TabIndex = 6;
             this.label4.Text = "Năm xuất bản";
             // 
@@ -204,9 +258,13 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Depth = 0;
+            this.label3.Font = new System.Drawing.Font("Roboto", 11F);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label3.Location = new System.Drawing.Point(6, 72);
+            this.label3.MouseState = MaterialSkin.MouseState.HOVER;
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 13);
+            this.label3.Size = new System.Drawing.Size(92, 19);
             this.label3.TabIndex = 4;
             this.label3.Text = "Thời hạn thẻ";
             // 
@@ -221,9 +279,13 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Depth = 0;
+            this.label2.Font = new System.Drawing.Font("Roboto", 11F);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label2.Location = new System.Drawing.Point(6, 46);
+            this.label2.MouseState = MaterialSkin.MouseState.HOVER;
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 13);
+            this.label2.Size = new System.Drawing.Size(82, 19);
             this.label2.TabIndex = 2;
             this.label2.Text = "Tuổi tối đa";
             // 
@@ -238,34 +300,21 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Depth = 0;
+            this.label1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label1.Location = new System.Drawing.Point(6, 20);
+            this.label1.MouseState = MaterialSkin.MouseState.HOVER;
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 13);
+            this.label1.Size = new System.Drawing.Size(98, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tuổi tối thiểu";
-            // 
-            // textBox_tienphattre
-            // 
-            this.textBox_tienphattre.Location = new System.Drawing.Point(460, 17);
-            this.textBox_tienphattre.Name = "textBox_tienphattre";
-            this.textBox_tienphattre.Size = new System.Drawing.Size(100, 20);
-            this.textBox_tienphattre.TabIndex = 13;
-            this.textBox_tienphattre.TextChanged += new System.EventHandler(this.CheckTextboxNumeric);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(296, 20);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(94, 13);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Số tiền phạt trả trễ";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(640, 296);
+            this.ClientSize = new System.Drawing.Size(640, 318);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button_trasach);
@@ -274,6 +323,7 @@
             this.Controls.Add(this.button_sach);
             this.Controls.Add(this.button_docgia);
             this.Name = "MainForm";
+            this.Sizable = false;
             this.Text = "MainForm";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.groupBox1.ResumeLayout(false);
@@ -282,29 +332,29 @@
 
 		}
 
-		#endregion
+        #endregion
 
-		private System.Windows.Forms.Button button_docgia;
-		private System.Windows.Forms.Button button_sach;
-		private System.Windows.Forms.Button button_baocao;
-		private System.Windows.Forms.Button button_muonsach;
-		private System.Windows.Forms.Button button_trasach;
-		private System.Windows.Forms.Button button6;
-		private System.Windows.Forms.GroupBox groupBox1;
+        private MaterialSkin.Controls.MaterialRaisedButton button_docgia;
+		private MaterialSkin.Controls.MaterialRaisedButton button_sach;
+		private MaterialSkin.Controls.MaterialRaisedButton button_baocao;
+		private MaterialSkin.Controls.MaterialRaisedButton button_muonsach;
+		private MaterialSkin.Controls.MaterialRaisedButton button_trasach;
+		private MaterialSkin.Controls.MaterialRaisedButton button6;
+        private System.Windows.Forms.GroupBox groupBox1;
 		private System.Windows.Forms.TextBox textBox_slsachtoidadcmuon;
-		private System.Windows.Forms.Label label5;
+		private MaterialSkin.Controls.MaterialLabel label5;
 		private System.Windows.Forms.TextBox textBox_namxuatban;
-		private System.Windows.Forms.Label label4;
+		private MaterialSkin.Controls.MaterialLabel label4;
 		private System.Windows.Forms.TextBox textBox_thoihanthe;
-		private System.Windows.Forms.Label label3;
+		private MaterialSkin.Controls.MaterialLabel label3;
 		private System.Windows.Forms.TextBox textBox_tuoitoida;
-		private System.Windows.Forms.Label label2;
+		private MaterialSkin.Controls.MaterialLabel label2;
 		private System.Windows.Forms.TextBox textBox_tuoitoithieu;
-		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.Button button_luuquydinh;
+		private MaterialSkin.Controls.MaterialLabel label1;
+		private MaterialSkin.Controls.MaterialRaisedButton button_luuquydinh;
 		private System.Windows.Forms.TextBox textBox_songaymuontoida;
-		private System.Windows.Forms.Label label6;
+		private MaterialSkin.Controls.MaterialLabel label6;
         private System.Windows.Forms.TextBox textBox_tienphattre;
-        private System.Windows.Forms.Label label7;
+        private MaterialSkin.Controls.MaterialLabel label7;
     }
 }

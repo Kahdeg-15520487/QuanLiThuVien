@@ -24,23 +24,23 @@
 		/// </summary>
 		private void InitializeComponent() {
             this.textBox_tensach = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button_Huy = new System.Windows.Forms.Button();
-            this.button_CapNhatThe = new System.Windows.Forms.Button();
+            this.label6 = new MaterialSkin.Controls.MaterialLabel();
+            this.label1 = new MaterialSkin.Controls.MaterialLabel();
+            this.label2 = new MaterialSkin.Controls.MaterialLabel();
+            this.button_Huy = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.button_CapNhatThe = new MaterialSkin.Controls.MaterialRaisedButton();
             this.textBox_nxb = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.label7 = new MaterialSkin.Controls.MaterialLabel();
             this.textBox_masach = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.label8 = new MaterialSkin.Controls.MaterialLabel();
             this.textBox_tinhtrang = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.label10 = new MaterialSkin.Controls.MaterialLabel();
             this.comboBox_theloai = new System.Windows.Forms.ComboBox();
             this.comboBox_tacgia = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label3 = new MaterialSkin.Controls.MaterialLabel();
             this.textBox_namxb = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new MaterialSkin.Controls.MaterialLabel();
+            this.label5 = new MaterialSkin.Controls.MaterialLabel();
             this.dateTimePicker_ngaynhap = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
@@ -241,23 +241,23 @@
 
 		#endregion
 		private System.Windows.Forms.TextBox textBox_tensach;
-		private System.Windows.Forms.Label label6;
-		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.Button button_Huy;
-		private System.Windows.Forms.Button button_CapNhatThe;
+		private MaterialSkin.Controls.MaterialLabel label6;
+		private MaterialSkin.Controls.MaterialLabel label1;
+		private MaterialSkin.Controls.MaterialLabel label2;
+		private MaterialSkin.Controls.MaterialRaisedButton button_Huy;
+		private MaterialSkin.Controls.MaterialRaisedButton button_CapNhatThe;
 		private System.Windows.Forms.TextBox textBox_nxb;
-		private System.Windows.Forms.Label label7;
+		private MaterialSkin.Controls.MaterialLabel label7;
 		private System.Windows.Forms.TextBox textBox_masach;
-		private System.Windows.Forms.Label label8;
+		private MaterialSkin.Controls.MaterialLabel label8;
 		private System.Windows.Forms.TextBox textBox_tinhtrang;
-		private System.Windows.Forms.Label label10;
+		private MaterialSkin.Controls.MaterialLabel label10;
 		private System.Windows.Forms.ComboBox comboBox_theloai;
 		private System.Windows.Forms.ComboBox comboBox_tacgia;
-		private System.Windows.Forms.Label label3;
+		private MaterialSkin.Controls.MaterialLabel label3;
 		private System.Windows.Forms.TextBox textBox_namxb;
-		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.Label label5;
+		private MaterialSkin.Controls.MaterialLabel label4;
+		private MaterialSkin.Controls.MaterialLabel label5;
 		private System.Windows.Forms.DateTimePicker dateTimePicker_ngaynhap;
 	}
 }

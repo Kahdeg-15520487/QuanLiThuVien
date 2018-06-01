@@ -9,10 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QuanLiThuVien.BaocaoSachMuonTheoTheloai {
-	public partial class LapBaocaoSachMuonTheoTheloai : Form {
+	public partial class LapBaocaoSachMuonTheoTheloai: MaterialSkin.Controls.MaterialForm {
 		public LapBaocaoSachMuonTheoTheloai() {
 			InitializeComponent();
-		}
+
+            var materialSkinManager = MaterialSkin.MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.BlueGrey800, MaterialSkin.Primary.BlueGrey900, MaterialSkin.Primary.BlueGrey500, MaterialSkin.Accent.LightBlue200, MaterialSkin.TextShade.WHITE);
+        }
 
 		private void LapBaocaoSachMuonTheoTheloai_Load(object sender, EventArgs e) {
 			//tạo mã báo cáo

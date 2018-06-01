@@ -2,12 +2,17 @@
 using System.Windows.Forms;
 
 namespace QuanLiThuVien.XuliTheDocGia {
-	public partial class LapPhieuThuTienPhat : Form {
+	public partial class LapPhieuThuTienPhat: MaterialSkin.Controls.MaterialForm {
 		private DataAccess.DataObject.DocGia docgia;
 
 		public LapPhieuThuTienPhat(string madocgia) {
 			InitializeComponent();
-			docgia = DataAccess.Database.GetDocGia(madocgia);
+
+            var materialSkinManager = MaterialSkin.MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.BlueGrey800, MaterialSkin.Primary.BlueGrey900, MaterialSkin.Primary.BlueGrey500, MaterialSkin.Accent.LightBlue200, MaterialSkin.TextShade.WHITE);
+            docgia = DataAccess.Database.GetDocGia(madocgia);
 			textBox_sotienthu.Focus();
 		}
 

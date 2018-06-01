@@ -8,6 +8,9 @@ using System.Collections.Generic;
 
 namespace DataAccess
 {
+    /// <summary>
+    /// base class for database manipulation
+    /// </summary>
     public static class Database
     {
         static ConnectionString DatabaseConnectionString;

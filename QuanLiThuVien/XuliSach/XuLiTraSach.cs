@@ -12,13 +12,18 @@ using System.Windows.Forms;
 
 namespace QuanLiThuVien.XuliSach
 {
-    public partial class XuLiTraSach : Form
+    public partial class XuLiTraSach: MaterialSkin.Controls.MaterialForm
     {
         DataAccess.DataObject.DocGia docgia = null;
 
         public XuLiTraSach()
         {
             InitializeComponent();
+
+            var materialSkinManager = MaterialSkin.MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.BlueGrey800, MaterialSkin.Primary.BlueGrey900, MaterialSkin.Primary.BlueGrey500, MaterialSkin.Accent.LightBlue200, MaterialSkin.TextShade.WHITE);
         }
 
         private void textBox_madocgia_TextChanged(object sender, EventArgs e)

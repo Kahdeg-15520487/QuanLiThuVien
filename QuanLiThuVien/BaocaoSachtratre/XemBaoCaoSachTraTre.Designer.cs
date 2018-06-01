@@ -31,10 +31,10 @@
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.textBox_mabaocao = new System.Windows.Forms.TextBox();
             this.dateTimePicker_ngaylapbaocao = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button_inbaocao = new System.Windows.Forms.Button();
+            this.label1 = new MaterialSkin.Controls.MaterialLabel();
+            this.label2 = new MaterialSkin.Controls.MaterialLabel();
+            this.label3 = new MaterialSkin.Controls.MaterialLabel();
+            this.button_inbaocao = new MaterialSkin.Controls.MaterialRaisedButton();
             this.SuspendLayout();
             // 
             // listView_sachtratre
@@ -160,10 +160,10 @@
 		private System.Windows.Forms.ColumnHeader columnHeader5;
 		private System.Windows.Forms.TextBox textBox_mabaocao;
 		private System.Windows.Forms.DateTimePicker dateTimePicker_ngaylapbaocao;
-		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.Label label3;
+		private MaterialSkin.Controls.MaterialLabel label1;
+		private MaterialSkin.Controls.MaterialLabel label2;
+		private MaterialSkin.Controls.MaterialLabel label3;
 		private System.Windows.Forms.ColumnHeader columnHeader3;
-		private System.Windows.Forms.Button button_inbaocao;
+		private MaterialSkin.Controls.MaterialRaisedButton button_inbaocao;
 	}
 }

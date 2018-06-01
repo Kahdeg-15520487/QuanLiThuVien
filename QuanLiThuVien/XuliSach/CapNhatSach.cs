@@ -11,13 +11,18 @@ using System.Windows.Forms;
 using DataAccess;
 
 namespace QuanLiThuVien.XuliSach {
-	public partial class CapNhatSach : Form {
+	public partial class CapNhatSach: MaterialSkin.Controls.MaterialForm {
 		private string masach;
 		private DataAccess.DataObject.Sach sach;
 
 		public CapNhatSach(string masach) {
 			InitializeComponent();
-			this.masach = masach;
+
+            var materialSkinManager = MaterialSkin.MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.BlueGrey800, MaterialSkin.Primary.BlueGrey900, MaterialSkin.Primary.BlueGrey500, MaterialSkin.Accent.LightBlue200, MaterialSkin.TextShade.WHITE);
+            this.masach = masach;
 		}
 
 		private void CapNhatTheDocGia_Load(object sender, EventArgs e) {

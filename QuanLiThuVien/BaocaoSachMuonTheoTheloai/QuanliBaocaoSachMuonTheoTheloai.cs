@@ -5,10 +5,15 @@ using System.Windows.Forms;
 using QuanLiThuVien.BaocaoSachMuonTheoTheloai;
 
 namespace QuanLiThuVien {
-	public partial class QuanliBaocaoSachMuonTheoTheloai : Form {
+	public partial class QuanliBaocaoSachMuonTheoTheloai: MaterialSkin.Controls.MaterialForm {
 		public QuanliBaocaoSachMuonTheoTheloai() {
 			InitializeComponent();
-		}
+
+            var materialSkinManager = MaterialSkin.MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.BlueGrey800, MaterialSkin.Primary.BlueGrey900, MaterialSkin.Primary.BlueGrey500, MaterialSkin.Accent.LightBlue200, MaterialSkin.TextShade.WHITE);
+        }
 
 		private void QuanliBaocaoSachMuonTheoTheloai_Load(object sender, EventArgs e) {
 			PopulateListView(GetAll());

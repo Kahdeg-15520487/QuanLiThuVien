@@ -9,10 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QuanLiThuVien.BaocaoSachtratre {
-	public partial class LapBaoCaoSachTraTre : Form {
+	public partial class LapBaoCaoSachTraTre: MaterialSkin.Controls.MaterialForm {
 		public LapBaoCaoSachTraTre() {
 			InitializeComponent();
-		}
+
+            var materialSkinManager = MaterialSkin.MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.BlueGrey800, MaterialSkin.Primary.BlueGrey900, MaterialSkin.Primary.BlueGrey500, MaterialSkin.Accent.LightBlue200, MaterialSkin.TextShade.WHITE);
+        }
 
 		private void LapBaoCaoSachTraTre_Load(object sender, EventArgs e) {
 			//tạo mã báo cáo

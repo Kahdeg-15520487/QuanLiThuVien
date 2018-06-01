@@ -11,13 +11,18 @@ using System.Windows.Forms;
 using DataAccess;
 
 namespace QuanLiThuVien.XuliTheDocGia {
-	public partial class CapNhatTheDocGia : Form {
+	public partial class CapNhatTheDocGia: MaterialSkin.Controls.MaterialForm {
 		private string mathedocgia;
 		private DataAccess.DataObject.DocGia docgia;
 
 		public CapNhatTheDocGia(string mathedocgia) {
 			InitializeComponent();
-			this.mathedocgia = mathedocgia;
+
+            var materialSkinManager = MaterialSkin.MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.BlueGrey800, MaterialSkin.Primary.BlueGrey900, MaterialSkin.Primary.BlueGrey500, MaterialSkin.Accent.LightBlue200, MaterialSkin.TextShade.WHITE);
+            this.mathedocgia = mathedocgia;
 		}
 
 		private void CapNhatTheDocGia_Load(object sender, EventArgs e) {

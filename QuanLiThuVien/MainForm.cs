@@ -7,7 +7,7 @@ using QuanLiThuVien.XuliSach;
 
 namespace QuanLiThuVien
 {
-    public partial class MainForm : Form
+    public partial class MainForm : MaterialSkin.Controls.MaterialForm
     {
         QuanLiDocGia QuanLiDocGia = null;
         QuanLiSach QuanLiSach = null;
@@ -19,6 +19,12 @@ namespace QuanLiThuVien
         public MainForm()
         {
             InitializeComponent();
+
+            var materialSkinManager = MaterialSkin.MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.BlueGrey800, MaterialSkin.Primary.BlueGrey900, MaterialSkin.Primary.BlueGrey500, MaterialSkin.Accent.LightBlue200, MaterialSkin.TextShade.WHITE);
+
         }
 
         private void button_docgia_Click(object sender, EventArgs e)

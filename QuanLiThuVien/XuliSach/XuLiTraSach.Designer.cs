@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.textBox_hoten = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label3 = new MaterialSkin.Controls.MaterialLabel();
             this.textBox_madocgia = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label2 = new MaterialSkin.Controls.MaterialLabel();
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listView_danhsachsachmuon = new System.Windows.Forms.ListView();
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button_huy = new System.Windows.Forms.Button();
-            this.button_xuli = new System.Windows.Forms.Button();
+            this.button_huy = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.button_xuli = new MaterialSkin.Controls.MaterialRaisedButton();
             this.textBox_tongno = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new MaterialSkin.Controls.MaterialLabel();
+            this.label4 = new MaterialSkin.Controls.MaterialLabel();
             this.SuspendLayout();
             // 
             // textBox_hoten
@@ -187,18 +187,18 @@
 
         #endregion
         private System.Windows.Forms.TextBox textBox_hoten;
-        private System.Windows.Forms.Label label3;
+        private MaterialSkin.Controls.MaterialLabel label3;
         private System.Windows.Forms.TextBox textBox_madocgia;
-        private System.Windows.Forms.Label label2;
+        private MaterialSkin.Controls.MaterialLabel label2;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ListView listView_danhsachsachmuon;
         private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.Button button_huy;
-        private System.Windows.Forms.Button button_xuli;
+        private MaterialSkin.Controls.MaterialRaisedButton button_huy;
+        private MaterialSkin.Controls.MaterialRaisedButton button_xuli;
         private System.Windows.Forms.TextBox textBox_tongno;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
+        private MaterialSkin.Controls.MaterialLabel label1;
+        private MaterialSkin.Controls.MaterialLabel label4;
     }
 }

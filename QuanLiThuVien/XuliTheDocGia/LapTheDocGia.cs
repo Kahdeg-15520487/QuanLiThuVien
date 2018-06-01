@@ -11,10 +11,15 @@ using System.Windows.Forms;
 using DataAccess;
 
 namespace QuanLiThuVien {
-	public partial class LapTheDocGia : Form {
+	public partial class LapTheDocGia: MaterialSkin.Controls.MaterialForm {
 		public LapTheDocGia() {
 			InitializeComponent();
-		}
+
+            var materialSkinManager = MaterialSkin.MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.BlueGrey800, MaterialSkin.Primary.BlueGrey900, MaterialSkin.Primary.BlueGrey500, MaterialSkin.Accent.LightBlue200, MaterialSkin.TextShade.WHITE);
+        }
 
 		private void LapTheDocGia_Load(object sender, EventArgs e) {
 			textBox_MaDocGia.Text = RandomIdGenerator.GetBase36(10);
