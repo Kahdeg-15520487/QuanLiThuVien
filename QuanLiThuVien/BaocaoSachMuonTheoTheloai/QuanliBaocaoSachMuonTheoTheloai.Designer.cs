@@ -136,7 +136,7 @@
             this.Controls.Add(this.textBox_mabaocao);
             this.Controls.Add(this.label1);
             this.Name = "QuanliBaocaoSachMuonTheoTheloai";
-            this.Text = "QuanliBaocaoSachMuonTheoTheloai";
+            this.Text = "Báo cáo sách mượn theo thể loại";
             this.Load += new System.EventHandler(this.QuanliBaocaoSachMuonTheoTheloai_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

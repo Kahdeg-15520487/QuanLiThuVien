@@ -128,7 +128,7 @@
             this.Controls.Add(this.textBox_mabaocao);
             this.Controls.Add(this.listView_sachtratre);
             this.Name = "LapBaoCaoSachTraTre";
-            this.Text = "LapBaoCaoSachTraTre";
+            this.Text = "Lập báo cáo sách trả trễ";
             this.Load += new System.EventHandler(this.LapBaoCaoSachTraTre_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

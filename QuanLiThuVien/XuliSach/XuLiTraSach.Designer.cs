@@ -200,7 +200,7 @@
             this.Controls.Add(this.button_huy);
             this.Controls.Add(this.button_xuli);
             this.Name = "XuLiTraSach";
-            this.Text = "XuLiTraSach";
+            this.Text = "Xử lí trả sách";
             this.ResumeLayout(false);
             this.PerformLayout();
 

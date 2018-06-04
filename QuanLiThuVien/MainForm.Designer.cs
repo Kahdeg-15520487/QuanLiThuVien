@@ -51,7 +51,7 @@
             // button_docgia
             // 
             this.button_docgia.Depth = 0;
-            this.button_docgia.Location = new System.Drawing.Point(13, 62);
+            this.button_docgia.Location = new System.Drawing.Point(11, 69);
             this.button_docgia.MouseState = MaterialSkin.MouseState.HOVER;
             this.button_docgia.Name = "button_docgia";
             this.button_docgia.Primary = true;
@@ -64,7 +64,7 @@
             // button_sach
             // 
             this.button_sach.Depth = 0;
-            this.button_sach.Location = new System.Drawing.Point(116, 62);
+            this.button_sach.Location = new System.Drawing.Point(114, 69);
             this.button_sach.MouseState = MaterialSkin.MouseState.HOVER;
             this.button_sach.Name = "button_sach";
             this.button_sach.Primary = true;
@@ -77,7 +77,7 @@
             // button_baocao
             // 
             this.button_baocao.Depth = 0;
-            this.button_baocao.Location = new System.Drawing.Point(425, 62);
+            this.button_baocao.Location = new System.Drawing.Point(423, 69);
             this.button_baocao.MouseState = MaterialSkin.MouseState.HOVER;
             this.button_baocao.Name = "button_baocao";
             this.button_baocao.Primary = true;
@@ -90,7 +90,7 @@
             // button_muonsach
             // 
             this.button_muonsach.Depth = 0;
-            this.button_muonsach.Location = new System.Drawing.Point(219, 62);
+            this.button_muonsach.Location = new System.Drawing.Point(217, 69);
             this.button_muonsach.MouseState = MaterialSkin.MouseState.HOVER;
             this.button_muonsach.Name = "button_muonsach";
             this.button_muonsach.Primary = true;
@@ -103,7 +103,7 @@
             // button_trasach
             // 
             this.button_trasach.Depth = 0;
-            this.button_trasach.Location = new System.Drawing.Point(322, 62);
+            this.button_trasach.Location = new System.Drawing.Point(320, 69);
             this.button_trasach.MouseState = MaterialSkin.MouseState.HOVER;
             this.button_trasach.Name = "button_trasach";
             this.button_trasach.Primary = true;
@@ -116,7 +116,7 @@
             // button6
             // 
             this.button6.Depth = 0;
-            this.button6.Location = new System.Drawing.Point(528, 62);
+            this.button6.Location = new System.Drawing.Point(526, 69);
             this.button6.MouseState = MaterialSkin.MouseState.HOVER;
             this.button6.Name = "button6";
             this.button6.Primary = true;
@@ -143,7 +143,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.textBox_tuoitoithieu);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 119);
+            this.groupBox1.Location = new System.Drawing.Point(10, 126);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(612, 187);
             this.groupBox1.TabIndex = 6;
@@ -314,7 +314,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(640, 318);
+            this.ClientSize = new System.Drawing.Size(636, 320);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button_trasach);
@@ -324,7 +324,7 @@
             this.Controls.Add(this.button_docgia);
             this.Name = "MainForm";
             this.Sizable = false;
-            this.Text = "MainForm";
+            this.Text = "Màn hình chính";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

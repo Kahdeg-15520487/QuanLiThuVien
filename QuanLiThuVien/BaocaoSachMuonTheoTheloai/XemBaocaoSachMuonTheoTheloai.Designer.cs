@@ -161,7 +161,7 @@
             this.Controls.Add(this.textBox_mabaocao);
             this.Controls.Add(this.listView_theloaitheoluotmuon);
             this.Name = "XemBaocaoSachMuonTheoTheloai";
-            this.Text = "XemBaocaoSachMuonTheoTheloai";
+            this.Text = "Báo cáo sách mượn theo thể loại";
             this.Load += new System.EventHandler(this.XemBaocaoSachMuonTheoTheloai_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

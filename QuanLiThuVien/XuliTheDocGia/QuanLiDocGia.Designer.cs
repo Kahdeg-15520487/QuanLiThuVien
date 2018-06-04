@@ -199,7 +199,7 @@
             this.Controls.Add(this.button_lapthedocgia);
             this.Name = "QuanLiDocGia";
             this.Sizable = false;
-            this.Text = "ThaoTacDocGia";
+            this.Text = "Quản lí đọc giả";
             this.Load += new System.EventHandler(this.ThaoTacDocGia_Load);
             this.contextMenuStrip_listview.ResumeLayout(false);
             this.ResumeLayout(false);

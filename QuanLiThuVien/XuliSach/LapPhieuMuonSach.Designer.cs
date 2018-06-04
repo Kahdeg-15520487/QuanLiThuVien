@@ -247,7 +247,7 @@
             this.Controls.Add(this.textBox_masach);
             this.Controls.Add(this.label1);
             this.Name = "LapPhieuMuonSach";
-            this.Text = "LapPhieuMuonSach";
+            this.Text = "Lập phiếu mượn sách";
             this.Load += new System.EventHandler(this.LapPhieuMuonSach_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

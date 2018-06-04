@@ -143,7 +143,7 @@
             this.Controls.Add(this.textBox_mabaocao);
             this.Controls.Add(this.listView_sachtratre);
             this.Name = "XemBaoCaoSachTraTre";
-            this.Text = "XemBaoCaoSachTraTre";
+            this.Text = "Báo cáo sách trả trễ";
             this.Load += new System.EventHandler(this.XemBaoCaoSachTraTre_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

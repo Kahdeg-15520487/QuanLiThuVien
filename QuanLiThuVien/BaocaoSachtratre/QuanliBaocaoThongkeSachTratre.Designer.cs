@@ -143,7 +143,7 @@
             this.Controls.Add(this.textBox_mabaocao);
             this.Controls.Add(this.label1);
             this.Name = "QuanliBaocaoThongkeSachTratre";
-            this.Text = "QuanliBaocaoThongkeSachTratre";
+            this.Text = "Báo cáo thống kê sách trả trễ";
             this.Load += new System.EventHandler(this.QuanliBaocaoThongkeSachTratre_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
