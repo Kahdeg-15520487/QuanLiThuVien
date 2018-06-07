@@ -259,7 +259,7 @@
             this.Controls.Add(this.textBox_nxb);
             this.MaximizeBox = false;
             this.Name = "CapNhatSach";
-            this.Text = "Cập nhật thẻ sách";
+            this.Text = "Cập nhật sách";
             this.Load += new System.EventHandler(this.CapNhatTheDocGia_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
