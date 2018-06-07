@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using QuanLiThuVien.BaocaoSachtratre;
 using QuanLiThuVien.XuliTheDocGia;
 using QuanLiThuVien.XuliSach;
+using System.Linq;
 
 namespace QuanLiThuVien
 {
@@ -123,6 +124,15 @@ namespace QuanLiThuVien
             textBox_slsachtoidadcmuon.Text = SoluongSachDuocMuon.NoiDungQuiDinh;
             textBox_songaymuontoida.Text = SoNgaymuonToida.NoiDungQuiDinh;
             textBox_tienphattre.Text = TienPhatTraTre.NoiDungQuiDinh;
+
+            var now = DateTime.Now;
+            if (now.Day == 1)
+            {
+                if (DataAccess.Database.GetBaocaoThongkeSachTraTres(bc => bc.NgayLapBaoCao.Year == now.Year && bc.NgayLapBaoCao.Month == now.Month && bc.NgayLapBaoCao.Day == now.Day).ToList().Count == 0)
+                {
+                    LapBaoCaoSachTraTre.LapBaoCao(DataAccess.RandomIdGenerator.GetBase36(10));
+                }
+            }
         }
 
         private void button_luuquydinh_Click(object sender, EventArgs e)
@@ -152,6 +162,11 @@ namespace QuanLiThuVien
             {
                 textbox.Undo();
             }
+        }
+
+        private void button_macdinh_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

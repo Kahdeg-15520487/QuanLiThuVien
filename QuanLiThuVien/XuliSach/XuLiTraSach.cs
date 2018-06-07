@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace QuanLiThuVien.XuliSach
 {
-    public partial class XuLiTraSach: MaterialSkin.Controls.MaterialForm
+    public partial class XuLiTraSach : MaterialSkin.Controls.MaterialForm
     {
         DataAccess.DataObject.DocGia docgia = null;
 
@@ -77,8 +77,14 @@ namespace QuanLiThuVien.XuliSach
                     SoNgayMuon = (phieuTraSach.NgayTra - ttms.NgayMuon).Days,
                     Sach = ttms.Sach
                 };
-
-                thongtinsachtra.TienPhat = (thongtinsachtra.SoNgayMuon - songaymuontoida) * tienphattratre;
+                if (thongtinsachtra.SoNgayMuon > songaymuontoida)
+                {
+                    thongtinsachtra.TienPhat = (thongtinsachtra.SoNgayMuon - songaymuontoida) * tienphattratre;
+                }
+                else
+                {
+                    thongtinsachtra.TienPhat = 0;
+                }
                 docgia.TongNo += thongtinsachtra.TienPhat;
 
                 thongtinsachtras.Add(thongtinsachtra);
@@ -133,12 +139,19 @@ namespace QuanLiThuVien.XuliSach
         private List<ListViewItem> GetAllForMaDocGia(string madocgia)
         {
             var lvis = new List<ListViewItem>();
+
+            var songaymuontoida = int.Parse(Database.GetQuyDinh(x => x.TenQuiDinh == "SoNgaymuonToida").NoiDungQuiDinh);
+            var tienphattratre = int.Parse(Database.GetQuyDinh(x => x.TenQuiDinh == "TienPhatTraTre").NoiDungQuiDinh);
+
             foreach (var ttms in Database.GetThongTinMuonSachs(ttms => ttms.DocGia.MaTheDG == madocgia))
             {
                 ListViewItem item = new ListViewItem(lvis.Count.ToString());
                 item.SubItems.Add(ttms.Sach.MaSach);
                 item.SubItems.Add(ttms.Sach.TenSach);
                 item.SubItems.Add(ttms.NgayMuon.ToShortDateString());
+                var soNgayMuon = (DateTime.Now - ttms.NgayMuon).Days;
+                var tienPhat = soNgayMuon > songaymuontoida ? (soNgayMuon - songaymuontoida) * tienphattratre : 0;
+                item.SubItems.Add(tienPhat.ToString());
                 lvis.Add(item);
             }
             return lvis;

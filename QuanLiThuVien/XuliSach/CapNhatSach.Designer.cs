@@ -257,6 +257,7 @@
             this.Controls.Add(this.button_Huy);
             this.Controls.Add(this.button_CapNhatThe);
             this.Controls.Add(this.textBox_nxb);
+            this.MaximizeBox = false;
             this.Name = "CapNhatSach";
             this.Text = "Cập nhật thẻ sách";
             this.Load += new System.EventHandler(this.CapNhatTheDocGia_Load);

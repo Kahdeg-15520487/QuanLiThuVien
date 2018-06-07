@@ -144,6 +144,7 @@
             this.Controls.Add(this.dateTimePicker_ngaylapbaocao);
             this.Controls.Add(this.textBox_mabaocao);
             this.Controls.Add(this.listView_theloaitheoluotmuon);
+            this.MaximizeBox = false;
             this.Name = "LapBaocaoSachMuonTheoTheloai";
             this.Text = "Lập báo cáo sách mượn theo thể loại";
             this.Load += new System.EventHandler(this.LapBaocaoSachMuonTheoTheloai_Load);

@@ -35,6 +35,21 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 [Files]
 Source: "C:\Users\DELL\Documents\Workspace\c#\QuanLiThuVien\Build\Release\QuanLiThuVien.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\DELL\Documents\Workspace\c#\QuanLiThuVien\Build\Release\config.xml"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\DELL\Documents\Workspace\c#\QuanLiThuVien\Build\Release\CrystalDecisions.CrystalReports.Engine.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\DELL\Documents\Workspace\c#\QuanLiThuVien\Build\Release\CrystalDecisions.ReportAppServer.ClientDoc.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\DELL\Documents\Workspace\c#\QuanLiThuVien\Build\Release\CrystalDecisions.ReportAppServer.CommLayer.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\DELL\Documents\Workspace\c#\QuanLiThuVien\Build\Release\CrystalDecisions.ReportAppServer.CommonControls.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\DELL\Documents\Workspace\c#\QuanLiThuVien\Build\Release\CrystalDecisions.ReportAppServer.CommonObjectModel.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\DELL\Documents\Workspace\c#\QuanLiThuVien\Build\Release\CrystalDecisions.ReportAppServer.Controllers.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\DELL\Documents\Workspace\c#\QuanLiThuVien\Build\Release\CrystalDecisions.ReportAppServer.CubeDefModel.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\DELL\Documents\Workspace\c#\QuanLiThuVien\Build\Release\CrystalDecisions.ReportAppServer.DataDefModel.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\DELL\Documents\Workspace\c#\QuanLiThuVien\Build\Release\CrystalDecisions.ReportAppServer.DataSetConversion.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\DELL\Documents\Workspace\c#\QuanLiThuVien\Build\Release\CrystalDecisions.ReportAppServer.ObjectFactory.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\DELL\Documents\Workspace\c#\QuanLiThuVien\Build\Release\CrystalDecisions.ReportAppServer.Prompting.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\DELL\Documents\Workspace\c#\QuanLiThuVien\Build\Release\CrystalDecisions.ReportAppServer.ReportDefModel.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\DELL\Documents\Workspace\c#\QuanLiThuVien\Build\Release\CrystalDecisions.ReportAppServer.XmlSerialize.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\DELL\Documents\Workspace\c#\QuanLiThuVien\Build\Release\CrystalDecisions.ReportSource.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\DELL\Documents\Workspace\c#\QuanLiThuVien\Build\Release\CrystalDecisions.Shared.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\DELL\Documents\Workspace\c#\QuanLiThuVien\Build\Release\DataAccess.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\DELL\Documents\Workspace\c#\QuanLiThuVien\Build\Release\docgia.json"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\DELL\Documents\Workspace\c#\QuanLiThuVien\Build\Release\InitDatabase.exe"; DestDir: "{app}"; Flags: ignoreversion
@@ -43,9 +58,12 @@ Source: "C:\Users\DELL\Documents\Workspace\c#\QuanLiThuVien\Build\Release\initdb
 Source: "C:\Users\DELL\Documents\Workspace\c#\QuanLiThuVien\Build\Release\LiteDB.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\DELL\Documents\Workspace\c#\QuanLiThuVien\Build\Release\MaterialSkin.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\DELL\Documents\Workspace\c#\QuanLiThuVien\Build\Release\Newtonsoft.Json.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\DELL\Documents\Workspace\c#\QuanLiThuVien\Build\Release\print_06_06_2018_19_34.txt"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\DELL\Documents\Workspace\c#\QuanLiThuVien\Build\Release\QuanLiThuVien.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\DELL\Documents\Workspace\c#\QuanLiThuVien\Build\Release\QuanLiThuVien.exe.config"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\DELL\Documents\Workspace\c#\QuanLiThuVien\Build\Release\quydinh.json"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\DELL\Documents\Workspace\c#\QuanLiThuVien\Build\Release\sach.json"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\DELL\Documents\Workspace\c#\QuanLiThuVien\Build\Release\stdole.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\DELL\Documents\Workspace\c#\QuanLiThuVien\Build\Release\thuvien.db"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\DELL\Documents\Workspace\c#\QuanLiThuVien\Build\Release\Utility.CommandLine.Arguments.dll"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files

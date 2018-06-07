@@ -37,6 +37,7 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listView_danhsachsachmuon = new System.Windows.Forms.ListView();
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button_huy = new MaterialSkin.Controls.MaterialRaisedButton();
             this.button_xuli = new MaterialSkin.Controls.MaterialRaisedButton();
             this.textBox_tongno = new System.Windows.Forms.TextBox();
@@ -107,7 +108,8 @@
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
-            this.columnHeader4});
+            this.columnHeader4,
+            this.columnHeader5});
             this.listView_danhsachsachmuon.FullRowSelect = true;
             this.listView_danhsachsachmuon.HideSelection = false;
             this.listView_danhsachsachmuon.Location = new System.Drawing.Point(12, 166);
@@ -122,6 +124,11 @@
             // 
             this.columnHeader3.Text = "Tên sách";
             this.columnHeader3.Width = 119;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Tiền phạt trả trễ";
+            this.columnHeader5.Width = 104;
             // 
             // button_huy
             // 
@@ -199,6 +206,7 @@
             this.Controls.Add(this.listView_danhsachsachmuon);
             this.Controls.Add(this.button_huy);
             this.Controls.Add(this.button_xuli);
+            this.MaximizeBox = false;
             this.Name = "XuLiTraSach";
             this.Text = "Xử lí trả sách";
             this.ResumeLayout(false);
@@ -221,5 +229,6 @@
         private System.Windows.Forms.TextBox textBox_tongno;
         private MaterialSkin.Controls.MaterialLabel label1;
         private MaterialSkin.Controls.MaterialLabel label4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
     }
 }

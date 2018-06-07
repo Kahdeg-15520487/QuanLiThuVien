@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAccess.DataObject;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,8 +25,25 @@ namespace QuanLiThuVien.BaocaoSachtratre {
 			PopulateListView(GetAll());
 		}
 
-		private void button_lapbaocao_Click(object sender, EventArgs e) {
-			new LapBaoCaoSachTraTre().ShowDialog();
+		private void button_lapbaocao_Click(object sender, EventArgs e)
+        {
+            var now = DateTime.Now;
+            //var baocaos = DataAccess.Database.GetBaocaoThongkeSachTraTres(bc => bc.NgayLapBaoCao.Year == now.Year && bc.NgayLapBaoCao.Month == now.Month && bc.NgayLapBaoCao.Day == now.Day).ToList();
+            var baocaos = new List<BaocaoThongkeSachTraTre>();
+            foreach (var bc in DataAccess.Database.GetAllBaocaoThongkeSachTraTre())
+            {
+                if (bc.NgayLapBaoCao.Year == now.Year && bc.NgayLapBaoCao.Month == now.Month && bc.NgayLapBaoCao.Day == now.Day)
+                {
+                    baocaos.Add(bc);
+                }
+            }
+            if (baocaos.Count != 0)
+            {
+                MessageBox.Show("Báo cáo hôm nay đã được lập rồi!\nBáo cáo hôm nay: " + baocaos[0].MaBaoCao);
+                return;
+            }
+
+            new LapBaoCaoSachTraTre().ShowDialog();
 			PopulateListView(GetAll());
 		}
 

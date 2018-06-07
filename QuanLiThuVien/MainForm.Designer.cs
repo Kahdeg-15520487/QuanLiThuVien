@@ -30,6 +30,7 @@
             this.button_trasach = new MaterialSkin.Controls.MaterialRaisedButton();
             this.button6 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button_macdinh = new MaterialSkin.Controls.MaterialRaisedButton();
             this.textBox_tienphattre = new System.Windows.Forms.TextBox();
             this.label7 = new MaterialSkin.Controls.MaterialLabel();
             this.button_luuquydinh = new MaterialSkin.Controls.MaterialRaisedButton();
@@ -128,6 +129,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button_macdinh);
             this.groupBox1.Controls.Add(this.textBox_tienphattre);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.button_luuquydinh);
@@ -149,6 +151,19 @@
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Quy định";
+            // 
+            // button_macdinh
+            // 
+            this.button_macdinh.Depth = 0;
+            this.button_macdinh.Location = new System.Drawing.Point(423, 128);
+            this.button_macdinh.MouseState = MaterialSkin.MouseState.HOVER;
+            this.button_macdinh.Name = "button_macdinh";
+            this.button_macdinh.Primary = true;
+            this.button_macdinh.Size = new System.Drawing.Size(87, 42);
+            this.button_macdinh.TabIndex = 14;
+            this.button_macdinh.Text = "Đặt về mặc định";
+            this.button_macdinh.UseVisualStyleBackColor = true;
+            this.button_macdinh.Click += new System.EventHandler(this.button_macdinh_Click);
             // 
             // textBox_tienphattre
             // 
@@ -186,7 +201,7 @@
             // 
             // textBox_songaymuontoida
             // 
-            this.textBox_songaymuontoida.Location = new System.Drawing.Point(170, 147);
+            this.textBox_songaymuontoida.Location = new System.Drawing.Point(242, 152);
             this.textBox_songaymuontoida.Name = "textBox_songaymuontoida";
             this.textBox_songaymuontoida.Size = new System.Drawing.Size(100, 20);
             this.textBox_songaymuontoida.TabIndex = 11;
@@ -198,7 +213,7 @@
             this.label6.Depth = 0;
             this.label6.Font = new System.Drawing.Font("Roboto", 11F);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label6.Location = new System.Drawing.Point(6, 150);
+            this.label6.Location = new System.Drawing.Point(6, 124);
             this.label6.MouseState = MaterialSkin.MouseState.HOVER;
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(148, 19);
@@ -207,7 +222,7 @@
             // 
             // textBox_slsachtoidadcmuon
             // 
-            this.textBox_slsachtoidadcmuon.Location = new System.Drawing.Point(170, 121);
+            this.textBox_slsachtoidadcmuon.Location = new System.Drawing.Point(190, 125);
             this.textBox_slsachtoidadcmuon.Name = "textBox_slsachtoidadcmuon";
             this.textBox_slsachtoidadcmuon.Size = new System.Drawing.Size(100, 20);
             this.textBox_slsachtoidadcmuon.TabIndex = 9;
@@ -219,7 +234,7 @@
             this.label5.Depth = 0;
             this.label5.Font = new System.Drawing.Font("Roboto", 11F);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label5.Location = new System.Drawing.Point(6, 124);
+            this.label5.Location = new System.Drawing.Point(6, 151);
             this.label5.MouseState = MaterialSkin.MouseState.HOVER;
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(230, 19);
@@ -228,7 +243,7 @@
             // 
             // textBox_namxuatban
             // 
-            this.textBox_namxuatban.Location = new System.Drawing.Point(170, 95);
+            this.textBox_namxuatban.Location = new System.Drawing.Point(190, 99);
             this.textBox_namxuatban.Name = "textBox_namxuatban";
             this.textBox_namxuatban.Size = new System.Drawing.Size(100, 20);
             this.textBox_namxuatban.TabIndex = 7;
@@ -249,7 +264,7 @@
             // 
             // textBox_thoihanthe
             // 
-            this.textBox_thoihanthe.Location = new System.Drawing.Point(170, 69);
+            this.textBox_thoihanthe.Location = new System.Drawing.Point(190, 73);
             this.textBox_thoihanthe.Name = "textBox_thoihanthe";
             this.textBox_thoihanthe.Size = new System.Drawing.Size(100, 20);
             this.textBox_thoihanthe.TabIndex = 5;
@@ -270,7 +285,7 @@
             // 
             // textBox_tuoitoida
             // 
-            this.textBox_tuoitoida.Location = new System.Drawing.Point(170, 43);
+            this.textBox_tuoitoida.Location = new System.Drawing.Point(190, 47);
             this.textBox_tuoitoida.Name = "textBox_tuoitoida";
             this.textBox_tuoitoida.Size = new System.Drawing.Size(100, 20);
             this.textBox_tuoitoida.TabIndex = 3;
@@ -291,7 +306,7 @@
             // 
             // textBox_tuoitoithieu
             // 
-            this.textBox_tuoitoithieu.Location = new System.Drawing.Point(170, 17);
+            this.textBox_tuoitoithieu.Location = new System.Drawing.Point(190, 21);
             this.textBox_tuoitoithieu.Name = "textBox_tuoitoithieu";
             this.textBox_tuoitoithieu.Size = new System.Drawing.Size(100, 20);
             this.textBox_tuoitoithieu.TabIndex = 1;
@@ -322,6 +337,7 @@
             this.Controls.Add(this.button_baocao);
             this.Controls.Add(this.button_sach);
             this.Controls.Add(this.button_docgia);
+            this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Sizable = false;
             this.Text = "Màn hình chính";
@@ -356,5 +372,6 @@
 		private MaterialSkin.Controls.MaterialLabel label6;
         private System.Windows.Forms.TextBox textBox_tienphattre;
         private MaterialSkin.Controls.MaterialLabel label7;
+        private MaterialSkin.Controls.MaterialRaisedButton button_macdinh;
     }
 }
