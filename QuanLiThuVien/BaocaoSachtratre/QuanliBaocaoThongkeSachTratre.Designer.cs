@@ -142,6 +142,7 @@
             this.Controls.Add(this.button_timbaocao);
             this.Controls.Add(this.textBox_mabaocao);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
             this.Name = "QuanliBaocaoThongkeSachTratre";
             this.Text = "Báo cáo thống kê sách trả trễ";
             this.Load += new System.EventHandler(this.QuanliBaocaoThongkeSachTratre_Load);

@@ -188,6 +188,7 @@
             this.Controls.Add(this.button_capnhatdocgia);
             this.Controls.Add(this.listView_danhsachsach);
             this.Controls.Add(this.button_lapthedocgia);
+            this.MaximizeBox = false;
             this.Name = "QuanLiSach";
             this.Text = "Quản lí sách";
             this.Load += new System.EventHandler(this.ThaoTacDocGia_Load);

@@ -127,6 +127,7 @@
             this.Controls.Add(this.dateTimePicker_ngaylapbaocao);
             this.Controls.Add(this.textBox_mabaocao);
             this.Controls.Add(this.listView_sachtratre);
+            this.MaximizeBox = false;
             this.Name = "LapBaoCaoSachTraTre";
             this.Text = "Lập báo cáo sách trả trễ";
             this.Load += new System.EventHandler(this.LapBaoCaoSachTraTre_Load);

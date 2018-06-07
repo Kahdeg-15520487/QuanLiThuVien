@@ -197,6 +197,7 @@
             this.Controls.Add(this.button_capnhatdocgia);
             this.Controls.Add(this.listView_docgia);
             this.Controls.Add(this.button_lapthedocgia);
+            this.MaximizeBox = false;
             this.Name = "QuanLiDocGia";
             this.Sizable = false;
             this.Text = "Quản lí đọc giả";

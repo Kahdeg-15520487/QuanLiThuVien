@@ -191,6 +191,7 @@
             this.Controls.Add(this.textBox_sotienthu);
             this.Controls.Add(this.textBox_tongno);
             this.Controls.Add(this.textBox_hoten);
+            this.MaximizeBox = false;
             this.Name = "LapPhieuThuTienPhat";
             this.Text = "Lập phiếu thu tiền phạt";
             this.Load += new System.EventHandler(this.LapPhieuThuTien_Load);
