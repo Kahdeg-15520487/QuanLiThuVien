@@ -96,6 +96,7 @@ namespace QuanLiThuVien
             }
 
             QuanliBaocaoSachMuonTheoTheloai = new QuanliBaocaoSachMuonTheoTheloai();
+            QuanliBaocaoSachMuonTheoTheloai.Show();
             QuanliBaocaoSachMuonTheoTheloai.FormClosed += (o, ee) => QuanliBaocaoSachMuonTheoTheloai = null;
         }
 

@@ -29,7 +29,7 @@ namespace QuanLiThuVien.BaocaoSachMuonTheoTheloai {
 			List<DataAccess.DataObject.BaocaoSachMuonTheoTheloai.SoLuotmuonCuaTheLoai> danhsach = new List<DataAccess.DataObject.BaocaoSachMuonTheoTheloai.SoLuotmuonCuaTheLoai>();
 			Dictionary<DataAccess.DataObject.TheLoai, int> danhsachsoluotmuontheotheloai = new Dictionary<DataAccess.DataObject.TheLoai, int>();
 			foreach (var ttms in danhsacthongtinmuonsach) {
-				if (!danhsachsoluotmuontheotheloai.ContainsKey(ttms.Sach.TheLoai)) {
+				if (danhsachsoluotmuontheotheloai.ContainsKey(ttms.Sach.TheLoai)) {
 					danhsachsoluotmuontheotheloai[ttms.Sach.TheLoai]++;
 				}
 				else {
