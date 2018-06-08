@@ -9,7 +9,7 @@
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application.
-; Do not use the same AppId value in installers for other applications.
+; Do not use the same AppId value in installers for other applications.                              
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
 AppId={{FBC74542-39A8-499B-A030-0D554F627D59}
 AppName={#MyAppName}
@@ -22,7 +22,7 @@ AppUpdatesURL={#MyAppURL}
 DefaultDirName={pf}\{#MyAppName}
 DisableProgramGroupPage=yes
 OutputDir=C:\Users\DELL\Documents\Workspace\c#\QuanLiThuVien\Build\Installer
-OutputBaseFilename=setup
+OutputBaseFilename=QLTV_setup
 Compression=lzma
 SolidCompression=yes
 
