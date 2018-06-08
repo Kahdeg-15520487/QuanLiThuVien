@@ -82,7 +82,7 @@
             this.button_baocao.MouseState = MaterialSkin.MouseState.HOVER;
             this.button_baocao.Name = "button_baocao";
             this.button_baocao.Primary = true;
-            this.button_baocao.Size = new System.Drawing.Size(97, 51);
+            this.button_baocao.Size = new System.Drawing.Size(125, 51);
             this.button_baocao.TabIndex = 2;
             this.button_baocao.Text = "Báo cáo thống kê sách trả trễ";
             this.button_baocao.UseVisualStyleBackColor = true;
@@ -117,11 +117,11 @@
             // button6
             // 
             this.button6.Depth = 0;
-            this.button6.Location = new System.Drawing.Point(526, 69);
+            this.button6.Location = new System.Drawing.Point(554, 69);
             this.button6.MouseState = MaterialSkin.MouseState.HOVER;
             this.button6.Name = "button6";
             this.button6.Primary = true;
-            this.button6.Size = new System.Drawing.Size(97, 51);
+            this.button6.Size = new System.Drawing.Size(126, 51);
             this.button6.TabIndex = 5;
             this.button6.Text = "Báo cáo thống kê thể loại theo lượt mượn";
             this.button6.UseVisualStyleBackColor = true;
@@ -147,7 +147,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(10, 126);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(612, 187);
+            this.groupBox1.Size = new System.Drawing.Size(670, 187);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Quy định";
@@ -155,7 +155,7 @@
             // button_macdinh
             // 
             this.button_macdinh.Depth = 0;
-            this.button_macdinh.Location = new System.Drawing.Point(423, 128);
+            this.button_macdinh.Location = new System.Drawing.Point(473, 130);
             this.button_macdinh.MouseState = MaterialSkin.MouseState.HOVER;
             this.button_macdinh.Name = "button_macdinh";
             this.button_macdinh.Primary = true;
@@ -167,7 +167,7 @@
             // 
             // textBox_tienphattre
             // 
-            this.textBox_tienphattre.Location = new System.Drawing.Point(460, 17);
+            this.textBox_tienphattre.Location = new System.Drawing.Point(556, 19);
             this.textBox_tienphattre.Name = "textBox_tienphattre";
             this.textBox_tienphattre.Size = new System.Drawing.Size(100, 20);
             this.textBox_tienphattre.TabIndex = 13;
@@ -179,7 +179,7 @@
             this.label7.Depth = 0;
             this.label7.Font = new System.Drawing.Font("Roboto", 11F);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label7.Location = new System.Drawing.Point(296, 20);
+            this.label7.Location = new System.Drawing.Point(405, 22);
             this.label7.MouseState = MaterialSkin.MouseState.HOVER;
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(133, 19);
@@ -189,7 +189,7 @@
             // button_luuquydinh
             // 
             this.button_luuquydinh.Depth = 0;
-            this.button_luuquydinh.Location = new System.Drawing.Point(531, 124);
+            this.button_luuquydinh.Location = new System.Drawing.Point(581, 126);
             this.button_luuquydinh.MouseState = MaterialSkin.MouseState.HOVER;
             this.button_luuquydinh.Name = "button_luuquydinh";
             this.button_luuquydinh.Primary = true;
@@ -222,7 +222,7 @@
             // 
             // textBox_slsachtoidadcmuon
             // 
-            this.textBox_slsachtoidadcmuon.Location = new System.Drawing.Point(190, 125);
+            this.textBox_slsachtoidadcmuon.Location = new System.Drawing.Point(242, 125);
             this.textBox_slsachtoidadcmuon.Name = "textBox_slsachtoidadcmuon";
             this.textBox_slsachtoidadcmuon.Size = new System.Drawing.Size(100, 20);
             this.textBox_slsachtoidadcmuon.TabIndex = 9;
@@ -243,7 +243,7 @@
             // 
             // textBox_namxuatban
             // 
-            this.textBox_namxuatban.Location = new System.Drawing.Point(190, 99);
+            this.textBox_namxuatban.Location = new System.Drawing.Point(242, 99);
             this.textBox_namxuatban.Name = "textBox_namxuatban";
             this.textBox_namxuatban.Size = new System.Drawing.Size(100, 20);
             this.textBox_namxuatban.TabIndex = 7;
@@ -264,7 +264,7 @@
             // 
             // textBox_thoihanthe
             // 
-            this.textBox_thoihanthe.Location = new System.Drawing.Point(190, 73);
+            this.textBox_thoihanthe.Location = new System.Drawing.Point(242, 73);
             this.textBox_thoihanthe.Name = "textBox_thoihanthe";
             this.textBox_thoihanthe.Size = new System.Drawing.Size(100, 20);
             this.textBox_thoihanthe.TabIndex = 5;
@@ -285,7 +285,7 @@
             // 
             // textBox_tuoitoida
             // 
-            this.textBox_tuoitoida.Location = new System.Drawing.Point(190, 47);
+            this.textBox_tuoitoida.Location = new System.Drawing.Point(242, 47);
             this.textBox_tuoitoida.Name = "textBox_tuoitoida";
             this.textBox_tuoitoida.Size = new System.Drawing.Size(100, 20);
             this.textBox_tuoitoida.TabIndex = 3;
@@ -306,7 +306,7 @@
             // 
             // textBox_tuoitoithieu
             // 
-            this.textBox_tuoitoithieu.Location = new System.Drawing.Point(190, 21);
+            this.textBox_tuoitoithieu.Location = new System.Drawing.Point(242, 21);
             this.textBox_tuoitoithieu.Name = "textBox_tuoitoithieu";
             this.textBox_tuoitoithieu.Size = new System.Drawing.Size(100, 20);
             this.textBox_tuoitoithieu.TabIndex = 1;
@@ -329,7 +329,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(636, 320);
+            this.ClientSize = new System.Drawing.Size(695, 320);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button_trasach);

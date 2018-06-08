@@ -5,6 +5,10 @@ using QuanLiThuVien.BaocaoSachtratre;
 using QuanLiThuVien.XuliTheDocGia;
 using QuanLiThuVien.XuliSach;
 using System.Linq;
+using System.Collections.Generic;
+using System.IO;
+using Newtonsoft.Json;
+using DataAccess;
 
 namespace QuanLiThuVien
 {
@@ -167,7 +171,51 @@ namespace QuanLiThuVien
 
         private void button_macdinh_Click(object sender, EventArgs e)
         {
+            var quydinhdatapath = "quydinh.json";
 
+            var dataquydinh = JsonConvert.DeserializeObject<List<quydinh>>(File.ReadAllText(quydinhdatapath));
+            if (dataquydinh != null)
+            {
+                var qds = Database.GetQuyDinhs(qd => true);
+                foreach (var qd in qds)
+                {
+                    Database.RemoveQuyDinh(qd.MaQuyDinh);
+                }
+                foreach (var qd in dataquydinh)
+                {
+                    Database.AddQuyDinh(new DataAccess.DataObject.QuyDinh()
+                    {
+                        MaQuyDinh = qd.maquydinh,
+                        TenQuiDinh = qd.tenquydinh,
+                        NoiDungQuiDinh = qd.noidungquydinh
+                    });
+                }
+            }
+
+            TuoiToithieu = DataAccess.Database.GetQuyDinh(x => x.TenQuiDinh == "TuoiToithieu");
+            TuoiToida = DataAccess.Database.GetQuyDinh(x => x.TenQuiDinh == "TuoiToida");
+            ThoihanThe = DataAccess.Database.GetQuyDinh(x => x.TenQuiDinh == "ThoihanThe");
+            NamXuatban = DataAccess.Database.GetQuyDinh(x => x.TenQuiDinh == "NamXuatban");
+            SoluongSachDuocMuon = DataAccess.Database.GetQuyDinh(x => x.TenQuiDinh == "SoluongSachDuocMuon");
+            SoNgaymuonToida = DataAccess.Database.GetQuyDinh(x => x.TenQuiDinh == "SoNgaymuonToida");
+            TienPhatTraTre = DataAccess.Database.GetQuyDinh(x => x.TenQuiDinh == "TienPhatTraTre");
+
+            textBox_tuoitoithieu.Text = TuoiToithieu.NoiDungQuiDinh;
+            textBox_tuoitoida.Text = TuoiToida.NoiDungQuiDinh;
+            textBox_thoihanthe.Text = ThoihanThe.NoiDungQuiDinh;
+            textBox_namxuatban.Text = NamXuatban.NoiDungQuiDinh;
+            textBox_slsachtoidadcmuon.Text = SoluongSachDuocMuon.NoiDungQuiDinh;
+            textBox_songaymuontoida.Text = SoNgaymuonToida.NoiDungQuiDinh;
+            textBox_tienphattre.Text = TienPhatTraTre.NoiDungQuiDinh;
+        }
+
+
+
+        class quydinh
+        {
+            public string maquydinh { get; set; }
+            public string tenquydinh { get; set; }
+            public string noidungquydinh { get; set; }
         }
     }
 }

@@ -287,6 +287,15 @@ namespace DataAccess
             return result;
         }
 
+        public static IEnumerable<QuyDinh> GetQuyDinhs(Expression<Func<QuyDinh, bool>> dieukienloc)
+        {
+            using (var db = new LiteDatabase(DatabaseConnectionString))
+            {
+                return db.GetCollection<QuyDinh>("QuyDinh")
+                           .Find(dieukienloc);
+            }
+        }
+
         /// <summary>
         /// cập nhật thông tin quy định vào database
         /// </summary>
