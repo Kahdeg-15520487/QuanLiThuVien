@@ -19,14 +19,14 @@ namespace QuanLiThuVien.XuliSach
             materialSkinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.BlueGrey800, MaterialSkin.Primary.BlueGrey900, MaterialSkin.Primary.BlueGrey500, MaterialSkin.Accent.LightBlue200, MaterialSkin.TextShade.WHITE);
         }
 
-        private void button_lapthedocgia_Click(object sender, EventArgs e)
+        private void button_themsach_Click(object sender, EventArgs e)
         {
             new LapSach().ShowDialog();
             PopulateListView(GetAll());
             //update listview
         }
 
-        private void button_capnhatdocgia_Click(object sender, EventArgs e)
+        private void button_capnhatsach_Click(object sender, EventArgs e)
         {
             var slvis = listView_danhsachsach.SelectedItems;
             foreach (ListViewItem slvi in slvis)
@@ -40,7 +40,7 @@ namespace QuanLiThuVien.XuliSach
             //update listview
         }
 
-        private void button_xoadocgia_Click(object sender, EventArgs e)
+        private void button_xoasach_Click(object sender, EventArgs e)
         {
             var slvis = listView_danhsachsach.SelectedItems;
             var danhsachsachcanxoa = new List<string>();
@@ -69,19 +69,19 @@ namespace QuanLiThuVien.XuliSach
             //update listview
         }
 
-        private void button_timdocgia_Click(object sender, EventArgs e)
+        private void button_timsach_Click(object sender, EventArgs e)
         {
-            if (textBox_MaDocGia.Text.Length != 10)
+            if (textBox_MaSach.Text.Length != 10)
             {
-                MessageBox.Show("Mã đọc giả không hợp lệ");
+                MessageBox.Show("Mã sách không hợp lệ");
                 return;
             }
-            PopulateListView(GetQuerry(x => x.MaSach == textBox_MaDocGia.Text));
+            PopulateListView(GetQuerry(x => x.MaSach == textBox_MaSach.Text));
             //generate querry, just querry madg for now
             //update listview
         }
 
-        private void ThaoTacDocGia_Load(object sender, EventArgs e)
+        private void ThaoTacSach_Load(object sender, EventArgs e)
         {
             PopulateListView(GetAll());
         }
@@ -98,14 +98,14 @@ namespace QuanLiThuVien.XuliSach
         private List<ListViewItem> GetAll()
         {
             var lvis = new List<ListViewItem>();
-            foreach (var dg in DataAccess.Database.GetAllSach())
+            foreach (var s in DataAccess.Database.GetAllSach())
             {
                 ListViewItem item = new ListViewItem(lvis.Count.ToString());
-                item.SubItems.Add(dg.MaSach);
-                item.SubItems.Add(dg.TenSach);
-                item.SubItems.Add(dg.TheLoai.TenTheLoai);
-                item.SubItems.Add(dg.TacGia.TenTacGia);
-                item.SubItems.Add(dg.TinhTrang);
+                item.SubItems.Add(s.MaSach);
+                item.SubItems.Add(s.TenSach);
+                item.SubItems.Add(s.TheLoai.TenTheLoai);
+                item.SubItems.Add(s.TacGia.TenTacGia);
+                item.SubItems.Add(s.TinhTrang);
                 lvis.Add(item);
             }
             return lvis;
@@ -114,20 +114,20 @@ namespace QuanLiThuVien.XuliSach
         private List<ListViewItem> GetQuerry(Expression<Func<DataAccess.DataObject.Sach, bool>> dieukienloc)
         {
             var lvis = new List<ListViewItem>();
-            foreach (var dg in DataAccess.Database.GetSachs(dieukienloc))
+            foreach (var s in DataAccess.Database.GetSachs(dieukienloc))
             {
                 ListViewItem item = new ListViewItem(lvis.Count.ToString());
-                item.SubItems.Add(dg.MaSach);
-                item.SubItems.Add(dg.TenSach);
-                item.SubItems.Add(dg.TheLoai.TenTheLoai);
-                item.SubItems.Add(dg.TacGia.TenTacGia);
-                item.SubItems.Add(dg.TinhTrang);
+                item.SubItems.Add(s.MaSach);
+                item.SubItems.Add(s.TenSach);
+                item.SubItems.Add(s.TheLoai.TenTheLoai);
+                item.SubItems.Add(s.TacGia.TenTacGia);
+                item.SubItems.Add(s.TinhTrang);
                 lvis.Add(item);
             }
             return lvis;
         }
 
-        private void listView_docgia_MouseClick(object sender, MouseEventArgs e)
+        private void listView_sach_MouseClick(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Right)
             {

@@ -24,7 +24,7 @@
 		/// </summary>
 		private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
-            this.button_lapthedocgia = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.button_themsach = new MaterialSkin.Controls.MaterialRaisedButton();
             this.listView_danhsachsach = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -32,28 +32,28 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button_capnhatdocgia = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.button_xoadocgia = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.button_capnhatsach = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.button_xoasach = new MaterialSkin.Controls.MaterialRaisedButton();
             this.button_timdocgia = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.textBox_MaDocGia = new System.Windows.Forms.TextBox();
+            this.textBox_MaSach = new System.Windows.Forms.TextBox();
             this.label1 = new MaterialSkin.Controls.MaterialLabel();
             this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem_copyMaSach = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button_lapthedocgia
+            // button_themsach
             // 
-            this.button_lapthedocgia.Depth = 0;
-            this.button_lapthedocgia.Location = new System.Drawing.Point(12, 66);
-            this.button_lapthedocgia.MouseState = MaterialSkin.MouseState.HOVER;
-            this.button_lapthedocgia.Name = "button_lapthedocgia";
-            this.button_lapthedocgia.Primary = true;
-            this.button_lapthedocgia.Size = new System.Drawing.Size(95, 39);
-            this.button_lapthedocgia.TabIndex = 1;
-            this.button_lapthedocgia.Text = "Thêm sách";
-            this.button_lapthedocgia.UseVisualStyleBackColor = true;
-            this.button_lapthedocgia.Click += new System.EventHandler(this.button_lapthedocgia_Click);
+            this.button_themsach.Depth = 0;
+            this.button_themsach.Location = new System.Drawing.Point(12, 66);
+            this.button_themsach.MouseState = MaterialSkin.MouseState.HOVER;
+            this.button_themsach.Name = "button_themsach";
+            this.button_themsach.Primary = true;
+            this.button_themsach.Size = new System.Drawing.Size(95, 39);
+            this.button_themsach.TabIndex = 1;
+            this.button_themsach.Text = "Thêm sách";
+            this.button_themsach.UseVisualStyleBackColor = true;
+            this.button_themsach.Click += new System.EventHandler(this.button_themsach_Click);
             // 
             // listView_danhsachsach
             // 
@@ -72,7 +72,7 @@
             this.listView_danhsachsach.TabIndex = 5;
             this.listView_danhsachsach.UseCompatibleStateImageBehavior = false;
             this.listView_danhsachsach.View = System.Windows.Forms.View.Details;
-            this.listView_danhsachsach.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listView_docgia_MouseClick);
+            this.listView_danhsachsach.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listView_sach_MouseClick);
             // 
             // columnHeader1
             // 
@@ -103,31 +103,31 @@
             this.columnHeader6.Text = "Tình trạng";
             this.columnHeader6.Width = 69;
             // 
-            // button_capnhatdocgia
+            // button_capnhatsach
             // 
-            this.button_capnhatdocgia.Depth = 0;
-            this.button_capnhatdocgia.Location = new System.Drawing.Point(113, 66);
-            this.button_capnhatdocgia.MouseState = MaterialSkin.MouseState.HOVER;
-            this.button_capnhatdocgia.Name = "button_capnhatdocgia";
-            this.button_capnhatdocgia.Primary = true;
-            this.button_capnhatdocgia.Size = new System.Drawing.Size(100, 39);
-            this.button_capnhatdocgia.TabIndex = 2;
-            this.button_capnhatdocgia.Text = "Cập nhật sách";
-            this.button_capnhatdocgia.UseVisualStyleBackColor = true;
-            this.button_capnhatdocgia.Click += new System.EventHandler(this.button_capnhatdocgia_Click);
+            this.button_capnhatsach.Depth = 0;
+            this.button_capnhatsach.Location = new System.Drawing.Point(113, 66);
+            this.button_capnhatsach.MouseState = MaterialSkin.MouseState.HOVER;
+            this.button_capnhatsach.Name = "button_capnhatsach";
+            this.button_capnhatsach.Primary = true;
+            this.button_capnhatsach.Size = new System.Drawing.Size(100, 39);
+            this.button_capnhatsach.TabIndex = 2;
+            this.button_capnhatsach.Text = "Cập nhật sách";
+            this.button_capnhatsach.UseVisualStyleBackColor = true;
+            this.button_capnhatsach.Click += new System.EventHandler(this.button_capnhatsach_Click);
             // 
-            // button_xoadocgia
+            // button_xoasach
             // 
-            this.button_xoadocgia.Depth = 0;
-            this.button_xoadocgia.Location = new System.Drawing.Point(219, 66);
-            this.button_xoadocgia.MouseState = MaterialSkin.MouseState.HOVER;
-            this.button_xoadocgia.Name = "button_xoadocgia";
-            this.button_xoadocgia.Primary = true;
-            this.button_xoadocgia.Size = new System.Drawing.Size(95, 39);
-            this.button_xoadocgia.TabIndex = 3;
-            this.button_xoadocgia.Text = "Xóa sách";
-            this.button_xoadocgia.UseVisualStyleBackColor = true;
-            this.button_xoadocgia.Click += new System.EventHandler(this.button_xoadocgia_Click);
+            this.button_xoasach.Depth = 0;
+            this.button_xoasach.Location = new System.Drawing.Point(219, 66);
+            this.button_xoasach.MouseState = MaterialSkin.MouseState.HOVER;
+            this.button_xoasach.Name = "button_xoasach";
+            this.button_xoasach.Primary = true;
+            this.button_xoasach.Size = new System.Drawing.Size(95, 39);
+            this.button_xoasach.TabIndex = 3;
+            this.button_xoasach.Text = "Xóa sách";
+            this.button_xoasach.UseVisualStyleBackColor = true;
+            this.button_xoasach.Click += new System.EventHandler(this.button_xoasach_Click);
             // 
             // button_timdocgia
             // 
@@ -140,14 +140,14 @@
             this.button_timdocgia.TabIndex = 4;
             this.button_timdocgia.Text = "Tìm sách";
             this.button_timdocgia.UseVisualStyleBackColor = true;
-            this.button_timdocgia.Click += new System.EventHandler(this.button_timdocgia_Click);
+            this.button_timdocgia.Click += new System.EventHandler(this.button_timsach_Click);
             // 
-            // textBox_MaDocGia
+            // textBox_MaSach
             // 
-            this.textBox_MaDocGia.Location = new System.Drawing.Point(113, 118);
-            this.textBox_MaDocGia.Name = "textBox_MaDocGia";
-            this.textBox_MaDocGia.Size = new System.Drawing.Size(100, 20);
-            this.textBox_MaDocGia.TabIndex = 0;
+            this.textBox_MaSach.Location = new System.Drawing.Point(113, 118);
+            this.textBox_MaSach.Name = "textBox_MaSach";
+            this.textBox_MaSach.Size = new System.Drawing.Size(100, 20);
+            this.textBox_MaSach.TabIndex = 0;
             // 
             // label1
             // 
@@ -182,16 +182,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(559, 367);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox_MaDocGia);
+            this.Controls.Add(this.textBox_MaSach);
             this.Controls.Add(this.button_timdocgia);
-            this.Controls.Add(this.button_xoadocgia);
-            this.Controls.Add(this.button_capnhatdocgia);
+            this.Controls.Add(this.button_xoasach);
+            this.Controls.Add(this.button_capnhatsach);
             this.Controls.Add(this.listView_danhsachsach);
-            this.Controls.Add(this.button_lapthedocgia);
+            this.Controls.Add(this.button_themsach);
             this.MaximizeBox = false;
             this.Name = "QuanLiSach";
             this.Text = "Quản lí sách";
-            this.Load += new System.EventHandler(this.ThaoTacDocGia_Load);
+            this.Load += new System.EventHandler(this.ThaoTacSach_Load);
             this.contextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -200,10 +200,10 @@
 
 		#endregion
 
-		private MaterialSkin.Controls.MaterialRaisedButton button_lapthedocgia;
+		private MaterialSkin.Controls.MaterialRaisedButton button_themsach;
 		private System.Windows.Forms.ListView listView_danhsachsach;
-		private MaterialSkin.Controls.MaterialRaisedButton button_capnhatdocgia;
-		private MaterialSkin.Controls.MaterialRaisedButton button_xoadocgia;
+		private MaterialSkin.Controls.MaterialRaisedButton button_capnhatsach;
+		private MaterialSkin.Controls.MaterialRaisedButton button_xoasach;
 		private MaterialSkin.Controls.MaterialRaisedButton button_timdocgia;
 		private System.Windows.Forms.ColumnHeader columnHeader1;
 		private System.Windows.Forms.ColumnHeader columnHeader2;
@@ -211,7 +211,7 @@
 		private System.Windows.Forms.ColumnHeader columnHeader4;
 		private System.Windows.Forms.ColumnHeader columnHeader5;
 		private System.Windows.Forms.ColumnHeader columnHeader6;
-		private System.Windows.Forms.TextBox textBox_MaDocGia;
+		private System.Windows.Forms.TextBox textBox_MaSach;
 		private MaterialSkin.Controls.MaterialLabel label1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_copyMaSach;
