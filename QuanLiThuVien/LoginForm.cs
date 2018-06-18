@@ -66,7 +66,7 @@ namespace QuanLiThuVien
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-            if (Config.Instance.username != null)
+            if (!string.IsNullOrEmpty(Config.Instance.username))
             {
                 textBox_username.Text = Config.Instance.username;
                 checkBox_save_username.Checked = true;

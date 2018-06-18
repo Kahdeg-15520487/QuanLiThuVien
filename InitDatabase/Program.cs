@@ -240,7 +240,8 @@ namespace InitDatabase
                         TimSach = q.TimSach,
                         MuonTraSach = q.MuonTraSach,
                         ThaoTacDocGia = q.ThaoTacDocGia,
-                        TimDocGia = q.TimDocGia
+                        TimDocGia = q.TimDocGia,
+                        BaoCao = q.BaoCao
                     });
                 }
             }
@@ -434,7 +435,10 @@ namespace InitDatabase
             Console.WriteLine("-d|--docgia <docgia data's filepath>");
             Console.WriteLine("-s|--sach <sach data's filepath>");
             Console.WriteLine("-q|--quydinh <quydinh data's filepath>");
+            Console.WriteLine("-p|--quyen <quyen data's filepath>");
             Console.WriteLine("-a|--append add data to the database without drop it");
+            Console.WriteLine("-v|--droptable drop table from database");
+            Console.WriteLine("-y|--yes bypass confirm dialog when drop table or drop database");
         }
     }
 }
