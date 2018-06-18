@@ -73,6 +73,9 @@ namespace DataAccess
 
             mapper.Entity<BaocaoSachMuonTheoTheloai>()
                   .Id(x => x.MaBaoCao);
+
+            mapper.Entity<Quyen>()
+                  .Id(x => x.Username);
         }
         #endregion
 
@@ -91,6 +94,22 @@ namespace DataAccess
                     {
                         db.DropCollection(collectionName);
                     }
+                }
+            }
+        }
+
+        /// <summary>
+        /// xóa table
+        /// </summary>
+        /// <param name="secret">mật khẩu để xóa</param>
+        /// <param name="table">table muôn xóa</param>
+        public static void DropTable(string secret, string table)
+        {
+            if (Secret == secret)
+            {
+                using (var db = new LiteDatabase(DatabaseConnectionString))
+                {
+                    db.DropCollection(table);
                 }
             }
         }
@@ -287,6 +306,10 @@ namespace DataAccess
             return result;
         }
 
+        /// <summary>
+        /// truy xuất thông tin quy định từ database dựa trên điều kiện lọc
+        /// </summary>
+        /// <param name="dieukienloc">điều kiện lọc</param>
         public static IEnumerable<QuyDinh> GetQuyDinhs(Expression<Func<QuyDinh, bool>> dieukienloc)
         {
             using (var db = new LiteDatabase(DatabaseConnectionString))
@@ -1195,6 +1218,62 @@ namespace DataAccess
                 result = db.GetCollection<BaocaoSachMuonTheoTheloai>("BaocaoSachMuonTheoTheloai").Delete(x => x.MaBaoCao == maBaoCao) > 0;
             }
             return result;
+        }
+        #endregion
+
+        #region Quyen
+        /// <summary>
+        /// truy xuất quyền của 1 user từ database
+        /// </summary>
+        /// <param name="username">username</param>
+        public static Quyen GetQuyen(string username)
+        {
+            Quyen result;
+            using (var db = new LiteDatabase(DatabaseConnectionString))
+            {
+                result = db.GetCollection<Quyen>("Quyen")
+                           .FindOne(x => x.Username.Equals(username));
+            }
+            return result;
+        }
+        /// <summary>
+        /// thêm quyền của 1 user vào đatabase
+        /// </summary>
+        /// <param name="password">password của user</param>
+        /// <param name="quyen">thông tin user</param>
+        public static void AddQuyen(string password, Quyen quyen)
+        {
+            var saltString = RandomIdGenerator.GetBase62(10);
+            var hashString = Hash.GetHash(password, saltString);
+
+            quyen.Hash = hashString;
+            quyen.Salt = saltString;
+
+            using (var db = new LiteDatabase(DatabaseConnectionString))
+            {
+                db.GetCollection<Quyen>("Quyen").Insert(quyen);
+            }
+        }
+        /// <summary>
+        /// kiểm tra thông tin đăng nhập của 1 user
+        /// </summary>
+        /// <param name="username">username</param>
+        /// <param name="password">password</param>
+        public static bool LoginQuyen(string username, string password)
+        {
+            var quyen = GetQuyen(username);
+
+            if (quyen == null)
+            {
+                return false;
+            }
+
+            var saltString = quyen.Salt;
+            var hashString = quyen.Hash;
+
+            var loginHashString = Hash.GetHash(password, saltString);
+
+            return hashString.Equals(loginHashString);
         }
         #endregion
     }

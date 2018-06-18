@@ -42,6 +42,19 @@ namespace InitDatabase
             public string noidungquydinh { get; set; }
         }
 
+        class quyen
+        {
+            public string Username { get; set; }
+            public string password { get; set; }
+            public bool ThayDoiQuyDinh { get; set; }
+            public bool ThaoTacSach { get; set; }
+            public bool TimSach { get; set; }
+            public bool MuonTraSach { get; set; }
+            public bool ThaoTacDocGia { get; set; }
+            public bool TimDocGia { get; set; }
+            public bool BaoCao { get; set; }
+        }
+
         public enum DataFormat
         {
             CSV = 0,
@@ -68,12 +81,22 @@ namespace InitDatabase
         [Argument('q', "quydinh")]
         public static string quydinhdatapath { get; set; } = null;
 
+        [Argument('p', "quyen")]
+        public static string quyendatapath { get; set; } = null;
+
         [Argument('a', "append")]
         public static bool append { get; set; } = false;
+
+        [Argument('v', "droptable")]
+        public static string droptable { get; set; } = null;
+
+        [Argument('y', "yes")]
+        public static bool yes { get; set; } = false;
 
         private static List<docgia> datadocgia = null;
         private static List<sach> datasach = null;
         private static List<quydinh> dataquydinh = null;
+        private static List<quyen> dataquyen = null;
 
         static void Main(string[] args)
         {
@@ -87,31 +110,60 @@ namespace InitDatabase
 
             Arguments.Populate();
 
-            if (!File.Exists(docgiadatapath))
+            if (docgiadatapath != null)
             {
-                datadocgia = new List<docgia>();
-            }
-            else
-            {
-                datadocgia = JsonConvert.DeserializeObject<List<docgia>>(File.ReadAllText(docgiadatapath));
-            }
-
-            if (!File.Exists(sachdatapath))
-            {
-                datasach = new List<sach>();
-            }
-            else
-            {
-                datasach = JsonConvert.DeserializeObject<List<sach>>(File.ReadAllText(sachdatapath));
+                if (!File.Exists(docgiadatapath))
+                {
+                    datadocgia = new List<docgia>();
+                    Console.WriteLine($"{docgiadatapath} not found");
+                    return;
+                }
+                else
+                {
+                    datadocgia = JsonConvert.DeserializeObject<List<docgia>>(File.ReadAllText(docgiadatapath));
+                }
             }
 
-            if (!File.Exists(quydinhdatapath))
+            if (sachdatapath != null)
             {
-                dataquydinh = new List<quydinh>();
+                if (!File.Exists(sachdatapath))
+                {
+                    datasach = new List<sach>();
+                    Console.WriteLine($"{sachdatapath} not found");
+                    return;
+                }
+                else
+                {
+                    datasach = JsonConvert.DeserializeObject<List<sach>>(File.ReadAllText(sachdatapath));
+                }
             }
-            else
+
+            if (quydinhdatapath != null)
             {
-                dataquydinh = JsonConvert.DeserializeObject<List<quydinh>>(File.ReadAllText(quydinhdatapath));
+                if (!File.Exists(quydinhdatapath))
+                {
+                    dataquydinh = new List<quydinh>();
+                    Console.WriteLine($"{quydinhdatapath} not found");
+                    return;
+                }
+                else
+                {
+                    dataquydinh = JsonConvert.DeserializeObject<List<quydinh>>(File.ReadAllText(quydinhdatapath));
+                }
+            }
+
+            if (quyendatapath != null)
+            {
+                if (!File.Exists(quyendatapath))
+                {
+                    dataquyen = new List<quyen>();
+                    Console.WriteLine($"{quyendatapath} not found");
+                    return;
+                }
+                else
+                {
+                    dataquyen = JsonConvert.DeserializeObject<List<quyen>>(File.ReadAllText(quyendatapath));
+                }
             }
 
             //databasepath = Path.Combine(databasepath, "thuvien.db");
@@ -121,7 +173,42 @@ namespace InitDatabase
 
             if (!append)
             {
-                Database.DropDatabase("secret");
+                if (!yes)
+                {
+                    Console.WriteLine($"This program is about to drop everything from database {databasepath}");
+                    Console.Write("Are you sure you want to proceed? (yes/no):");
+                    var answer = Console.ReadLine();
+                    yes = answer.Equals("yes");
+                }
+                if (yes)
+                {
+                    Console.WriteLine("Database dropped");
+                    Database.DropDatabase(secret);
+                }
+                else
+                {
+                    Console.WriteLine("Database is not dropped, data will be append to the database");
+                }
+            }
+
+            if (droptable != null)
+            {
+                if (!yes)
+                {
+                    Console.WriteLine($"This program is about to drop table {droptable} from database {databasepath}");
+                    Console.Write("Are you sure you want to proceed? (yes/no):");
+                    var answer = Console.ReadLine();
+                    yes = answer.Equals("yes");
+                }
+                if (yes)
+                {
+                    Console.WriteLine($"table {droptable} dropped");
+                    Database.DropTable(secret, droptable);
+                }
+                else
+                {
+                    Console.WriteLine($"table {droptable} is not dropped, data will be append to table {droptable}");
+                }
             }
 
             if (dataquydinh != null)
@@ -138,6 +225,26 @@ namespace InitDatabase
                     });
                 }
             }
+
+            if (dataquyen != null)
+            {
+                //insert quyen
+                Console.WriteLine("inserting quyen");
+                foreach (var q in dataquyen)
+                {
+                    Database.AddQuyen(q.password, new Quyen()
+                    {
+                        Username = q.Username,
+                        ThayDoiQuyDinh = q.ThayDoiQuyDinh,
+                        ThaoTacSach = q.ThaoTacSach,
+                        TimSach = q.TimSach,
+                        MuonTraSach = q.MuonTraSach,
+                        ThaoTacDocGia = q.ThaoTacDocGia,
+                        TimDocGia = q.TimDocGia
+                    });
+                }
+            }
+
             //var qdcount = 0;
             //Database.AddQuyDinh(new QuyDinh()
             //{

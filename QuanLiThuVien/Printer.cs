@@ -49,9 +49,9 @@ namespace QuanLiThuVien
                 }
                 objrpt.Export();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                
+
             }
         }
     }

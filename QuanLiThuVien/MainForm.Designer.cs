@@ -25,11 +25,11 @@
 		private void InitializeComponent() {
             this.button_docgia = new MaterialSkin.Controls.MaterialRaisedButton();
             this.button_sach = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.button_baocao = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.button_baocao_thongketratre = new MaterialSkin.Controls.MaterialRaisedButton();
             this.button_muonsach = new MaterialSkin.Controls.MaterialRaisedButton();
             this.button_trasach = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.button6 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button_baocao_thongketheloaitheoluotmuon = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.groupBox_quydinh = new System.Windows.Forms.GroupBox();
             this.button_macdinh = new MaterialSkin.Controls.MaterialRaisedButton();
             this.textBox_tienphattre = new System.Windows.Forms.TextBox();
             this.label7 = new MaterialSkin.Controls.MaterialLabel();
@@ -46,7 +46,7 @@
             this.label2 = new MaterialSkin.Controls.MaterialLabel();
             this.textBox_tuoitoithieu = new System.Windows.Forms.TextBox();
             this.label1 = new MaterialSkin.Controls.MaterialLabel();
-            this.groupBox1.SuspendLayout();
+            this.groupBox_quydinh.SuspendLayout();
             this.SuspendLayout();
             // 
             // button_docgia
@@ -58,7 +58,7 @@
             this.button_docgia.Primary = true;
             this.button_docgia.Size = new System.Drawing.Size(97, 51);
             this.button_docgia.TabIndex = 0;
-            this.button_docgia.Text = "Thao tác thẻ đọc giả";
+            this.button_docgia.Text = "Quản lý đọc giả";
             this.button_docgia.UseVisualStyleBackColor = true;
             this.button_docgia.Click += new System.EventHandler(this.button_docgia_Click);
             // 
@@ -71,22 +71,22 @@
             this.button_sach.Primary = true;
             this.button_sach.Size = new System.Drawing.Size(97, 51);
             this.button_sach.TabIndex = 1;
-            this.button_sach.Text = "Thao tác sách";
+            this.button_sach.Text = "Quản lý sách";
             this.button_sach.UseVisualStyleBackColor = true;
             this.button_sach.Click += new System.EventHandler(this.button_sach_Click);
             // 
-            // button_baocao
+            // button_baocao_thongketratre
             // 
-            this.button_baocao.Depth = 0;
-            this.button_baocao.Location = new System.Drawing.Point(423, 69);
-            this.button_baocao.MouseState = MaterialSkin.MouseState.HOVER;
-            this.button_baocao.Name = "button_baocao";
-            this.button_baocao.Primary = true;
-            this.button_baocao.Size = new System.Drawing.Size(125, 51);
-            this.button_baocao.TabIndex = 2;
-            this.button_baocao.Text = "Báo cáo thống kê sách trả trễ";
-            this.button_baocao.UseVisualStyleBackColor = true;
-            this.button_baocao.Click += new System.EventHandler(this.button_baocao_Click);
+            this.button_baocao_thongketratre.Depth = 0;
+            this.button_baocao_thongketratre.Location = new System.Drawing.Point(423, 69);
+            this.button_baocao_thongketratre.MouseState = MaterialSkin.MouseState.HOVER;
+            this.button_baocao_thongketratre.Name = "button_baocao_thongketratre";
+            this.button_baocao_thongketratre.Primary = true;
+            this.button_baocao_thongketratre.Size = new System.Drawing.Size(125, 51);
+            this.button_baocao_thongketratre.TabIndex = 2;
+            this.button_baocao_thongketratre.Text = "Báo cáo thống kê sách trả trễ";
+            this.button_baocao_thongketratre.UseVisualStyleBackColor = true;
+            this.button_baocao_thongketratre.Click += new System.EventHandler(this.button_baocao_Click);
             // 
             // button_muonsach
             // 
@@ -114,43 +114,43 @@
             this.button_trasach.UseVisualStyleBackColor = true;
             this.button_trasach.Click += new System.EventHandler(this.button_trasach_Click);
             // 
-            // button6
+            // button_baocao_thongketheloaitheoluotmuon
             // 
-            this.button6.Depth = 0;
-            this.button6.Location = new System.Drawing.Point(554, 69);
-            this.button6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.button6.Name = "button6";
-            this.button6.Primary = true;
-            this.button6.Size = new System.Drawing.Size(126, 51);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Báo cáo thống kê thể loại theo lượt mượn";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button_baocao_thongketheloaitheoluotmuon.Depth = 0;
+            this.button_baocao_thongketheloaitheoluotmuon.Location = new System.Drawing.Point(554, 69);
+            this.button_baocao_thongketheloaitheoluotmuon.MouseState = MaterialSkin.MouseState.HOVER;
+            this.button_baocao_thongketheloaitheoluotmuon.Name = "button_baocao_thongketheloaitheoluotmuon";
+            this.button_baocao_thongketheloaitheoluotmuon.Primary = true;
+            this.button_baocao_thongketheloaitheoluotmuon.Size = new System.Drawing.Size(126, 51);
+            this.button_baocao_thongketheloaitheoluotmuon.TabIndex = 5;
+            this.button_baocao_thongketheloaitheoluotmuon.Text = "Báo cáo thống kê thể loại theo lượt mượn";
+            this.button_baocao_thongketheloaitheoluotmuon.UseVisualStyleBackColor = true;
+            this.button_baocao_thongketheloaitheoluotmuon.Click += new System.EventHandler(this.button6_Click);
             // 
-            // groupBox1
+            // groupBox_quydinh
             // 
-            this.groupBox1.Controls.Add(this.button_macdinh);
-            this.groupBox1.Controls.Add(this.textBox_tienphattre);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.button_luuquydinh);
-            this.groupBox1.Controls.Add(this.textBox_songaymuontoida);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.textBox_slsachtoidadcmuon);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox_namxuatban);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox_thoihanthe);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox_tuoitoida);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox_tuoitoithieu);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(10, 126);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(670, 187);
-            this.groupBox1.TabIndex = 6;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Quy định";
+            this.groupBox_quydinh.Controls.Add(this.button_macdinh);
+            this.groupBox_quydinh.Controls.Add(this.textBox_tienphattre);
+            this.groupBox_quydinh.Controls.Add(this.label7);
+            this.groupBox_quydinh.Controls.Add(this.button_luuquydinh);
+            this.groupBox_quydinh.Controls.Add(this.textBox_songaymuontoida);
+            this.groupBox_quydinh.Controls.Add(this.label6);
+            this.groupBox_quydinh.Controls.Add(this.textBox_slsachtoidadcmuon);
+            this.groupBox_quydinh.Controls.Add(this.label5);
+            this.groupBox_quydinh.Controls.Add(this.textBox_namxuatban);
+            this.groupBox_quydinh.Controls.Add(this.label4);
+            this.groupBox_quydinh.Controls.Add(this.textBox_thoihanthe);
+            this.groupBox_quydinh.Controls.Add(this.label3);
+            this.groupBox_quydinh.Controls.Add(this.textBox_tuoitoida);
+            this.groupBox_quydinh.Controls.Add(this.label2);
+            this.groupBox_quydinh.Controls.Add(this.textBox_tuoitoithieu);
+            this.groupBox_quydinh.Controls.Add(this.label1);
+            this.groupBox_quydinh.Location = new System.Drawing.Point(10, 126);
+            this.groupBox_quydinh.Name = "groupBox_quydinh";
+            this.groupBox_quydinh.Size = new System.Drawing.Size(670, 187);
+            this.groupBox_quydinh.TabIndex = 6;
+            this.groupBox_quydinh.TabStop = false;
+            this.groupBox_quydinh.Text = "Quy định";
             // 
             // button_macdinh
             // 
@@ -330,11 +330,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(695, 320);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.groupBox_quydinh);
+            this.Controls.Add(this.button_baocao_thongketheloaitheoluotmuon);
             this.Controls.Add(this.button_trasach);
             this.Controls.Add(this.button_muonsach);
-            this.Controls.Add(this.button_baocao);
+            this.Controls.Add(this.button_baocao_thongketratre);
             this.Controls.Add(this.button_sach);
             this.Controls.Add(this.button_docgia);
             this.MaximizeBox = false;
@@ -342,8 +342,8 @@
             this.Sizable = false;
             this.Text = "Màn hình chính";
             this.Load += new System.EventHandler(this.MainForm_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupBox_quydinh.ResumeLayout(false);
+            this.groupBox_quydinh.PerformLayout();
             this.ResumeLayout(false);
 
 		}
@@ -352,11 +352,11 @@
 
         private MaterialSkin.Controls.MaterialRaisedButton button_docgia;
 		private MaterialSkin.Controls.MaterialRaisedButton button_sach;
-		private MaterialSkin.Controls.MaterialRaisedButton button_baocao;
+		private MaterialSkin.Controls.MaterialRaisedButton button_baocao_thongketratre;
 		private MaterialSkin.Controls.MaterialRaisedButton button_muonsach;
 		private MaterialSkin.Controls.MaterialRaisedButton button_trasach;
-		private MaterialSkin.Controls.MaterialRaisedButton button6;
-        private System.Windows.Forms.GroupBox groupBox1;
+		private MaterialSkin.Controls.MaterialRaisedButton button_baocao_thongketheloaitheoluotmuon;
+        private System.Windows.Forms.GroupBox groupBox_quydinh;
 		private System.Windows.Forms.TextBox textBox_slsachtoidadcmuon;
 		private MaterialSkin.Controls.MaterialLabel label5;
 		private System.Windows.Forms.TextBox textBox_namxuatban;

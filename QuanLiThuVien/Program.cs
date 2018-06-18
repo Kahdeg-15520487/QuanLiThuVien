@@ -1,51 +1,29 @@
 ﻿using System;
 using System.IO;
 using System.Windows.Forms;
-using System.Xml;
+
 using DataAccess;
 
 namespace QuanLiThuVien
 {
     static class Program
     {
-
-        class config
-        {
-            public readonly string database;
-            public readonly string secret;
-
-            public config(string db, string se)
-            {
-                database = db;
-                secret = se;
-            }
-
-            public static config GetConfig()
-            {
-                XmlDocument xml = new XmlDocument();
-                xml.Load("config.xml");
-                XmlNode db = xml.DocumentElement.SelectSingleNode("/config/database");
-                XmlNode se = xml.DocumentElement.SelectSingleNode("/config/secret");
-
-                return new config(db.InnerText.Trim(), se.InnerText.Trim());
-            }
-
-        }
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
         static void Main(string[] args)
         {
+            Config.ConfigFilePath = "config.xml";
             if (!File.Exists("config.xml"))
             {
                 MessageBox.Show("Không tìm thấy file config!", "Lỗi");
             }
 
-            config config = config.GetConfig();
+            Config.GetConfig();
 
             //setup database
-            Database.InitDatabase(config.database, config.secret);
+            Database.InitDatabase(Config.Instance.database, Config.Instance.secret);
 
             //setup crash handler
             AppDomain currentDomain = AppDomain.CurrentDomain;
@@ -53,7 +31,12 @@ namespace QuanLiThuVien
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            var entryform = new LoginForm();
+            entryform.FormClosed += (o, e) =>
+            {
+                Config.SetConfig();
+            };
+            Application.Run(entryform);
         }
 
         private static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
@@ -66,7 +49,7 @@ namespace QuanLiThuVien
             string logfilename = "crashlog_" + DateTime.Now.ToString(@"dd_MM_yyyy_HH_mm") + ".txt";
             try
             {
-                System.IO.File.WriteAllText(logfilename, message);
+                File.WriteAllText(logfilename, message);
             }
             catch (Exception exx)
             {
