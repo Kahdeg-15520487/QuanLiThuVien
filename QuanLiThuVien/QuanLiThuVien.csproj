@@ -97,7 +97,7 @@
     <Compile Include="BaocaoSachtratre\QuanliBaocaoThongkeSachTratre.Designer.cs">
       <DependentUpon>QuanliBaocaoThongkeSachTratre.cs</DependentUpon>
     </Compile>
-    <Compile Include="config.cs" />
+    <Compile Include="Config.cs" />
     <Compile Include="CrystalReport2.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

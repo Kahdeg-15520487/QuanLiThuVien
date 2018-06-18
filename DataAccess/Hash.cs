@@ -6,6 +6,12 @@ namespace DataAccess
 {
     public static class Hash
     {
+        /// <summary>
+        /// hash a password + salt using SHA256
+        /// </summary>
+        /// <param name="passwordString">plain text password</param>
+        /// <param name="saltString">plain text salt</param>
+        /// <returns>hash of salted password</returns>
         public static string GetHash(string passwordString, string saltString)
         {
             HashAlgorithm algorithm = new SHA256Managed();

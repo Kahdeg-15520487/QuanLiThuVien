@@ -10,6 +10,7 @@ public static class DataAccess.Database
 | ---- | ---- | ------- | 
 | `void` | InitDatabase(`String` path, `String` secret) | khởi tạo thông tin database | 
 | `void` | DropDatabase(`String` secret) | xóa toàn bộ database | 
+| `void` | DropTable(`String` secret, `String` table) | xóa table | 
 ## bảng DocGia
 | Type | Name | Summary | 
 | ---- | ---- | ------- | 
@@ -102,3 +103,45 @@ public static class DataAccess.Database
 | `IEnumerable<ThongTinMuonSach>` | GetAllThongTinMuonSach() | truy xuất tất cả thông tin mượn sách từ database | 
 | `Boolean` | SetThongTinMuonSach(`ThongTinMuonSach` ThongTinMuonSach) | cập nhật thông tin mượn sách vào database | 
 | `Boolean` | RemoveThongTinMuonSach(`String` maTheDocGia, `String` maSach) | xóa thông tin mượn sách khỏi database | 
+## bảng ThongTinMuonSach
+| Type | Name | Summary | 
+| ---- | ---- | ------- | 
+| `void` | AddQuyen(`String` password, `Quyen` quyen) | thêm quyền của 1 user vào đatabase | 
+| `Quyen` | GetQuyen(`String` username) | truy xuất quyền của 1 user từ database | 
+| `Boolean` | LoginQuyen(`String` username, `String` password) | kiểm tra thông tin đăng nhập của 1 user | 
+
+## `Hash`
+
+```csharp
+public static class DataAccess.Hash
+
+```
+
+Static Methods
+
+| Type | Name | Summary | 
+| --- | --- | --- | 
+| `String` | GetHash(`String` passwordString, `String` saltString) | hash a password + salt using SHA256 | 
+
+## `Quyen`
+
+Quyền được lưu trong bảng Quyen
+```csharp
+public class DataAccess.DataObject.Quyen
+
+```
+
+Properties
+
+| Type | Name | Summary | 
+| --- | --- | --- | 
+| `String` | Username | Username | 
+| `String` | Hash | Hash | 
+| `String` | Salt | Salt | 
+| `Boolean` | ThaoTacDocGia | Quyền thao tác đọc giả :  lập thẻ đọc giả  cập nhật thông tin đọc giả  xóa thông tin đọc giả | 
+| `Boolean` | ThaoTacSach | Quyền thao tác sách :  thêm sách  cập nhật sách  xóa sách | 
+| `Boolean` | ThayDoiQuyDinh | Quyền thay đổi quy định | 
+| `Boolean` | MuonTraSach | Quyền thực hiện mượn và trả sách | 
+| `Boolean` | TimDocGia | Quyền xem thông tin đọc giả | 
+| `Boolean` | TimSach | Quyền xem thông tin sách | 
+| `Boolean` | BaoCao | Quyền lập và xem báo cáo | 
