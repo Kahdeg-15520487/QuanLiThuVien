@@ -103,7 +103,7 @@ public static class DataAccess.Database
 | `IEnumerable<ThongTinMuonSach>` | GetAllThongTinMuonSach() | truy xuất tất cả thông tin mượn sách từ database | 
 | `Boolean` | SetThongTinMuonSach(`ThongTinMuonSach` ThongTinMuonSach) | cập nhật thông tin mượn sách vào database | 
 | `Boolean` | RemoveThongTinMuonSach(`String` maTheDocGia, `String` maSach) | xóa thông tin mượn sách khỏi database | 
-## bảng ThongTinMuonSach
+## bảng Quyen
 | Type | Name | Summary | 
 | ---- | ---- | ------- | 
 | `void` | AddQuyen(`String` password, `Quyen` quyen) | thêm quyền của 1 user vào đatabase | 
