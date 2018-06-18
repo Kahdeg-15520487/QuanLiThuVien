@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace QuanLiThuVien.XuliTheDocGia
 {
-    public partial class QuanLiDocGia: MaterialSkin.Controls.MaterialForm
+    public partial class QuanLiDocGia : MaterialSkin.Controls.MaterialForm
     {
         public QuanLiDocGia()
         {
@@ -70,6 +70,23 @@ namespace QuanLiThuVien.XuliTheDocGia
         private void ThaoTacDocGia_Load(object sender, EventArgs e)
         {
             PopulateListView(GetAll());
+
+            HandleQuyen();
+        }
+
+        private void HandleQuyen()
+        {
+            var quyen = Quyen.Instance;
+
+            if (!quyen.ThaoTacDocGia)
+            {
+                button_lapthedocgia.Enabled = false;
+                button_lapthedocgia.Visible = false;
+                button_capnhatdocgia.Enabled = false;
+                button_capnhatdocgia.Visible = false;
+                button_xoadocgia.Enabled = false;
+                button_xoadocgia.Visible = false;
+            }
         }
 
         private void PopulateListView(List<ListViewItem> lvis)

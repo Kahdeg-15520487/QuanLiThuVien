@@ -29,7 +29,6 @@ namespace QuanLiThuVien
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.BlueGrey800, MaterialSkin.Primary.BlueGrey900, MaterialSkin.Primary.BlueGrey500, MaterialSkin.Accent.LightBlue200, MaterialSkin.TextShade.WHITE);
-
         }
 
         private void button_docgia_Click(object sender, EventArgs e)
@@ -137,6 +136,57 @@ namespace QuanLiThuVien
                 {
                     LapBaoCaoSachTraTre.LapBaoCao(DataAccess.RandomIdGenerator.GetBase36(10));
                 }
+            }
+
+            HandleQuyen();
+        }
+
+        private void HandleQuyen()
+        {
+            var quyen = Quyen.Instance;
+
+            if (!quyen.ThayDoiQuyDinh)
+            {
+                foreach(Control c in groupBox_quydinh.Controls)
+                {
+                    if (c is TextBox)
+                    {
+                        c.Enabled = false;
+                    }
+                    else if (c is MaterialSkin.Controls.MaterialRaisedButton)
+                    {
+                        c.Enabled = false;
+                        c.Visible = false;
+                    }
+                }
+            }
+
+            if (!quyen.TimDocGia)
+            {
+                button_docgia.Enabled = false;
+                button_docgia.Visible = false;
+            }
+
+            if (!quyen.TimSach)
+            {
+                button_sach.Enabled = false;
+                button_sach.Visible = false;
+            }
+
+            if (!quyen.MuonTraSach)
+            {
+                button_muonsach.Enabled = false;
+                button_muonsach.Visible = false;
+                button_trasach.Enabled = false;
+                button_trasach.Visible = false;
+            }
+
+            if (!quyen.BaoCao)
+            {
+                button_baocao_thongketratre.Enabled = false;
+                button_baocao_thongketratre.Visible = false;
+                button_baocao_thongketheloaitheoluotmuon.Enabled = false;
+                button_baocao_thongketheloaitheoluotmuon.Visible = false;
             }
         }
 

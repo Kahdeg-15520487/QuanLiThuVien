@@ -58,7 +58,6 @@ Source: "C:\Users\DELL\Documents\Workspace\c#\QuanLiThuVien\Build\Release\initdb
 Source: "C:\Users\DELL\Documents\Workspace\c#\QuanLiThuVien\Build\Release\LiteDB.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\DELL\Documents\Workspace\c#\QuanLiThuVien\Build\Release\MaterialSkin.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\DELL\Documents\Workspace\c#\QuanLiThuVien\Build\Release\Newtonsoft.Json.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\DELL\Documents\Workspace\c#\QuanLiThuVien\Build\Release\print_06_06_2018_19_34.txt"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\DELL\Documents\Workspace\c#\QuanLiThuVien\Build\Release\QuanLiThuVien.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\DELL\Documents\Workspace\c#\QuanLiThuVien\Build\Release\QuanLiThuVien.exe.config"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\DELL\Documents\Workspace\c#\QuanLiThuVien\Build\Release\quydinh.json"; DestDir: "{app}"; Flags: ignoreversion

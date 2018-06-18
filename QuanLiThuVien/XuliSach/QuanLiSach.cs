@@ -84,6 +84,23 @@ namespace QuanLiThuVien.XuliSach
         private void ThaoTacSach_Load(object sender, EventArgs e)
         {
             PopulateListView(GetAll());
+
+            HandleQuyen();
+        }
+
+        private void HandleQuyen()
+        {
+            var quyen = Quyen.Instance;
+
+            if (!quyen.ThaoTacSach)
+            {
+                button_themsach.Enabled = false;
+                button_themsach.Visible = false;
+                button_capnhatsach.Enabled = false;
+                button_capnhatsach.Visible = false;
+                button_xoasach.Enabled = false;
+                button_xoasach.Visible = false;
+            }
         }
 
         private void PopulateListView(List<ListViewItem> lvis)
